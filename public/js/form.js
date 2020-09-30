@@ -1,21 +1,13 @@
-// var config = {
-//   apiKey: "AIzaSyCGETuuyifSjRxXjjLJsiXLHPZTvR2hWrA",
-//   authDomain: "dotslashdb.firebaseapp.com",
-//   databaseURL: "https://dotslashdb.firebaseio.com",
-//   projectId: "dotslashdb",
-//   storageBucket: "dotslashdb.appspot.com",
-//   messagingSenderId: "868174794203"
-// };
 
 var config = {
-  apiKey: "AIzaSyBpWMzK7KQBGJMuIjvTsw0jpxReU8U",
-  authDomain: "dotslash-ba4c2.firapp.com",
-  databaseURL: "https://dotsh-ba4c2.firebaseio.com",
-  projectId: "dot-ba4c2",
-  storageBucket: "dotslash-ba4c2.appspot.com",
-  messagingSenderId: "48488487694",
-  appId: "1:484884876494:web:9cbde8ed8e7be8c093149f",
-  measurementId: "G-2ZKY5VP4YL"
+  apiKey: "AIzaSyBsZCiQ_q8HT6In5MYr_ynfO8zBoT5cHds",
+  authDomain: "dotslash4-8b10e.firebaseapp.com",
+  databaseURL: "https://dotslash4-8b10e.firebaseio.com",
+  projectId: "dotslash4-8b10e",
+  storageBucket: "dotslash4-8b10e.appspot.com",
+  messagingSenderId: "767933726480",
+  appId: "1:767933726480:web:22ed0000ed08e21b48ef95",
+  measurementId: "G-47Y08XE607"
 };
 firebase.initializeApp(config);
 let db = firebase.firestore();
