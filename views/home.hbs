@@ -91,7 +91,7 @@
           {{!-- <li><a href="#schedule">Schedule</a></li> --}}
           <li><a href="#sponsors">Sponsors</a></li>
           <li><a href="#faq">FAQs</a></li>
-          <li><a href="#prizes">Prizes</a></li>
+          {{!-- <li><a href="#prizes">Prizes</a></li> --}}
           <li><a href="/coc">Code of conduct</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -104,25 +104,30 @@
 
   <!-- Home -->
   <div id="home">
-    <!-- background image -->
-    <div class="section-bg"  data-stellar-background-ratio="0.5"></div>
-    <!-- /background image -->
 
     <!-- home wrapper -->
     <div class="home-wrapper">
       <!-- container -->
-      <div class="container">
+      <div class="container" style="
+          background-image: url(img/illustration.png);
+          background-position: -11rem -1rem;
+          background-repeat: no-repeat;
+      ">
+        <img src="img/main.jpg" class="img-responsive" alt="" style="
+            float: right;
+            height: 60rem;
+        ">
         <!-- row -->
         <div class="row">
           <!-- home content -->
-          <div class="col-md-8 col-md-offset-2">
+          <div>
             <!--
             <div class="home-content">
                 <h1><img src="img/logo_only1.png" width="100px"><span style="color: #bd0c0e"> DOT</span><span style="color: black"> SLASH</span></h1>
               <h4 class="lead">Root to Ideas</h4>
             </div>
 -->
-            <div class="home-content jumbotron" style="background-color: white;position: absolute;">
+            <div class="home-content jumbotron" style="background-color: white;position: absolute;padding: 20px;width: 65%;margin: 0;top: 50%;box-shadow: -5px 5px 10px #ddd;">
               <h1 style="font-family: lato"><img src="img/logo_only1.png" class="animated rotateIn delay-1s" style=""
                   width="100px">&nbsp;<span style="color: #bd0c0e">DOT</span><span style="color: black">SLASH</span><span style="color: black; margin-top: 1rem;"> 4.0</span></h1>
               <h4 class="lead" style="font-size: 25px;color: black; text-shadow:0 0 5px white;">Root to Ideas</h4>
