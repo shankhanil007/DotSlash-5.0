@@ -19,7 +19,7 @@ db.settings({
 function modalShow() {
   Swal({
     title: `<h2>Instructions!</h2>`,
-    html: `<h5>The Deadline for Registrations is 7th January 2020</h5>
+    html: `<h5>The Deadline for Registrations is 7th January 2021</h5>
     <ol>
     <li><b>1. </b>First Team member will be our point of contact.Further Details will be conveyed to him.</li>
     <li><b>2. </b>Enter the College name of first team member</li>
@@ -30,7 +30,7 @@ function modalShow() {
     <li><b>6.</b> You are not allowed to submit multiple forms and your first entry will only be considered as
       valid. Please be very sure before you submit!</li>
     <li><b>7.</b> You can also give a google doc with your professional details in case you dont have a resume. Nevertheless a resume is preferred.</li>
-    <li><b>8.</b> In case of any query feel free to contact us at <code>vedant@hackdotslash.co.in</code></li>
+    <li><b>8.</b> In case of any query feel free to contact us at <code>darshil@hackdotslash.co.in</code></li>
   </ol>`,
     type: 'info',
     confirmButtonText: 'Cool'
