@@ -825,8 +825,9 @@ textarea.input {
 }
 
 .sponsor>img {
-  height: 200px;
-  width: auto;
+  max-width: 35vw;
+  min-width: 25vw;	  
+  height: auto;
 }
 .home-content{
   text-align: center;
@@ -932,8 +933,9 @@ textarea.input {
 }
 .tracks img{
   max-height: 200px;
-  min-width:100%;
   border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .tracks p{
   margin-top:20px;
