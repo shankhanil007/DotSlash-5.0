@@ -105,7 +105,7 @@ ol {
   color: #fff;
   text-transform: uppercase;
   border: none;
-  border-radius: 20px;
+  border-radius: 10px;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
 }
@@ -133,6 +133,49 @@ textarea.input {
 
 .input:focus {
   border-color: #bd0c0e;
+}
+
+.swal2-icon.swal2-info {
+  border-color: #bd0c10 !important;
+  color: #bd0c10 !important;
+}
+
+.swal2-popup .swal2-styled.swal2-confirm {
+  background-color: #bd0c10 !important;
+  border-radius: 10px !important;
+}
+
+.swal2-popup .swal2-styled:focus {
+  box-shadow: none !important;
+}
+
+h2.swal2-title h2 {
+  margin: 0 !important;
+}
+
+div#swal2-content h5 {
+  margin-bottom: 2rem !important;
+}
+
+div#swal2-content ol {
+  text-align: left !important;
+}
+
+div#swal2-content ol li {
+  margin-bottom: 0.5rem !important;
+}
+
+button:focus {
+  background-color: #bd0c10 !important;
+}
+
+.waves-effect {
+  border-radius: 10px !important;
+}
+
+.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+  outline: 0 !important;
+  color: #fff !important;
 }
 
 /*----------------------------*\
@@ -1386,3 +1429,4 @@ div.home-content {
     text-align: center;
   }
 }
+
