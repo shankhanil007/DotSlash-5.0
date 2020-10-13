@@ -101,10 +101,11 @@ ol {
   display: inline-block;
   padding: 14px 50px;
   background: #bd0c0e;
+  box-shadow: 3px 3px #840a0c;
   color: #fff;
   text-transform: uppercase;
   border: none;
-  border-radius: 2px;
+  border-radius: 20px;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
 }
@@ -167,7 +168,7 @@ textarea.input {
 .section-title .title {
   position: relative;
   text-transform: capitalize;
-  font-weight: 900;
+  font-weight: 600;
   font-size: 42px;
   overflow: hidden;
 }
@@ -502,6 +503,7 @@ textarea.input {
 
 #galery-owl.owl-theme .owl-nav {
   margin-top: 0px;
+  display: none;
 }
 
 #galery-owl.owl-theme .owl-nav [class*='owl-'] {
@@ -854,8 +856,7 @@ textarea.input {
   -webkit-transition: 0.3s opacity;
   transition: 0.3s all;
   text-align: center;
-  transform: scale(1);
-  padding: 20px;
+  padding: 35px;
 }
 
 .sponsor:hover {
@@ -971,13 +972,15 @@ textarea.input {
   text-decoration: underline;
 }
 .tracks .col-xs-6:hover {
-  box-shadow: 0 5px 10px rgb(143, 143, 143);
+  box-shadow: 0 5px 10px #eee;
 }
 .tracks img {
   max-height: 200px;
   border-radius: 5px;
   margin-left: auto;
   margin-right: auto;
+  width: 30rem;
+  height: auto;
 }
 .tracks p {
   margin-top: 20px;
@@ -1233,7 +1236,8 @@ textarea.input {
 img.img-responsive {
   float: right;
   height: 50rem;
-  margin-bottom: 10rem;
+  margin-bottom: 20rem;
+  z-index: -1;
 }
 
 img.img-bg {
