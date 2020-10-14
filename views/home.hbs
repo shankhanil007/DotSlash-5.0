@@ -59,7 +59,7 @@
 </style>
 
 <body>
-
+  <div style="overflow-x: hidden;">
   <!-- Header -->
   <header id="header" class="transparent-navbar">
     <!-- container -->
@@ -808,8 +808,6 @@
               <p class="collapse box1" id="num6">A valid college issued photo ID, hardcopy of acceptance mail, laptop,
                 phone, chargers, any sleeping equipment you might want (we'll be providing mattresses)!</p>
               <br>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
               <h2 data-parent="#accordion" data-toggle="collapse" class="box arrow6" href="#num7" style="cursor: pointer; font-weight: 300;">
                 <span><i class="material-icons prefix arrow-img6">play_arrow</i></span>What facilities will be provided
                 in hackathon?
@@ -820,6 +818,8 @@
                 <br> We will also provide a Certificate of Participation to every participant.</p>
               <br>
 
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
               <h2 data-parent="#accordion" data-toggle="collapse" class="box arrow7" href="#num8" style="cursor: pointer; font-weight: 300;">
                 <span><i class="material-icons prefix arrow-img7">play_arrow</i></span>What shouldn’t I bring?
 
@@ -858,6 +858,14 @@
                 doing our best to lend hardware at the event
                 and enable you to work on your dream hack. We’ll put out a list closer to the event so you can see
                 what’s available.</p>
+              <br>
+
+              <h2 data-parent="#accordion" data-toggle="collapse" class="box arrow12" href="#num13" style="cursor: pointer; font-weight: 300;">
+                <span><i class="material-icons prefix arrow-img12">play_arrow</i></span>What will be the mode of conduct of hackathon?
+              </h2>
+              <p class="collapse box1" id="num13">Currently, we plan to conduct Dotslash 4.0 on campus wherein participants and judges will be 
+                physically present. But if we are not able to do so due to COVID-19 precautionary guidelines given by the government and 
+                college, then the hackathon will be conducted online. The confirmed mode of conduct will be declared by Mid-December.</p>
               <br>
             </div>
           </div>
@@ -1035,7 +1043,7 @@
     <!-- /container -->
   </footer>
   <!-- /Footer -->
-
+  </div>
   <!-- jQuery Plugins -->
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
@@ -1048,7 +1056,7 @@
   <script src="js/main.js"></script>
   {{!-- <script src="js/devfolio.js"></script> --}}
   <script>
-    for (let i = 0; i < 12; i++) {
+    for (let i = 0; i < 13; i++) {
       $('.arrow' + i).on("click", function (event) {
         $('.arrow-img' + i).toggleClass('rotate');
       });
