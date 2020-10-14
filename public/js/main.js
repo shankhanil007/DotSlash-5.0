@@ -10,6 +10,8 @@
 	// Mobile nav toggle
 	$('.navbar-toggle').on('click',function() {
 		$('.main-nav').toggleClass('open');
+		$('.hamburger').toggleClass('open');
+		
 	});
 
 	// Fixed nav
