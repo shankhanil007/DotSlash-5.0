@@ -97,5 +97,6 @@ el.forEach(element => {
 		console.log(element);
 		let parent = document.querySelector('ul.main-nav');
 		parent.classList.remove('open');
+		$('.hamburger').removeClass('open');
 	});
 });
