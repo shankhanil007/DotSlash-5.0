@@ -432,7 +432,7 @@ button:not(:focus) {
   .navbar-toggle {
     display: block;
     margin: 15px;
-    background-color: #fff !important;
+    /* background-color: #fff !important; */
   }
 
   .navbar-brand {
