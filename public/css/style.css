@@ -165,9 +165,12 @@ div#swal2-content ol li {
   margin-bottom: 0.5rem !important;
 }
 
-button:focus {
+/* button:focus {
   background-color: #bd0c10 !important;
 }
+button:not(:focus) {
+  background-color: transparent !important;
+} */
 
 .waves-effect {
   border-radius: 10px !important;
@@ -411,6 +414,9 @@ button:focus {
   .main-nav.open {
     max-height: 500px;
   }
+  .hamburger.open{
+    background-color: #bd0c10;
+  }
   .main-nav li.active a:after {
     display: none;
   }
@@ -426,7 +432,7 @@ button:focus {
   .navbar-toggle {
     display: block;
     margin: 15px;
-    background-color: #fff !important;
+    /* background-color: #fff !important; */
   }
 
   .navbar-brand {
