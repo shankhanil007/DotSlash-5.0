@@ -1,19 +1,18 @@
-
 var config = {
-  apiKey: "AIzaSyBsZCiQ_q8HT6In5MYr_ynfO8zBoT5cHds",
-  authDomain: "dotslash4-8b10e.firebaseapp.com",
-  databaseURL: "https://dotslash4-8b10e.firebaseio.com",
-  projectId: "dotslash4-8b10e",
-  storageBucket: "dotslash4-8b10e.appspot.com",
-  messagingSenderId: "767933726480",
-  appId: "1:767933726480:web:22ed0000ed08e21b48ef95",
-  measurementId: "G-47Y08XE607"
+  apiKey: 'AIzaSyBsZCiQ_q8HT6In5MYr_ynfO8zBoT5cHds',
+  authDomain: 'dotslash4-8b10e.firebaseapp.com',
+  databaseURL: 'https://dotslash4-8b10e.firebaseio.com',
+  projectId: 'dotslash4-8b10e',
+  storageBucket: 'dotslash4-8b10e.appspot.com',
+  messagingSenderId: '767933726480',
+  appId: '1:767933726480:web:22ed0000ed08e21b48ef95',
+  measurementId: 'G-47Y08XE607',
 };
 firebase.initializeApp(config);
 let db = firebase.firestore();
 
 db.settings({
-  timestampsInSnapshots: true
+  timestampsInSnapshots: true,
 });
 
 function modalShow() {
@@ -33,12 +32,12 @@ function modalShow() {
     <li><b>8.</b> In case of any query feel free to contact us at <code>darshil@hackdotslash.co.in</code></li>
   </ol>`,
     type: 'info',
-    confirmButtonText: 'Cool'
-  })
+    confirmButtonText: 'Cool',
+  });
 }
 window.onload = () => {
   modalShow();
-}
+};
 jQuery(document).ready(function ($) {
   let alterClass = function () {
     let ww = document.body.clientWidth;
@@ -46,7 +45,7 @@ jQuery(document).ready(function ($) {
       $('.res').removeClass('s6').addClass('s12');
     } else if (ww >= 601) {
       $('.res').removeClass('s12').addClass('s6');
-    };
+    }
   };
   $(window).resize(function () {
     alterClass();
@@ -55,60 +54,56 @@ jQuery(document).ready(function ($) {
 
   $('#instructions').on('click', function () {
     modalShow();
-  })
+  });
 
-  $('#nextMem').on('change',(e)=>{
-    let mem2=$('.member2');
-    if(e.target.checked===true){
-    mem2.removeClass('hidden');
-    $('#full_name2').prop('required','true');
-    $('#dob2').prop('required','true');
-    $('#email2').prop('required','true');
-    $('#your_mob2').prop('required','true');
-    $('#resume_url2').prop('required','true');
-    $('#git_url2').prop('required','true');
-    $('#tshirt2').prop('required','true');
+  $('#nextMem').on('change', (e) => {
+    let mem2 = $('.member2');
+    if (e.target.checked === true) {
+      mem2.removeClass('hidden');
+      $('#full_name2').prop('required', 'true');
+      $('#dob2').prop('required', 'true');
+      $('#email2').prop('required', 'true');
+      $('#your_mob2').prop('required', 'true');
+      $('#resume_url2').prop('required', 'true');
+      $('#git_url2').prop('required', 'true');
+      $('#tshirt2').prop('required', 'true');
+    } else {
+      $('.member2 input').val('');
+      $('.member2 select').val('');
+      $('#full_name2').prop('required', '');
+      $('#dob2').prop('required', '');
+      $('#email2').prop('required', '');
+      $('#your_mob2').prop('required', '');
+      $('#resume_url2').prop('required', '');
+      $('#git_url2').prop('required', '');
+      $('#tshirt2').prop('required', '');
+      mem2.addClass('hidden');
     }
-    else{
-    $('.member2 input').val('');
-    $('.member2 select').val('');
-    $('#full_name2').prop('required','');
-    $('#dob2').prop('required','');
-    $('#email2').prop('required','');
-    $('#your_mob2').prop('required','');
-    $('#resume_url2').prop('required','');
-    $('#git_url2').prop('required','');
-    $('#tshirt2').prop('required','');
-    mem2.addClass('hidden');
+  });
+  $('#nextMem2').on('change', (e) => {
+    let mem3 = $('.member3');
+    if (e.target.checked === true) {
+      mem3.removeClass('hidden');
+      $('#full_name3').prop('required', 'true');
+      $('#dob3').prop('required', 'true');
+      $('#email3').prop('required', 'true');
+      $('#your_mob3').prop('required', 'true');
+      $('#resume_url3').prop('required', 'true');
+      $('#git_url3').prop('required', 'true');
+      $('#tshirt3').prop('required', 'true');
+    } else {
+      $('.member3 input').val('');
+      $('.member3 select').val('');
+      $('#full_name3').prop('required', '');
+      $('#dob3').prop('required', '');
+      $('#email3').prop('required', '');
+      $('#your_mob3').prop('required', '');
+      $('#resume_url3').prop('required', '');
+      $('#git_url3').prop('required', '');
+      $('#tshirt3').prop('required', '');
+      mem3.addClass('hidden');
     }
-  })
-  $('#nextMem2').on('change',(e)=>{
-    let mem3=$('.member3');
-    if(e.target.checked===true){
-    mem3.removeClass('hidden');
-    $('#full_name3').prop('required','true');
-    $('#dob3').prop('required','true');
-    $('#email3').prop('required','true');
-    $('#your_mob3').prop('required','true');
-    $('#resume_url3').prop('required','true');
-    $('#git_url3').prop('required','true');
-    $('#tshirt3').prop('required','true');    
-    }
-    else{
-    $('.member3 input').val('');
-    $('.member3 select').val('');
-    $('#full_name3').prop('required','');
-    $('#dob3').prop('required','');
-    $('#email3').prop('required','');
-    $('#your_mob3').prop('required','');
-    $('#resume_url3').prop('required','');
-    $('#git_url3').prop('required','');
-    $('#tshirt3').prop('required','');
-    mem3.addClass('hidden');
-    
-    }
-  })
-
+  });
 
   $('#form').on('submit', (e) => {
     e.preventDefault();
@@ -151,7 +146,7 @@ jQuery(document).ready(function ($) {
     let resume3 = $('#resume_url3').val() || 'none';
     let tShirt3 = $('#tshirt3').val() || 'none';
     let firstTime = 'yes';
-    if (document.querySelector('#test1').checked) radioval = 'yes'
+    if (document.querySelector('#test1').checked) radioval = 'yes';
     else if (document.querySelector('#test2').checked) radioval = 'no';
     else {
       alert('Please Tell Us whether you are new to hackathons!');
@@ -160,88 +155,89 @@ jQuery(document).ready(function ($) {
     let track = 'software';
     if (document.querySelector('#track1').checked) radioval = 'software';
     else if (document.querySelector('#track2').checked) radioval = 'hardware';
-    else if (document.querySelector('#track3').checked) radioval = 'ethereum'
+    else if (document.querySelector('#track3').checked) radioval = 'ethereum';
     let needs = $('#textarea1').val() || 'none';
     let heardFrom = $('#textarea2').val() || 'none';
 
     swal({
-      title:'<h2>Submission</h2>',
-      html:`<h3>Are you sure you want to submit?</h3>`,
-      type:'warning',
-      confirmButtonText:'Yes',
-      showCancelButton:true,
-      allowEnterKey:false
-    }).then((val)=>{
-      if(val.value===true){
-        db.collection("users").add({
-          teamName,
-          collegeName,
-          track,
-          members: [{
-              fname1,
-              dob1,
-              selGen1,
-              email1,
-              mob1,
-              git1,
-              link1,
-              twit1,
-              face1,
-              resume1,
-              tShirt1
-            },
-            {
-              fname2,
-              dob2,
-              selGen2,
-              email2,
-              mob2,
-              git2,
-              link2,
-              twit2,
-              face2,
-              resume2,
-              tShirt2
-            },
-            {
-              fname3,
-              dob3,
-              selGen3,
-              email3,
-              mob3,
-              git3,
-              link3,
-              twit3,
-              face3,
-              resume3,
-              tShirt3
-            }
-          ],
-          needs,
-          heardFrom,
-          firstTime
-  
-        })
-        .then(function (docRef) {
-          Swal({
-            title: 'Success!',
-            text: 'We recieved your form! Thank you for your participation',
-            type: 'success',
-            confirmButtonText: 'Cool'
-          }).then(() => {
-            document.location.href = '/final';
+      title: '<h2>Submission</h2>',
+      html: `<h3>Are you sure you want to submit?</h3>`,
+      type: 'warning',
+      confirmButtonText: 'Yes',
+      showCancelButton: true,
+      allowEnterKey: false,
+    }).then((val) => {
+      if (val.value === true) {
+        db.collection('users')
+          .add({
+            teamName,
+            collegeName,
+            track,
+            members: [
+              {
+                fname1,
+                dob1,
+                selGen1,
+                email1,
+                mob1,
+                git1,
+                link1,
+                twit1,
+                face1,
+                resume1,
+                tShirt1,
+              },
+              {
+                fname2,
+                dob2,
+                selGen2,
+                email2,
+                mob2,
+                git2,
+                link2,
+                twit2,
+                face2,
+                resume2,
+                tShirt2,
+              },
+              {
+                fname3,
+                dob3,
+                selGen3,
+                email3,
+                mob3,
+                git3,
+                link3,
+                twit3,
+                face3,
+                resume3,
+                tShirt3,
+              },
+            ],
+            needs,
+            heardFrom,
+            firstTime,
           })
-        })
-        .catch(function (error) {
-          alert('The Document was not uploaded. Please check your internet or browser console for more information.');
-          console.log(error)
-          return;
-        });
+          .then(function (docRef) {
+            Swal({
+              title: 'Success!',
+              text: 'We recieved your form! Thank you for your participation',
+              type: 'success',
+              confirmButtonText: 'Cool',
+            }).then(() => {
+              document.location.href = '/final';
+            });
+          })
+          .catch(function (error) {
+            alert(
+              'The Document was not uploaded. Please check your internet or browser console for more information.'
+            );
+            console.log(error);
+            return;
+          });
       }
-      
-    })
+    });
 
-    
     return;
-  })
+  });
 });
