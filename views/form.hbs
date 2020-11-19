@@ -25,17 +25,19 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 </head>
 <style>
-  input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    margin: 0; 
-}
-label {
-  font-family: 'Raleway', sans-serif;
-}
+    margin: 0;
+  }
+
+  label {
+    font-family: 'Raleway', sans-serif;
+  }
 </style>
+
 <body>
   <!-- Header -->
   <header id="header" class="transparent-navbar">
@@ -264,7 +266,7 @@ label {
             </div>
           </div>
         </div>
-        
+
         <div style="background-color: whitesmoke;padding-top: 10px" class="hidden member3">
           <div style="width:80%">
             <h3>Member 3</h3>
@@ -386,6 +388,27 @@ label {
             </div>
             <div class="row">
               <div class="input-field col s12">
+                <label>If the mode of conduct is decided as offline, i.e in SVNIT campus then would you be willing to
+                  come there and
+                  participate?</label><br><br>
+                <p>
+                  <input name="mode-of-conduct" class="with-gap" type="radio" id="mode-of-conduct-yes" checked />
+                  <label for="mode-of-conduct-yes">Yes</label>
+                </p>
+                <p>
+                  <input name="mode-of-conduct" class="with-gap" type="radio" id="mode-of-conduct-no" />
+                  <label for="mode-of-conduct-no">No</label>
+                </p>
+                <p>
+                  <input name="mode-of-conduct" class="with-gap" type="radio" id="mode-of-conduct-maybe" />
+                  <label for="mode-of-conduct-maybe">Maybe
+                    <input type="text" class="reason-text" placeholder="please explain your concerns">
+                  </label>
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12 res" style="margin-top: 50px;">
                 <select id="textarea2" name="textarea2">
                   <option value="socialMed" selected>Social Media sites like facebook, twitter etc.</option>
                   <option value="friend">A friend or a Relative</option>
@@ -393,7 +416,7 @@ label {
                   <option value="hackathon.com">From sites like hackathon.com or devpost.com</option>
                   <option value="others">Others</option>
                 </select>
-                <label for="textarea2">How did you hear about us?</label>
+                <label for="textarea2">How did you hear about us?<br></label>
               </div>
             </div>
           </div>
@@ -404,7 +427,7 @@ label {
         </button>
       </form>
     </div>
-   
+
   </center>
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
@@ -415,6 +438,7 @@ label {
   <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.28.4/dist/sweetalert2.all.min.js"></script>
   <script src="js/form.js"></script>
-  <script src="js/init.js" ></script>
+  <script src="js/init.js"></script>
 </body>
+
 </html>
