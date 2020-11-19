@@ -1046,7 +1046,7 @@ button:not(:focus) {
 }
 
 .select-wrapper+label{
-  font-size: 0.9rem !important;
+  font-size: 1rem !important;
 }
 
 /*=========================================================
