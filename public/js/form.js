@@ -11,10 +11,6 @@ var config = {
 firebase.initializeApp(config);
 let db = firebase.firestore();
 
-db.settings({
-  timestampsInSnapshots: true,
-});
-
 function modalShow() {
   Swal({
     title: `<h2>Instructions!</h2>`,
@@ -35,6 +31,7 @@ function modalShow() {
     confirmButtonText: 'Cool',
   });
 }
+
 window.onload = () => {
   modalShow();
 };
@@ -54,6 +51,13 @@ jQuery(document).ready(function ($) {
 
   $('#instructions').on('click', function () {
     modalShow();
+  });
+
+  $('.reason-text').prop('disabled', true);
+  $('.reason-text').prop('required', false);
+
+  $('#mode-of-conduct-yes,#mode-of-conduct-no,#mode-of-conduct-maybe').on('click', function () {
+    handleClickModeOfConduct();
   });
 
   $('#nextMem').on('change', (e) => {
@@ -146,16 +150,26 @@ jQuery(document).ready(function ($) {
     let resume3 = $('#resume_url3').val() || 'none';
     let tShirt3 = $('#tshirt3').val() || 'none';
     let firstTime = 'yes';
-    if (document.querySelector('#test1').checked) radioval = 'yes';
-    else if (document.querySelector('#test2').checked) radioval = 'no';
+    let modeOfConduct = 'offline', reason = 'none';
+    if (document.querySelector('#test1').checked) firstTime = 'yes';
+    else if (document.querySelector('#test2').checked) firstTime = 'no';
     else {
       alert('Please Tell Us whether you are new to hackathons!');
       return;
     }
+    if (document.querySelector('#mode-of-conduct-yes').checked) modeOfConduct = 'offline';
+    else if (document.querySelector('#mode-of-conduct-no').checked) modeOfConduct = 'online';
+    else if (document.querySelector('#mode-of-conduct-maybe').checked) {
+      modeOfConduct = 'maybe';
+      reason = document.querySelector('.reason-text').value;
+      if (reason === '') {
+        alert('Please tell us your concerns on mode of conduct');
+      }
+    }
     let track = 'software';
-    if (document.querySelector('#track1').checked) radioval = 'software';
-    else if (document.querySelector('#track2').checked) radioval = 'hardware';
-    else if (document.querySelector('#track3').checked) radioval = 'ethereum';
+    if (document.querySelector('#track1').checked) track = 'software';
+    else if (document.querySelector('#track2').checked) track = 'hardware';
+    else if (document.querySelector('#track3').checked) track = 'ethereum';
     let needs = $('#textarea1').val() || 'none';
     let heardFrom = $('#textarea2').val() || 'none';
 
@@ -217,6 +231,8 @@ jQuery(document).ready(function ($) {
             needs,
             heardFrom,
             firstTime,
+            modeOfConduct,
+            reason
           })
           .then(function (docRef) {
             Swal({
@@ -241,3 +257,14 @@ jQuery(document).ready(function ($) {
     return;
   });
 });
+
+function handleClickModeOfConduct() {
+  if ($('#mode-of-conduct-maybe').is(':checked')) {
+    $('.reason-text').prop('disabled', false);
+    $('.reason-text').prop('required', true);
+  } else {
+    $('.reason-text').prop('disabled', true);
+    $('.reason-text').prop('required', false);
+  }
+}
+
