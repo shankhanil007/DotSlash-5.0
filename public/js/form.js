@@ -33,7 +33,7 @@ function modalShow() {
 }
 
 window.onload = () => {
-  // modalShow();
+  modalShow();
 };
 jQuery(document).ready(function ($) {
   let alterClass = function () {
@@ -161,7 +161,7 @@ jQuery(document).ready(function ($) {
     else if (document.querySelector('#mode-of-conduct-no').checked) modeOfConduct = 'online';
     else if (document.querySelector('#mode-of-conduct-maybe').checked) {
       modeOfConduct = 'maybe';
-      reason = document.querySelector('.reason-text').val();
+      reason = document.querySelector('.reason-text').value;
       if (reason === '') {
         alert('Please tell us your concerns on mode of conduct');
       }
