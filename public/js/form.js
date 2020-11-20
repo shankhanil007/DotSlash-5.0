@@ -1,16 +1,3 @@
-var config = {
-  apiKey: 'AIzaSyBsZCiQ_q8HT6In5MYr_ynfO8zBoT5cHds',
-  authDomain: 'dotslash4-8b10e.firebaseapp.com',
-  databaseURL: 'https://dotslash4-8b10e.firebaseio.com',
-  projectId: 'dotslash4-8b10e',
-  storageBucket: 'dotslash4-8b10e.appspot.com',
-  messagingSenderId: '767933726480',
-  appId: '1:767933726480:web:22ed0000ed08e21b48ef95',
-  measurementId: 'G-47Y08XE607',
-};
-firebase.initializeApp(config);
-let db = firebase.firestore();
-
 function modalShow() {
   Swal({
     title: `<h3>Instructions!</h3>`,
@@ -172,7 +159,6 @@ jQuery(document).ready(function ($) {
     else if (document.querySelector('#track3').checked) track = 'ethereum';
     let needs = $('#textarea1').val() || 'none';
     let heardFrom = $('#textarea2').val() || 'none';
-    let url = 'https://hackdotslash.co.in/users';
     swal({
       title: '<h2>Submission</h2>',
       html: `<h3>Are you sure you want to submit?</h3>`,
@@ -182,7 +168,7 @@ jQuery(document).ready(function ($) {
       allowEnterKey: false,
     }).then((val) => {
       if (val.value === true) {
-        fetch(url, {
+        fetch('/users', {
           method: 'POST',
           body: JSON.stringify({
             teamName,
