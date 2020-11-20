@@ -999,6 +999,8 @@ div.home-content {
 
 #devfolio-apply-now1:not([disabled]) {
   cursor: pointer;
+  outline: none;
+
 }
 
 #devfolio-apply-now1:hover {
