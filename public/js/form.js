@@ -13,13 +13,13 @@ let db = firebase.firestore();
 
 function modalShow() {
   Swal({
-    title: `<h2>Instructions!</h2>`,
+    title: `<h3>Instructions!</h3>`,
     html: `<h5>The Deadline for Registrations is 7th January 2021</h5>
     <ol>
     <li><b>1. </b>First Team member will be our point of contact.Further Details will be conveyed to him.</li>
     <li><b>2. </b>Enter the College name of first team member</li>
     <li><b>3. </b>You can have at max 3 members in every team. Minimum is one😉</li>
-    <li style="color:red"><b>3. </b>A Team of two or three members will be preferred over single member.</li>
+    <li style="color:#c7254e"><b>4. </b>A Team of two or three members will be preferred over single member.</li>
     <li><b>5.</b> Every URL in the form accepts links that starts with <code>https://</code> or <code>http://</code>
       to ensure security.</li>
     <li><b>6.</b> You are not allowed to submit multiple forms and your first entry will only be considered as
