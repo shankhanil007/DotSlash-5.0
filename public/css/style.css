@@ -943,6 +943,39 @@ button:not(:focus) {
   border-radius: 25px;
 }
 
+img.img-responsive {
+  float: right;
+  height: 50rem;
+  margin-bottom: 30rem;
+  z-index: -1;
+}
+
+img.img-responsive.img-vector {
+  float: left;
+  margin-top: 4rem;
+  height: auto;
+  margin-bottom: 0;
+}
+
+img.img-bg {
+  float: left;
+  height: 30rem;
+  position: absolute;
+  top: 18%;
+  z-index: -1;
+}
+
+div.home-content {
+  background-color: white;
+  position: absolute;
+  padding: 15px;
+  width: 65%;
+  margin: 0;
+  top: 40%;
+  box-shadow: 0 5px 10px #ddd;
+  border-radius: 25px;
+}
+
 /* Devfolio setup */
 #devfolio-apply-now1 {
   -ms-flex-align: center;
@@ -1326,39 +1359,6 @@ button:not(:focus) {
 
 .blog .blog-reply form .form-group {
   margin-bottom: 30px;
-}
-
-img.img-responsive {
-  float: right;
-  height: 50rem;
-  margin-bottom: 20rem;
-  z-index: -1;
-}
-
-img.img-responsive.img-vector {
-  float: left;
-  margin-top: 8rem;
-  height: auto;
-  margin-bottom: 0;
-}
-
-img.img-bg {
-  float: left;
-            height: 30rem;
-            position: absolute;
-            top: 18%;
-            z-index: -1;
-}
-
-div.home-content {
-  background-color: white;
-  position: absolute;
-  padding: 20px;
-  width: 65%;
-  margin: 0;
-  top: 50%;
-  box-shadow: 0 5px 10px #ddd;
-  border-radius: 25px;
 }
 
 /*=========================================================
