@@ -94,7 +94,6 @@ function register() {
 let el = document.querySelectorAll('ul.main-nav li');
 el.forEach(element => {
 	element.addEventListener('click', () => {
-		console.log(element);
 		let parent = document.querySelector('ul.main-nav');
 		parent.classList.remove('open');
 		$('.hamburger').removeClass('open');

@@ -22,6 +22,7 @@ GALERY
 SPEAKERS
 EVENTS
 SPONSORS
+REGISTRATION FORM
 CONTACT
 CTA
 FOOTER
@@ -148,7 +149,9 @@ textarea.input {
 .swal2-popup .swal2-styled:focus {
   box-shadow: none !important;
 }
-
+.swal2-popup{
+  width: 55em !important;
+}
 h2.swal2-title h2 {
   margin: 0 !important;
 }
@@ -164,6 +167,7 @@ div#swal2-content ol {
 div#swal2-content ol li {
   margin-bottom: 0.5rem !important;
 }
+
 
 /* button:focus {
   background-color: #bd0c10 !important;
@@ -1038,7 +1042,7 @@ button:not(:focus) {
 }
 
 /*----------------------------*\
-	FORM 
+	REGISTRATION FORM 
 \*----------------------------*/
 
 .reason-text{
@@ -1047,6 +1051,23 @@ button:not(:focus) {
 
 .select-wrapper+label{
   font-size: 1rem !important;
+}
+
+.input-field label{
+  width: 100%;
+  text-align: left;
+}
+
+.add-member{
+  margin: 20px;
+}
+
+.resume{
+  top: 0px !important
+}
+
+.mode{
+  position: relative !important;
 }
 
 /*=========================================================

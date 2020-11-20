@@ -1,25 +1,12 @@
-var config = {
-  apiKey: 'AIzaSyBsZCiQ_q8HT6In5MYr_ynfO8zBoT5cHds',
-  authDomain: 'dotslash4-8b10e.firebaseapp.com',
-  databaseURL: 'https://dotslash4-8b10e.firebaseio.com',
-  projectId: 'dotslash4-8b10e',
-  storageBucket: 'dotslash4-8b10e.appspot.com',
-  messagingSenderId: '767933726480',
-  appId: '1:767933726480:web:22ed0000ed08e21b48ef95',
-  measurementId: 'G-47Y08XE607',
-};
-firebase.initializeApp(config);
-let db = firebase.firestore();
-
 function modalShow() {
   Swal({
-    title: `<h2>Instructions!</h2>`,
+    title: `<h3>Instructions!</h3>`,
     html: `<h5>The Deadline for Registrations is 7th January 2021</h5>
     <ol>
     <li><b>1. </b>First Team member will be our point of contact.Further Details will be conveyed to him.</li>
     <li><b>2. </b>Enter the College name of first team member</li>
     <li><b>3. </b>You can have at max 3 members in every team. Minimum is one😉</li>
-    <li style="color:red"><b>3. </b>A Team of two or three members will be preferred over single member.</li>
+    <li style="color:#c7254e"><b>4. </b>A Team of two or three members will be preferred over single member.</li>
     <li><b>5.</b> Every URL in the form accepts links that starts with <code>https://</code> or <code>http://</code>
       to ensure security.</li>
     <li><b>6.</b> You are not allowed to submit multiple forms and your first entry will only be considered as
@@ -172,7 +159,6 @@ jQuery(document).ready(function ($) {
     else if (document.querySelector('#track3').checked) track = 'ethereum';
     let needs = $('#textarea1').val() || 'none';
     let heardFrom = $('#textarea2').val() || 'none';
-
     swal({
       title: '<h2>Submission</h2>',
       html: `<h3>Are you sure you want to submit?</h3>`,
@@ -182,68 +168,65 @@ jQuery(document).ready(function ($) {
       allowEnterKey: false,
     }).then((val) => {
       if (val.value === true) {
-        db.collection('users')
-          .add({
+        fetch('/users', {
+          method: 'POST',
+          body: JSON.stringify({
             teamName,
             collegeName,
             track,
-            members: [
-              {
-                fname1,
-                dob1,
-                selGen1,
-                email1,
-                mob1,
-                git1,
-                link1,
-                twit1,
-                face1,
-                resume1,
-                tShirt1,
-              },
-              {
-                fname2,
-                dob2,
-                selGen2,
-                email2,
-                mob2,
-                git2,
-                link2,
-                twit2,
-                face2,
-                resume2,
-                tShirt2,
-              },
-              {
-                fname3,
-                dob3,
-                selGen3,
-                email3,
-                mob3,
-                git3,
-                link3,
-                twit3,
-                face3,
-                resume3,
-                tShirt3,
-              },
-            ],
+            fname1,
+            dob1,
+            selGen1,
+            email1,
+            mob1,
+            git1,
+            link1,
+            twit1,
+            face1,
+            resume1,
+            tShirt1,
+            fname2,
+            dob2,
+            selGen2,
+            email2,
+            mob2,
+            git2,
+            link2,
+            twit2,
+            face2,
+            resume2,
+            tShirt2,
+            fname3,
+            dob3,
+            selGen3,
+            email3,
+            mob3,
+            git3,
+            link3,
+            twit3,
+            face3,
+            resume3,
+            tShirt3,
             needs,
             heardFrom,
             firstTime,
             modeOfConduct,
             reason
-          })
-          .then(function (docRef) {
-            Swal({
-              title: 'Success!',
-              text: 'We recieved your form! Thank you for your participation',
-              type: 'success',
-              confirmButtonText: 'Cool',
-            }).then(() => {
-              document.location.href = '/final';
-            });
-          })
+          }),
+          headers: {
+            "Content-type": "application/json"
+          }
+        }).then(function (docRef) {
+          console.log(docRef);
+          Swal({
+            title: 'Success!',
+            text: 'We recieved your form! Thank you for your participation',
+            type: 'success',
+            confirmButtonText: 'Cool',
+          }).then(() => {
+            document.location.href = '/final';
+          });
+        })
           .catch(function (error) {
             alert(
               'The Document was not uploaded. Please check your internet or browser console for more information.'
