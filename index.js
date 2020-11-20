@@ -89,6 +89,7 @@ app.post('/api/users', (req, res) => {
         modeOfConduct,
         reason
     } = req.body;
+    let emailSent = false;
     db.collection('users')
         .add({
             teamName,
@@ -139,14 +140,13 @@ app.post('/api/users', (req, res) => {
             heardFrom,
             firstTime,
             modeOfConduct,
+            emailSent,
             reason
         }).then(result => {
-            // console.log("Successfully added");
-            // console.log(result);
             res.set('Sec-Fetch-Site', 'same-origin');
-            res.status(200).json({success: true});
+            res.status(200).json({ success: true });
         }).catch(err => {
-            res.status(500).json({success: false, error: err});
+            res.status(500).json({ success: false, error: err });
         })
 
 })
