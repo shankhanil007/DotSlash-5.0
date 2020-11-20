@@ -1,36 +1,158 @@
-const express= require('express');
-const app=express();
-const hbs=require('hbs');
-const http=require('http').Server(app);
-const port=process.env.PORT || 5000;
-let server=app.listen(port,()=>{
+const express = require('express');
+const app = express();
+const hbs = require('hbs');
+const http = require('http').Server(app);
+const port = process.env.PORT || 5000;
+const admin = require("firebase-admin");
+
+const serviceAccount = require("./serviceAccountKey.json");
+
+admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+    databaseURL: "https://dotslash4-8b10e.firebaseio.com"
+});
+let db = admin.firestore();
+
+let server = app.listen(port, () => {
     console.log('listening on port 5000');
 })
 
+
 // express middleware setup
-app.set('view engine','hbs');
-app.use(express.static(__dirname+'/public'));
-app.use('/bower_components',express.static(__dirname+'/bower_components'));
+app.set('view engine', 'hbs');
+app.use(express.static(__dirname + '/public'));
+app.use(express.json());
+app.use('/bower_components', express.static(__dirname + '/bower_components'));
 
 // partial setup
 hbs.registerPartials(__dirname + '/views/partials');
 
 // App routes
-app.get('/',(req,res)=>{
+app.get('/', (req, res) => {
     res.render('home');
 })
 
-app.get('/final',(req,res)=>{
+app.get('/final', (req, res) => {
     res.render('final1');
 });
 
 
-app.get('/coc',(req,res)=>{
+app.get('/coc', (req, res) => {
     res.render('coc');
 });
 
+app.post('/users', (req, res) => {
+    console.log(req.body);
+    let {
+        teamName,
+        collegeName,
+        track,
 
-app.get('/registration',(req,res)=>{
+        fname1,
+        dob1,
+        selGen1,
+        email1,
+        mob1,
+        git1,
+        link1,
+        twit1,
+        face1,
+        resume1,
+        tShirt1,
+
+
+        fname2,
+        dob2,
+        selGen2,
+        email2,
+        mob2,
+        git2,
+        link2,
+        twit2,
+        face2,
+        resume2,
+        tShirt2,
+
+        fname3,
+        dob3,
+        selGen3,
+        email3,
+        mob3,
+        git3,
+        link3,
+        twit3,
+        face3,
+        resume3,
+        tShirt3,
+        needs,
+        heardFrom,
+        firstTime,
+        modeOfConduct,
+        reason
+    } = req.body;
+
+    db.collection('users')
+        .add({
+            teamName,
+            collegeName,
+            track,
+            members: [
+                {
+                    fname1,
+                    dob1,
+                    selGen1,
+                    email1,
+                    mob1,
+                    git1,
+                    link1,
+                    twit1,
+                    face1,
+                    resume1,
+                    tShirt1,
+                },
+                {
+                    fname2,
+                    dob2,
+                    selGen2,
+                    email2,
+                    mob2,
+                    git2,
+                    link2,
+                    twit2,
+                    face2,
+                    resume2,
+                    tShirt2,
+                },
+                {
+                    fname3,
+                    dob3,
+                    selGen3,
+                    email3,
+                    mob3,
+                    git3,
+                    link3,
+                    twit3,
+                    face3,
+                    resume3,
+                    tShirt3,
+                },
+            ],
+            needs,
+            heardFrom,
+            firstTime,
+            modeOfConduct,
+            reason
+        }).then(res => {
+            console.log("Successfully added");
+            res.send();
+        }).catch(err => {
+            res.status(500);
+            res.send(err);
+        })
+
+})
+
+app.get('/registration', (req, res) => {
     res.render('form');
 });
 
