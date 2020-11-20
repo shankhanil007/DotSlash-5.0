@@ -172,7 +172,7 @@ jQuery(document).ready(function ($) {
     else if (document.querySelector('#track3').checked) track = 'ethereum';
     let needs = $('#textarea1').val() || 'none';
     let heardFrom = $('#textarea2').val() || 'none';
-
+    let url = 'https://hackdotslash.co.in/users';
     swal({
       title: '<h2>Submission</h2>',
       html: `<h3>Are you sure you want to submit?</h3>`,
@@ -182,68 +182,65 @@ jQuery(document).ready(function ($) {
       allowEnterKey: false,
     }).then((val) => {
       if (val.value === true) {
-        db.collection('users')
-          .add({
+        fetch(url, {
+          method: 'POST',
+          body: JSON.stringify({
             teamName,
             collegeName,
             track,
-            members: [
-              {
-                fname1,
-                dob1,
-                selGen1,
-                email1,
-                mob1,
-                git1,
-                link1,
-                twit1,
-                face1,
-                resume1,
-                tShirt1,
-              },
-              {
-                fname2,
-                dob2,
-                selGen2,
-                email2,
-                mob2,
-                git2,
-                link2,
-                twit2,
-                face2,
-                resume2,
-                tShirt2,
-              },
-              {
-                fname3,
-                dob3,
-                selGen3,
-                email3,
-                mob3,
-                git3,
-                link3,
-                twit3,
-                face3,
-                resume3,
-                tShirt3,
-              },
-            ],
+            fname1,
+            dob1,
+            selGen1,
+            email1,
+            mob1,
+            git1,
+            link1,
+            twit1,
+            face1,
+            resume1,
+            tShirt1,
+            fname2,
+            dob2,
+            selGen2,
+            email2,
+            mob2,
+            git2,
+            link2,
+            twit2,
+            face2,
+            resume2,
+            tShirt2,
+            fname3,
+            dob3,
+            selGen3,
+            email3,
+            mob3,
+            git3,
+            link3,
+            twit3,
+            face3,
+            resume3,
+            tShirt3,
             needs,
             heardFrom,
             firstTime,
             modeOfConduct,
             reason
-          })
-          .then(function (docRef) {
-            Swal({
-              title: 'Success!',
-              text: 'We recieved your form! Thank you for your participation',
-              type: 'success',
-              confirmButtonText: 'Cool',
-            }).then(() => {
-              document.location.href = '/final';
-            });
-          })
+          }),
+          headers: {
+            "Content-type": "application/json"
+          }
+        }).then(function (docRef) {
+          console.log(docRef);
+          Swal({
+            title: 'Success!',
+            text: 'We recieved your form! Thank you for your participation',
+            type: 'success',
+            confirmButtonText: 'Cool',
+          }).then(() => {
+            document.location.href = '/final';
+          });
+        })
           .catch(function (error) {
             alert(
               'The Document was not uploaded. Please check your internet or browser console for more information.'
