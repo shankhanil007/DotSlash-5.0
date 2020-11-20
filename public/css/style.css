@@ -22,6 +22,7 @@ GALERY
 SPEAKERS
 EVENTS
 SPONSORS
+REGISTRATION FORM
 CONTACT
 CTA
 FOOTER
@@ -1038,7 +1039,7 @@ button:not(:focus) {
 }
 
 /*----------------------------*\
-	FORM 
+	REGISTRATION FORM 
 \*----------------------------*/
 
 .reason-text{
@@ -1047,6 +1048,23 @@ button:not(:focus) {
 
 .select-wrapper+label{
   font-size: 1rem !important;
+}
+
+.input-field label{
+  width: 100%;
+  text-align: left;
+}
+
+.add-member{
+  margin: 20px;
+}
+
+.resume{
+  top: 0px !important
+}
+
+.mode{
+  position: relative !important;
 }
 
 /*=========================================================
