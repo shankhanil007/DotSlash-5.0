@@ -168,7 +168,7 @@ jQuery(document).ready(function ($) {
       allowEnterKey: false,
     }).then((val) => {
       if (val.value === true) {
-        fetch('/users', {
+        fetch('/api/users', {
           method: 'POST',
           body: JSON.stringify({
             teamName,
@@ -217,23 +217,35 @@ jQuery(document).ready(function ($) {
             "Content-type": "application/json"
           }
         }).then(function (docRef) {
-          console.log(docRef);
-          Swal({
-            title: 'Success!',
-            text: 'We recieved your form! Thank you for your participation',
-            type: 'success',
-            confirmButtonText: 'Cool',
-          }).then(() => {
-            document.location.href = '/final';
-          });
+          if(docRef.status === 200){
+            Swal({
+              title: 'Success!',
+              text: 'We recieved your form! Thank you for your participation',
+              type: 'success',
+              confirmButtonText: 'Cool',
+            }).then(() => {
+              document.location.href = '/final';
+            });
+          }
+          else{
+            Swal({
+              title: 'Error!',
+              text: 'The Document was not uploaded. Please check your internet or browser console for more information.',
+              type: 'error',
+              confirmButtonText: 'Okay',
+            })
+          }
         })
-          .catch(function (error) {
-            alert(
-              'The Document was not uploaded. Please check your internet or browser console for more information.'
-            );
-            console.log(error);
-            return;
-          });
+        .catch(function (error) {
+          Swal({
+            title: 'Error!',
+            text: 'The Document was not uploaded. Please check your internet or browser console for more information.',
+            type: 'error',
+            confirmButtonText: 'Okay',
+          })
+          console.log(error);
+          return;
+        });
       }
     });
 

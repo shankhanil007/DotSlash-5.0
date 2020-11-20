@@ -41,8 +41,7 @@ app.get('/coc', (req, res) => {
     res.render('coc');
 });
 
-app.post('/users', (req, res) => {
-    console.log(req.body);
+app.post('/api/users', (req, res) => {
     let {
         teamName,
         collegeName,
@@ -90,7 +89,6 @@ app.post('/users', (req, res) => {
         modeOfConduct,
         reason
     } = req.body;
-
     db.collection('users')
         .add({
             teamName,
@@ -142,12 +140,13 @@ app.post('/users', (req, res) => {
             firstTime,
             modeOfConduct,
             reason
-        }).then(res => {
-            console.log("Successfully added");
-            res.send();
+        }).then(result => {
+            // console.log("Successfully added");
+            // console.log(result);
+            res.set('Sec-Fetch-Site', 'same-origin');
+            res.status(200).json({success: true});
         }).catch(err => {
-            res.status(500);
-            res.send(err);
+            res.status(500).json({success: false, error: err});
         })
 
 })
