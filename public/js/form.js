@@ -230,7 +230,7 @@ jQuery(document).ready(function ($) {
           else{
             Swal({
               title: 'Error!',
-              text: 'The Document was not uploaded. Please check your internet or browser console for more information.',
+              text: 'The Document was not uploaded. Please check your internet connection or contact us.',
               type: 'error',
               confirmButtonText: 'Okay',
             })
