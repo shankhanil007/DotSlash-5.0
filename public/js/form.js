@@ -217,7 +217,15 @@ jQuery(document).ready(function ($) {
             "Content-type": "application/json"
           }
         }).then(function (docRef) {
-          if(docRef.status === 200){
+          if (docRef.status === 503) {
+            Swal({
+              title: 'Error!',
+              text: 'Email already present! Please check your email.',
+              type: 'error',
+              confirmButtonText: 'Okay',
+            });
+          }
+          else if(docRef.status === 200){
             Swal({
               title: 'Success!',
               text: 'We recieved your form! Thank you for your participation',
