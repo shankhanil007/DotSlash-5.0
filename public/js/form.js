@@ -1,7 +1,7 @@
 function modalShow() {
   Swal({
     title: `<h3>Instructions!</h3>`,
-    html: `<h5>The Deadline for Registrations is 7th January 2021</h5>
+    html: `<h5>The Deadline for Registrations is 6th January 2021</h5>
     <ol>
     <li><b>1. </b>First Team member will be our point of contact.Further Details will be conveyed to him.</li>
     <li><b>2. </b>Enter the College name of first team member</li>
@@ -12,7 +12,7 @@ function modalShow() {
     <li><b>6.</b> You are not allowed to submit multiple forms and your first entry will only be considered as
       valid. Please be very sure before you submit!</li>
     <li><b>7.</b> You can also give a google doc with your professional details in case you dont have a resume. Nevertheless a resume is preferred.</li>
-    <li><b>8.</b> In case of any query feel free to contact us at <code>darshil@hackdotslash.co.in</code></li>
+    <li><b>8.</b> In case of any query feel free to contact us at <a href="mailto:darshil@hackdotslash.co.in"><code>darshil@hackdotslash.co.in</code></a></li>
   </ol>`,
     type: 'info',
     confirmButtonText: 'Cool',
@@ -43,9 +43,12 @@ jQuery(document).ready(function ($) {
   $('.reason-text').prop('disabled', true);
   $('.reason-text').prop('required', false);
 
-  $('#mode-of-conduct-yes,#mode-of-conduct-no,#mode-of-conduct-maybe').on('click', function () {
-    handleClickModeOfConduct();
-  });
+  $('#mode-of-conduct-yes,#mode-of-conduct-no,#mode-of-conduct-maybe').on(
+    'click',
+    function () {
+      handleClickModeOfConduct();
+    }
+  );
 
   $('#nextMem').on('change', (e) => {
     let mem2 = $('.member2');
@@ -137,15 +140,18 @@ jQuery(document).ready(function ($) {
     let resume3 = $('#resume_url3').val() || 'none';
     let tShirt3 = $('#tshirt3').val() || 'none';
     let firstTime = 'yes';
-    let modeOfConduct = 'offline', reason = 'none';
+    let modeOfConduct = 'offline',
+      reason = 'none';
     if (document.querySelector('#test1').checked) firstTime = 'yes';
     else if (document.querySelector('#test2').checked) firstTime = 'no';
     else {
       alert('Please Tell Us whether you are new to hackathons!');
       return;
     }
-    if (document.querySelector('#mode-of-conduct-yes').checked) modeOfConduct = 'offline';
-    else if (document.querySelector('#mode-of-conduct-no').checked) modeOfConduct = 'online';
+    if (document.querySelector('#mode-of-conduct-yes').checked)
+      modeOfConduct = 'offline';
+    else if (document.querySelector('#mode-of-conduct-no').checked)
+      modeOfConduct = 'online';
     else if (document.querySelector('#mode-of-conduct-maybe').checked) {
       modeOfConduct = 'maybe';
       reason = document.querySelector('.reason-text').value;
@@ -168,7 +174,7 @@ jQuery(document).ready(function ($) {
       allowEnterKey: false,
     }).then((val) => {
       if (val.value === true) {
-        fetch('/users', {
+        fetch('/api/users', {
           method: 'POST',
           body: JSON.stringify({
             teamName,
@@ -211,26 +217,47 @@ jQuery(document).ready(function ($) {
             heardFrom,
             firstTime,
             modeOfConduct,
-            reason
+            reason,
           }),
           headers: {
-            "Content-type": "application/json"
-          }
-        }).then(function (docRef) {
-          console.log(docRef);
-          Swal({
-            title: 'Success!',
-            text: 'We recieved your form! Thank you for your participation',
-            type: 'success',
-            confirmButtonText: 'Cool',
-          }).then(() => {
-            document.location.href = '/final';
-          });
+            'Content-type': 'application/json',
+          },
         })
+          .then(function (docRef) {
+            if (docRef.status === 503) {
+              Swal({
+                title: 'Error!',
+                text: 'Email already present! Please check your email.',
+                type: 'error',
+                confirmButtonText: 'Okay',
+              });
+            } else if (docRef.status === 200) {
+              Swal({
+                title: 'Success!',
+                text: 'We recieved your form! Thank you for your participation',
+                type: 'success',
+                confirmButtonText: 'Cool',
+              }).then(() => {
+                document.location.href = '/final';
+              });
+            } else {
+              Swal({
+                title: 'Error!',
+                text:
+                  'The Document was not uploaded. Please check your internet or browser console for more information.',
+                type: 'error',
+                confirmButtonText: 'Okay',
+              });
+            }
+          })
           .catch(function (error) {
-            alert(
-              'The Document was not uploaded. Please check your internet or browser console for more information.'
-            );
+            Swal({
+              title: 'Error!',
+              text:
+                'The Document was not uploaded. Please check your internet or browser console for more information.',
+              type: 'error',
+              confirmButtonText: 'Okay',
+            });
             console.log(error);
             return;
           });
@@ -250,4 +277,3 @@ function handleClickModeOfConduct() {
     $('.reason-text').prop('required', false);
   }
 }
-
