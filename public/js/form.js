@@ -217,7 +217,15 @@ jQuery(document).ready(function ($) {
             "Content-type": "application/json"
           }
         }).then(function (docRef) {
-          if(docRef.status === 200){
+          if (docRef.status === 503) {
+            Swal({
+              title: 'Error!',
+              text: 'Email already present! Please check your email.',
+              type: 'error',
+              confirmButtonText: 'Okay',
+            });
+          }
+          else if(docRef.status === 200){
             Swal({
               title: 'Success!',
               text: 'We recieved your form! Thank you for your participation',
@@ -230,7 +238,7 @@ jQuery(document).ready(function ($) {
           else{
             Swal({
               title: 'Error!',
-              text: 'The Document was not uploaded. Please check your internet or browser console for more information.',
+              text: 'The Document was not uploaded. Please check your internet connection or contact us.',
               type: 'error',
               confirmButtonText: 'Okay',
             })

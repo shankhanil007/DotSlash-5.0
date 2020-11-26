@@ -3,20 +3,19 @@ const app = express();
 const hbs = require('hbs');
 const http = require('http').Server(app);
 const port = process.env.PORT || 5000;
-const admin = require("firebase-admin");
+const admin = require('firebase-admin');
 
-const serviceAccount = require("./serviceAccountKey.json");
+const serviceAccount = require('./serviceAccountKey.json');
 
 admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
-    databaseURL: "https://dotslash4-8b10e.firebaseio.com"
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: 'https://dotslash4-8b10e.firebaseio.com',
 });
 let db = admin.firestore();
 
 let server = app.listen(port, () => {
-    console.log('listening on port 5000');
-})
-
+  console.log('listening on port 5000');
+});
 
 // express middleware setup
 app.set('view engine', 'hbs');
@@ -29,141 +28,156 @@ hbs.registerPartials(__dirname + '/views/partials');
 
 // App routes
 app.get('/', (req, res) => {
-    res.render('home');
-})
+  res.render('home');
+});
 
 app.get('/final', (req, res) => {
-    res.render('final1');
+  res.render('final1');
 });
-
 
 app.get('/coc', (req, res) => {
-    res.render('coc');
+  res.render('coc');
 });
 
-app.post('/api/users', (req, res) => {
-    let {
-        teamName,
-        collegeName,
-        track,
+let matchString = (s1, s2, s3, s4, s5, s6) => {
+  let strSet = new Set();
+  let strArr = [s1, s2, s3, s4, s5, s6].filter((str) => {
+    return str !== 'none';
+  });
+  strArr.forEach((str) => {
+    strSet.add(str);
+  });
+  if (strSet.size === strArr.length) return false;
+  else return true;
+};
 
-        fname1,
-        dob1,
-        selGen1,
-        email1,
-        mob1,
-        git1,
-        link1,
-        twit1,
-        face1,
-        resume1,
-        tShirt1,
+app.post('/api/users', async (req, res) => {
+  let {
+    teamName,
+    collegeName,
+    track,
 
+    fname1,
+    dob1,
+    selGen1,
+    email1,
+    mob1,
+    git1,
+    link1,
+    twit1,
+    face1,
+    resume1,
+    tShirt1,
 
-        fname2,
-        dob2,
-        selGen2,
-        email2,
-        mob2,
-        git2,
-        link2,
-        twit2,
-        face2,
-        resume2,
-        tShirt2,
+    fname2,
+    dob2,
+    selGen2,
+    email2,
+    mob2,
+    git2,
+    link2,
+    twit2,
+    face2,
+    resume2,
+    tShirt2,
 
-        fname3,
-        dob3,
-        selGen3,
-        email3,
-        mob3,
-        git3,
-        link3,
-        twit3,
-        face3,
-        resume3,
-        tShirt3,
-        needs,
-        heardFrom,
-        firstTime,
-        modeOfConduct,
-        reason
-    } = req.body;
-    let emailSent = false;
-    db.collection('users')
-        .add({
-            teamName,
-            collegeName,
-            track,
-            members: [
-                {
-                    fname1,
-                    dob1,
-                    selGen1,
-                    email1,
-                    mob1,
-                    git1,
-                    link1,
-                    twit1,
-                    face1,
-                    resume1,
-                    tShirt1,
-                },
-                {
-                    fname2,
-                    dob2,
-                    selGen2,
-                    email2,
-                    mob2,
-                    git2,
-                    link2,
-                    twit2,
-                    face2,
-                    resume2,
-                    tShirt2,
-                },
-                {
-                    fname3,
-                    dob3,
-                    selGen3,
-                    email3,
-                    mob3,
-                    git3,
-                    link3,
-                    twit3,
-                    face3,
-                    resume3,
-                    tShirt3,
-                },
-            ],
-            needs,
-            heardFrom,
-            firstTime,
-            modeOfConduct,
-            emailSent,
-            reason
-        }).then(result => {
-            res.set('Sec-Fetch-Site', 'same-origin');
-            res.status(200).json({ success: true });
-        }).catch(err => {
-            res.status(500).json({ success: false, error: err });
-        })
+    fname3,
+    dob3,
+    selGen3,
+    email3,
+    mob3,
+    git3,
+    link3,
+    twit3,
+    face3,
+    resume3,
+    tShirt3,
+    needs,
+    heardFrom,
+    firstTime,
+    modeOfConduct,
+    reason,
+  } = req.body;
+  let emailSent = false;
+  let found = false;
 
-})
+  try {
+    const docs = await db.collection('users').get();
+    docs.forEach((doc) => {
+      let docEmail1 = doc.data().members[0].email1;
+      let docEmail2 = doc.data().members[1].email2;
+      let docEmail3 = doc.data().members[2].email3;
+      if (
+        matchString(docEmail1, docEmail2, docEmail3, email1, email2, email3)
+      ) {
+        found = true;
+      }
+    });
+    if (found) {
+      res.status(503);
+      throw new Error('Duplicate Email entry found');
+    }
+    const user = await db.collection('users').add({
+      teamName,
+      collegeName,
+      track,
+      members: [
+        {
+          fname1,
+          dob1,
+          selGen1,
+          email1,
+          mob1,
+          git1,
+          link1,
+          twit1,
+          face1,
+          resume1,
+          tShirt1,
+        },
+        {
+          fname2,
+          dob2,
+          selGen2,
+          email2,
+          mob2,
+          git2,
+          link2,
+          twit2,
+          face2,
+          resume2,
+          tShirt2,
+        },
+        {
+          fname3,
+          dob3,
+          selGen3,
+          email3,
+          mob3,
+          git3,
+          link3,
+          twit3,
+          face3,
+          resume3,
+          tShirt3,
+        },
+      ],
+      needs,
+      heardFrom,
+      firstTime,
+      modeOfConduct,
+      emailSent,
+      reason,
+    });
+    res.set('Sec-Fetch-Site', 'same-origin');
+    res.status(200).json({ success: true });
+  } catch (err) {
+    let statusCode = res.statusCode === 200 ? 500 : res.statusCode;
+    // console.log(statusCode);
+    res.status(statusCode).json({ success: false, error: err });
+  }
+});
 
 app.get('/registration', (req, res) => {
-    res.render('form');
+  res.render('form');
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
