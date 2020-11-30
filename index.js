@@ -95,8 +95,6 @@ app.post('/api/users', async (req, res) => {
     needs,
     heardFrom,
     firstTime,
-    modeOfConduct,
-    reason,
   } = req.body;
   let emailSent = false;
   let found = false;
@@ -165,9 +163,7 @@ app.post('/api/users', async (req, res) => {
       needs,
       heardFrom,
       firstTime,
-      modeOfConduct,
       emailSent,
-      reason,
     });
     res.set('Sec-Fetch-Site', 'same-origin');
     res.status(200).json({ success: true });
