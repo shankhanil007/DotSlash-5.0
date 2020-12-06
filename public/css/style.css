@@ -532,7 +532,6 @@ button:not(:focus) {
 .atlastmoment {
   font-size: 25px;
 }
-
 /*=========================================================
 	GALERY
 ===========================================================*/
@@ -1410,6 +1409,9 @@ div.home-content {
     margin-right: auto;
     padding: 10px;
     border-radius: 25px;
+  }
+  div#about{
+    margin-top: 10rem;
   }
 }
 
