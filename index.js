@@ -1,11 +1,11 @@
 const express = require('express');
-const app = express();
 const hbs = require('hbs');
-const http = require('http').Server(app);
-const port = process.env.PORT || 5000;
 const admin = require('firebase-admin');
-
+const compression = require('compression');
 const serviceAccount = require('./serviceAccountKey.json');
+
+const app = express();
+const port = process.env.PORT || 5000;
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -13,9 +13,9 @@ admin.initializeApp({
 });
 let db = admin.firestore();
 
-let server = app.listen(port, () => {
-  console.log('listening on port 5000');
-});
+
+// compress all responses
+app.use(compression())
 
 // express middleware setup
 app.set('view engine', 'hbs');
@@ -177,3 +177,5 @@ app.post('/api/users', async (req, res) => {
 app.get('/registration', (req, res) => {
   res.render('form');
 });
+
+app.listen(port);
