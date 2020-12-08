@@ -451,6 +451,7 @@ button:not(:focus) {
 #home {
   height: 100vh;
   position: relative;
+  margin-bottom: 45px;
 }
 
 #home .home-wrapper {
