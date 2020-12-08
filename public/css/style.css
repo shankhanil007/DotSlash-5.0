@@ -945,7 +945,7 @@ button:not(:focus) {
 
 img.img-responsive {
   float: right;
-  height: 50rem;
+  height: 40rem;
   margin-bottom: 30rem;
   z-index: -1;
 }
