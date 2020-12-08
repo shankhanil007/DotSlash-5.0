@@ -23,28 +23,45 @@
 
   <title>DotSlash</title>
   <link rel="shortcut icon" type="image/png" href="/img/logo_only1.png" />
+
+  <!-- Google font -->
   {{!-- <link rel="preload" href="https://fonts.googleapis.com/css?family=Poppins:400,700,900" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,700,900"></noscript>
-  loading syles async --}}
-  <!-- Google font -->
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:800i|Amaranth:700i|Kanit:700i|Lato:900i|Source+Sans+Pro:900i" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:800i|Amaranth:700i|Kanit:700i|Lato:900i|Source+Sans+Pro:900i"></noscript> --}}
+  
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700,900" rel="stylesheet">
   <link
     href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:800i|Amaranth:700i|Kanit:700i|Lato:900i|Source+Sans+Pro:900i"
     rel="stylesheet">
-  <!-- Bootstrap -->
+  
+  <!-- Bootstrap (required to load initially)-->
   <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
 
   <!-- Owl Carousel -->
-  <link type="text/css" rel="stylesheet" href="css/owl.carousel.css" />
-  <link type="text/css" rel="stylesheet" href="css/owl.theme.default.css" />
-
+  {{!-- <link rel="preload" href="css/owl.carousel.css" as="style"/> --}}
+  {{!-- <link rel="preload" href="css/owl.theme.default.css" as="style"/> --}}
+  <link rel="preload" href="css/owl.carousel.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/owl.carousel.css"></noscript>
+  <link rel="preload" href="css/owl.theme.default.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/owl.theme.default.css"></noscript>
+  
   <!-- Font Awesome Icon -->
-  <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Custom stlylesheet -->
-  <link type="text/css" rel="stylesheet" href="css/style.css" />
+  {{!-- <link rel="stylesheet" href="css/font-awesome.min.css"> --}}
+  {{!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> --}}
+  <link rel="preload" href="css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/font-awesome.min.css"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/icon?family=Material+Icons" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></noscript>
+  
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
+  <!-- Custom stlylesheet  (required to load initially)-->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css"></noscript>
+  
+  {{!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" > --}}
 </head>
 <style>
   .rotate {
