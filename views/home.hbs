@@ -62,25 +62,25 @@
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css"></noscript>
   
   {{!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" > --}}
+  <style>
+    .rotate {
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+      -webkit-transition: all 300ms ease-in-out;
+      -moz-transition: all 300ms ease-in-out;
+      -o-transition: all 300ms ease-in-out;
+      transition: all 300ms ease-in-out;
+    }
+
+    .logofixer {
+      position: relative;
+      top: 10px;
+      width: 250px;
+    }
+  </style>
+
 </head>
-<style>
-  .rotate {
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
-    -webkit-transition: all 300ms ease-in-out;
-    -moz-transition: all 300ms ease-in-out;
-    -o-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out;
-  }
-
-  .logofixer {
-    position: relative;
-    top: 10px;
-    width: 250px;
-  }
-</style>
-
 <body>
   <div style="overflow-x: hidden;">
     <!-- Header -->
@@ -142,7 +142,7 @@
             <!-- home content -->
             <div>
               <div class="home-content" style="">
-                <h1 style="font-family: lato"><img src="img/logo_only1.png" class="animated rotateIn delay-1s" style=""
+                <h1 style="font-family: lato"><img src="img/logo_only1.png" alt="logo" class="animated rotateIn delay-1s" style=""
                     width="20%">&nbsp;<span style="color: #bd0c0e">DOT</span><span
                     style="color: black">SLASH</span><span style="color: black; margin-top: 1rem;"> 4.0</span></h1>
                 <h4 class="lead" style="font-size: 25px;color: black; text-shadow:0 0 5px white;">Root to Ideas</h4>
@@ -833,7 +833,7 @@
                 <h3 class="title"><span style="color: #000;">Frequently Asked &nbsp;</span><span
                     style="color: #bd0c0e;">Questions</span></h3>
               </div>
-              <img src="img/faq.svg">
+              <img src="img/faq.svg" alt="faq">
             </div>
           </div>
 
@@ -865,7 +865,7 @@
                     process
                     work?
                   </h3>
-                  <p class="collapse box1" class="box" id="num3">We’re looking for people who "do"! Folks who are
+                  <p class="collapse box1 box" id="num3">We’re looking for people who "do"! Folks who are
                     passionate enough to work on crazy world-changing ideas. We’ll
                     get to know more about your abilities from the past projects, GitHub profile,
                     participation/awards in
