@@ -10,14 +10,22 @@
 	// Mobile nav toggle
 	$('.navbar-toggle').on('click', function () {
 		$('.main-nav').toggleClass('open');
-		$('.hamburger').toggleClass('open');
-		
 	});
 
 	// Fixed nav
 	$(window).on('scroll', function () {
 		var wScroll = $(this).scrollTop();
-		$('#header').addClass('fixed-navbar');
+		var $win = $(window);
+		var winH = $win.height();
+		var winW = $win.width();
+		if(winW < 1024 ){
+			winH = 1200;
+		}
+		if (wScroll > winH) {
+			$('#header').addClass('fixed-navbar');
+		} else {
+			$('#header').removeClass('fixed-navbar'); 
+		}
 	});
 
 	// Smooth scroll
@@ -25,7 +33,7 @@
 		e.preventDefault();
 		var hash = this.hash;
 		$('html, body').animate({
-			scrollTop: $(this.hash).offset().top - 72
+			scrollTop: $(this.hash).offset().top - 40
 		}, 800);
 	});
 
