@@ -134,4 +134,7 @@ $primary-text: #ddd;
 }
 
 @import 'chatbot';
+@import 'footer';
+
+// mobile must be in end;
 @import 'mobile';
