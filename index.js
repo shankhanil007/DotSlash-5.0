@@ -1,11 +1,11 @@
 const express = require('express');
-const app = express();
 const hbs = require('hbs');
-const http = require('http').Server(app);
-const port = process.env.PORT || 5000;
 const admin = require('firebase-admin');
-
+const compression = require('compression');
 const serviceAccount = require('./serviceAccountKey.json');
+
+const app = express();
+const port = process.env.PORT || 5000;
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -13,9 +13,9 @@ admin.initializeApp({
 });
 let db = admin.firestore();
 
-let server = app.listen(port, () => {
-  console.log('listening on port 5000');
-});
+
+// compress all responses
+app.use(compression())
 
 // express middleware setup
 app.set('view engine', 'hbs');
@@ -52,7 +52,6 @@ let matchString = (s1, s2, s3, s4, s5, s6) => {
 };
 
 app.post('/api/users', async (req, res) => {
-  console.log(req.body);
   let {
     teamName,
     collegeName,
@@ -96,8 +95,6 @@ app.post('/api/users', async (req, res) => {
     needs,
     heardFrom,
     firstTime,
-    modeOfConduct,
-    reason,
   } = req.body;
   let emailSent = false;
   let found = false;
@@ -111,7 +108,6 @@ app.post('/api/users', async (req, res) => {
       if (
         matchString(docEmail1, docEmail2, docEmail3, email1, email2, email3)
       ) {
-        // console.log('found');
         found = true;
       }
     });
@@ -167,15 +163,13 @@ app.post('/api/users', async (req, res) => {
       needs,
       heardFrom,
       firstTime,
-      modeOfConduct,
       emailSent,
-      reason,
     });
     res.set('Sec-Fetch-Site', 'same-origin');
     res.status(200).json({ success: true });
   } catch (err) {
     let statusCode = res.statusCode === 200 ? 500 : res.statusCode;
-    console.log(statusCode);
+    // console.log(statusCode);
     res.status(statusCode).json({ success: false, error: err });
   }
 });
@@ -183,3 +177,5 @@ app.post('/api/users', async (req, res) => {
 app.get('/registration', (req, res) => {
   res.render('form');
 });
+
+app.listen(port);

@@ -40,15 +40,12 @@ jQuery(document).ready(function ($) {
     modalShow();
   });
 
-  $('.reason-text').prop('disabled', true);
-  $('.reason-text').prop('required', false);
+  // $('.reason-text').prop('disabled', true);
+  // $('.reason-text').prop('required', false);
 
-  $('#mode-of-conduct-yes,#mode-of-conduct-no,#mode-of-conduct-maybe').on(
-    'click',
-    function () {
-      handleClickModeOfConduct();
-    }
-  );
+  // $('#mode-of-conduct-yes,#mode-of-conduct-no,#mode-of-conduct-maybe').on('click', function () {
+  //   handleClickModeOfConduct();
+  // });
 
   $('#nextMem').on('change', (e) => {
     let mem2 = $('.member2');
@@ -140,25 +137,22 @@ jQuery(document).ready(function ($) {
     let resume3 = $('#resume_url3').val() || 'none';
     let tShirt3 = $('#tshirt3').val() || 'none';
     let firstTime = 'yes';
-    let modeOfConduct = 'offline',
-      reason = 'none';
+    // let modeOfConduct = 'offline', reason = 'none';
     if (document.querySelector('#test1').checked) firstTime = 'yes';
     else if (document.querySelector('#test2').checked) firstTime = 'no';
     else {
       alert('Please Tell Us whether you are new to hackathons!');
       return;
     }
-    if (document.querySelector('#mode-of-conduct-yes').checked)
-      modeOfConduct = 'offline';
-    else if (document.querySelector('#mode-of-conduct-no').checked)
-      modeOfConduct = 'online';
-    else if (document.querySelector('#mode-of-conduct-maybe').checked) {
-      modeOfConduct = 'maybe';
-      reason = document.querySelector('.reason-text').value;
-      if (reason === '') {
-        alert('Please tell us your concerns on mode of conduct');
-      }
-    }
+    // if (document.querySelector('#mode-of-conduct-yes').checked) modeOfConduct = 'offline';
+    // else if (document.querySelector('#mode-of-conduct-no').checked) modeOfConduct = 'online';
+    // else if (document.querySelector('#mode-of-conduct-maybe').checked) {
+    //   modeOfConduct = 'maybe';
+    //   reason = document.querySelector('.reason-text').value;
+    //   if (reason === '') {
+    //     alert('Please tell us your concerns on mode of conduct');
+    //   }
+    // }
     let track = 'software';
     if (document.querySelector('#track1').checked) track = 'software';
     else if (document.querySelector('#track2').checked) track = 'hardware';
@@ -216,51 +210,48 @@ jQuery(document).ready(function ($) {
             needs,
             heardFrom,
             firstTime,
-            modeOfConduct,
-            reason,
           }),
           headers: {
-            'Content-type': 'application/json',
-          },
-        })
-          .then(function (docRef) {
-            if (docRef.status === 503) {
-              Swal({
-                title: 'Error!',
-                text: 'Email already present! Please check your email.',
-                type: 'error',
-                confirmButtonText: 'Okay',
-              });
-            } else if (docRef.status === 200) {
-              Swal({
-                title: 'Success!',
-                text: 'We recieved your form! Thank you for your participation',
-                type: 'success',
-                confirmButtonText: 'Cool',
-              }).then(() => {
-                document.location.href = '/final';
-              });
-            } else {
-              Swal({
-                title: 'Error!',
-                text:
-                  'The Document was not uploaded. Please check your internet or browser console for more information.',
-                type: 'error',
-                confirmButtonText: 'Okay',
-              });
-            }
-          })
-          .catch(function (error) {
+            "Content-type": "application/json"
+          }
+        }).then(function (docRef) {
+          if (docRef.status === 503) {
             Swal({
               title: 'Error!',
-              text:
-                'The Document was not uploaded. Please check your internet or browser console for more information.',
+              text: 'Email already present! Please check your email.',
               type: 'error',
               confirmButtonText: 'Okay',
             });
-            console.log(error);
-            return;
-          });
+          }
+          else if(docRef.status === 200){
+            Swal({
+              title: 'Success!',
+              text: 'We recieved your form! Thank you for your participation',
+              type: 'success',
+              confirmButtonText: 'Cool',
+            }).then(() => {
+              document.location.href = '/final';
+            });
+          }
+          else{
+            Swal({
+              title: 'Error!',
+              text: 'The Document was not uploaded. Please check your internet connection or contact us.',
+              type: 'error',
+              confirmButtonText: 'Okay',
+            })
+          }
+        })
+        .catch(function (error) {
+          Swal({
+            title: 'Error!',
+            text: 'The Document was not uploaded. Please check your internet or browser console for more information.',
+            type: 'error',
+            confirmButtonText: 'Okay',
+          })
+          console.log(error);
+          return;
+        });
       }
     });
 
@@ -268,12 +259,13 @@ jQuery(document).ready(function ($) {
   });
 });
 
-function handleClickModeOfConduct() {
-  if ($('#mode-of-conduct-maybe').is(':checked')) {
-    $('.reason-text').prop('disabled', false);
-    $('.reason-text').prop('required', true);
-  } else {
-    $('.reason-text').prop('disabled', true);
-    $('.reason-text').prop('required', false);
-  }
-}
+// function handleClickModeOfConduct() {
+//   if ($('#mode-of-conduct-maybe').is(':checked')) {
+//     $('.reason-text').prop('disabled', false);
+//     $('.reason-text').prop('required', true);
+//   } else {
+//     $('.reason-text').prop('disabled', true);
+//     $('.reason-text').prop('required', false);
+//   }
+// }
+

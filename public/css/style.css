@@ -191,7 +191,7 @@ button:not(:focus) {
 
 .section {
   position: relative;
-  padding: 90px 0px;
+  padding: 45px 0px;
 }
 
 .section-bg {
@@ -451,6 +451,7 @@ button:not(:focus) {
 #home {
   height: 100vh;
   position: relative;
+  margin-bottom: 45px;
 }
 
 #home .home-wrapper {
@@ -495,6 +496,17 @@ button:not(:focus) {
   text-align: center;
 }
 
+#hackathon__dates{
+  box-shadow: 2px 2px #5d5d5d;
+  font-size: 20px;
+  color: #bd0c0e;
+  font-weight:600;
+  border: 0.5px solid #5d5d5d;
+  border-radius: 7px;
+  padding: 10px;
+
+}
+
 /*=========================================================
 	ABOUT
 ===========================================================*/
@@ -521,7 +533,6 @@ button:not(:focus) {
 .atlastmoment {
   font-size: 25px;
 }
-
 /*=========================================================
 	GALERY
 ===========================================================*/
@@ -932,13 +943,46 @@ button:not(:focus) {
   border-radius: 25px;
 }
 
+img.img-responsive {
+  float: right;
+  height: 40rem;
+  margin-bottom: 30rem;
+  z-index: -1;
+}
+
+img.img-responsive.img-vector {
+  float: left;
+  margin-top: 4rem;
+  height: auto;
+  margin-bottom: 0;
+}
+
+img.img-bg {
+  float: left;
+  height: 30rem;
+  position: absolute;
+  top: 18%;
+  z-index: -1;
+}
+
+div.home-content {
+  background-color: white;
+  position: absolute;
+  padding: 15px;
+  width: 65%;
+  margin: 0;
+  top: 40%;
+  box-shadow: 0 5px 10px #ddd;
+  border-radius: 25px;
+}
+
 /* Devfolio setup */
 #devfolio-apply-now1 {
   -ms-flex-align: center;
   -webkit-box-align: center;
   align-items: center;
   background: #bd0c0e;
-  border-radius: 3px;
+  border-radius: 7px;
   border: none;
   color: #ffffff;
   cursor: pointer;
@@ -955,6 +999,8 @@ button:not(:focus) {
 
 #devfolio-apply-now1:not([disabled]) {
   cursor: pointer;
+  outline: none;
+
 }
 
 #devfolio-apply-now1:hover {
@@ -1317,39 +1363,6 @@ button:not(:focus) {
   margin-bottom: 30px;
 }
 
-img.img-responsive {
-  float: right;
-  height: 50rem;
-  margin-bottom: 20rem;
-  z-index: -1;
-}
-
-img.img-responsive.img-vector {
-  float: left;
-  margin-top: 8rem;
-  height: auto;
-  margin-bottom: 0;
-}
-
-img.img-bg {
-  float: left;
-            height: 30rem;
-            position: absolute;
-            top: 18%;
-            z-index: -1;
-}
-
-div.home-content {
-  background-color: white;
-  position: absolute;
-  padding: 20px;
-  width: 65%;
-  margin: 0;
-  top: 50%;
-  box-shadow: 0 5px 10px #ddd;
-  border-radius: 25px;
-}
-
 /*=========================================================
 	RESPONSIVE
 ===========================================================*/
@@ -1397,6 +1410,9 @@ div.home-content {
     margin-right: auto;
     padding: 10px;
     border-radius: 25px;
+  }
+  div#about{
+    margin-top: 10rem;
   }
 }
 
