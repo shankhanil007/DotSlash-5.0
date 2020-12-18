@@ -565,10 +565,6 @@ button:not(:focus) {
 /* #galery-owl.owl-theme .owl-item.active .galery-item img {
 } */
 
-#galery-owl.owl-theme .owl-nav {
-  margin-top: 0px;
-  display: none;
-}
 
 #galery-owl.owl-theme .owl-nav [class*='owl-'] {
   position: absolute;
@@ -588,11 +584,11 @@ button:not(:focus) {
 }
 
 #galery-owl.owl-theme .owl-prev {
-  left: 15px;
+  left: 2%;
 }
 
 #galery-owl.owl-theme .owl-next {
-  right: 15px;
+  right: 2%;
 }
 
 /*=========================================================

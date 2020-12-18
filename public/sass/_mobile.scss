@@ -90,6 +90,9 @@
     .section-bg{
         border-radius: 0;
     }
+    #galery-owl.owl-theme .owl-nav{
+        display: none;
+    }
 }
 
 @media (max-width: 280px){
