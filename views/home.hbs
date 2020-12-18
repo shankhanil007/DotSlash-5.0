@@ -251,42 +251,6 @@
                 target="_blank"><button id="slackBtn"><i class="fa fa-slack"></i> Slack Channel</button></a> --}}
             </div>
             <!-- /about content -->
-
-            <!-- Numbers -->
-            <div id="numbers">
-              <!-- row -->
-              <div class="row">
-                <!-- number -->
-                <div class="col-md-4 col-sm-4 col-xs-6">
-                  <div class="number">
-                    <h3><span class="counter" data-from="0" data-to="30" data-speed="1500">0</span></h3>
-                    <p>Hours</p>
-                  </div>
-                </div>
-                <!-- /number -->
-
-                <!-- number -->
-                <div class="col-md-4 col-sm-4 col-xs-6">
-                  <div class="number">
-                    <h3><span class="counter" data-from="0" data-to="900" data-speed="1500">0</span>+</h3>
-                    <p>Applications</p>
-                  </div>
-                </div>
-                <!-- /number -->
-
-                <!-- number -->
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                  <div class="number">
-                    <h3><span class="counter" data-from="0" data-to="150" data-speed="1500">0</span>+</h3>
-                    <p>Participants</p>
-                  </div>
-                </div>
-                <!-- /number -->
-
-              </div>
-              <!-- /row -->
-            </div>
-            <!-- /Numbers -->
           </div>
         </div>
         <!-- row -->
@@ -457,45 +421,53 @@
           <div class="row">
             <div class="row">
               <div class="section-title">
-                <h3 class="title"><span>Prizes worth more than Rs. 33 Lakhs!!</span></h3>
+                <h3 class="title"><span>Prizes worth more than Rs 33 Lakhs</span></h3>
               </div>
             </div>
 
-            <div class="col-md-4 col-sm-4 col-xs-12">
-              <div class="content text-center">
+            <div class="col-md-4 col-sm-4 col-xs-12 flip">
+              <div class="front content text-center" style="background: linear-gradient(to top left, #3a6186, #89253e);">
                 <h2>First Prize</h2>
+                {{!-- <h1>&#x20B9; 10,000</h1> --}}
+                <p>
+                  To be announced...
+                <p>
               </div>
-              <a class="sponsor">
-                <img src="./img/cup.png" alt="">
-              </a>
+              <div class="back">
+                <h2 class="content text-center">Details</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel eum totam cumque corrupti obcaecati magni?
+                </p>
+              </div>
             </div>
-            <div class="col-md-4 col-sm-4 col-xs-12">
-              <div class="content text-center">
+            <div class="col-md-4 col-sm-4 col-xs-12 flip">
+              <div class="front content text-center" style="background: linear-gradient(to top left, #ffa17f, #00223e);">
                 <h2>Second Prize</h2>
+                <p>
+                  To be announced...
+                <p>
               </div>
-              <a class="sponsor">
-                <img src="./img/cup.png" alt="">
-              </a>
+              <div class="back">
+                <h2 class="content text-center">Details</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel eum totam cumque corrupti obcaecati magni?
+                </p>
+              </div>
             </div>
-            <div class="col-md-4 col-sm-4 col-xs-12">
-              <div class="content text-center">
+            <div class="col-md-4 col-sm-4 col-xs-12 flip">
+              <div class="front content text-center" style="background: linear-gradient(to top left, #1CB5E0, #ffaf40)">
                 <h2>Third Prize</h2>
+                <p>
+                  To be announced...
+                <p>
               </div>
-              <a class="sponsor">
-                <img src="./img/cup.png" alt="">
-              </a>
-            </div>
-            <div>
-              <div class="content text-center">
-                <h3 style="color:#000 ;text-decoration: none; ">
-                  To be announced soon...
-                </h3>
+              <div class="back">
+                <h2 class="content text-center">Details</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel eum totam cumque corrupti obcaecati magni?
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- /PRIZES -->
 
       <!-- Current-Sponsors -->
       <div id="sponsors" class="section">
@@ -742,7 +714,7 @@
                   what can be done. We're open for all! We'll take care of the food and stay - virtually leaving
                   you no excuse to not build something that'll blow our minds.</p>
                 {{!-- <button class="" id="devfolio-apply-now2">Apply with Devfolio</button> --}}
-                <button class="" id="devfolio-apply-now1" onclick="register()">Register </button>
+                <button class="register" onclick="register()">Register</button>
 
               </div>
             </div>

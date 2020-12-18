@@ -100,13 +100,13 @@ ol {
 
 .main-btn {
   display: inline-block;
-  padding: 14px 50px;
-  background: #bd0c0e;
-  box-shadow: 3px 3px #840a0c;
+  padding: 16px 30px;
+  background: -webkit-linear-gradient(to right, #ff416c, #ff4b2b);
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
   color: #fff;
-  text-transform: uppercase;
   border: none;
-  border-radius: 10px;
+  border-radius: 7px;
+  box-shadow: 0 3px 5px -3px black;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
 }
@@ -114,7 +114,8 @@ ol {
 .main-btn:hover,
 .main-btn:focus {
   color: #fff;
-  opacity: 0.8;
+  background: linear-gradient(to right, darken(#ff416c, 3),darken( #ff4b2b, 3));
+  transform: scale(1.01);
 }
 
 .input {
@@ -1489,3 +1490,6 @@ div.home-content {
   }
 }
 
+
+@import 'custom-card';
+@import 'prizes';
