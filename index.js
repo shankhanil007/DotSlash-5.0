@@ -34,10 +34,6 @@ app.get('/final', (req, res) => {
   res.render('final1');
 });
 
-app.get('/dummy', (req, res) => {
-  res.render('dummy_home');
-});
-
 app.get('/coc', (req, res) => {
   res.render('coc');
 });
