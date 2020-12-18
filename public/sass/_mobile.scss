@@ -87,6 +87,17 @@
             line-height: 30px;
         }
     }
+    .section-bg{
+        border-radius: 0;
+    }
+    #galery-owl.owl-theme .owl-nav{
+        display: none;
+    }
+    #become-sponsor{
+        .dotted-line{
+            display: none;
+        }
+    }
 }
 
 @media (max-width: 280px){

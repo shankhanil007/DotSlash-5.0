@@ -197,12 +197,13 @@ button:not(:focus) {
 
 .section-bg {
   position: absolute;
-  background-image: 
-    linear-gradient(
-      rgba(255, 255, 255, 0.1),
-      rgba(255, 255, 255, 0.1)
-    ),
-    url(/img/main.jpg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.1));
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  // filter: blur(2px);
+  // -webkit-filter: blur(2px);
+  border-radius: 20px;
   left: 0;
   top: 0;
   right: 0;
@@ -447,7 +448,6 @@ button:not(:focus) {
 ===========================================================*/
 
 #home {
-  height: 100vh;
   position: relative;
   margin-bottom: 45px;
 }
@@ -565,10 +565,6 @@ button:not(:focus) {
 /* #galery-owl.owl-theme .owl-item.active .galery-item img {
 } */
 
-#galery-owl.owl-theme .owl-nav {
-  margin-top: 0px;
-  display: none;
-}
 
 #galery-owl.owl-theme .owl-nav [class*='owl-'] {
   position: absolute;
@@ -588,11 +584,11 @@ button:not(:focus) {
 }
 
 #galery-owl.owl-theme .owl-prev {
-  left: 15px;
+  left: 2%;
 }
 
 #galery-owl.owl-theme .owl-next {
-  right: 15px;
+  right: 2%;
 }
 
 /*=========================================================
@@ -1084,6 +1080,28 @@ div.home-content {
 .tracks p {
   margin-top: 20px;
 }
+#become-sponsor{
+  position: relative;
+  background: #1d1d22;
+  border-radius: 25px;
+  box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+  .title, h4, a{
+    color: #ddd;
+  }
+  h4 a:hover{
+    color: #ff4b2b;
+  }
+  .dotted-line{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1500px !important;
+    padding: 0;
+    margin-left: -180px !important;
+    z-index: -55;
+    max-height: 800px !important;
+  }
+}
 
 /*----------------------------*\
     REGISTRATION FORM 
@@ -1410,9 +1428,6 @@ div.home-content {
     padding: 10px;
     border-radius: 25px;
   }
-  div#about{
-    margin-top: 10rem;
-  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -1489,7 +1504,3 @@ div.home-content {
     text-align: center;
   }
 }
-
-
-@import 'custom-card';
-@import 'prizes';
