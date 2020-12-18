@@ -13,9 +13,8 @@ admin.initializeApp({
 });
 let db = admin.firestore();
 
-
 // compress all responses
-app.use(compression())
+app.use(compression());
 
 // express middleware setup
 app.set('view engine', 'hbs');
@@ -33,6 +32,10 @@ app.get('/', (req, res) => {
 
 app.get('/final', (req, res) => {
   res.render('final1');
+});
+
+app.get('/dummy', (req, res) => {
+  res.render('dummy_home');
 });
 
 app.get('/coc', (req, res) => {
