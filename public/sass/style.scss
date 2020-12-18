@@ -1052,6 +1052,7 @@ div.home-content {
   background-color: #850a0c;
 }
 
+
 /* Tracks */
 
 .tracks .col-xs-6 {
@@ -1079,6 +1080,28 @@ div.home-content {
 }
 .tracks p {
   margin-top: 20px;
+}
+#become-sponsor{
+  position: relative;
+  background: #1d1d22;
+  border-radius: 25px;
+  box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+  .title, h4, a{
+    color: #ddd;
+  }
+  h4 a:hover{
+    color: #ff4b2b;
+  }
+  .dotted-line{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1500px !important;
+    padding: 0;
+    margin-left: -180px !important;
+    z-index: -55;
+    max-height: 800px !important;
+  }
 }
 
 /*----------------------------*\
@@ -1482,4 +1505,3 @@ div.home-content {
     text-align: center;
   }
 }
-
