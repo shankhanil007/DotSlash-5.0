@@ -1,0 +1,103 @@
+@media (max-width: 1024px) {
+    .hero {
+        background-size: 1500px;
+        background-position: center;
+        height: 1200px;
+        &__content{
+            .row{
+                display: block;
+            }
+            &__details{
+                .chat{
+                    backdrop-filter: unset;
+                }
+                .hackathon__details{
+                    margin-left: auto;
+                    margin-right: auto;
+                    &__title{
+                        font-size: 40px;
+                        text-align: center;
+                    }
+                }
+                .countdown__wrapper{
+                    margin-left: auto;
+                    margin-right: auto;
+                    p{
+                        text-align: center;
+                    }
+                }
+                .registration__details{
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                .chat{
+                    margin: 30px auto;
+                    max-width: 320px;
+                }
+            }
+            &__banner{
+                margin-left: 0;
+                .banner_img{
+                    max-width: 200px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px){
+    .hero{
+        .hero__content{
+            margin: 0;
+            padding: 0 10px;
+            &__details{
+                min-width: 300px;
+                
+                .countdown__wrapper{
+                    p{
+                        letter-spacing: 4px;
+                        font-size: 14px;
+                    }
+                    .countdown span{
+                        font-size: 3rem;
+                    }
+                }
+            }
+            &__banner{
+                &_slogan{
+                    div span{
+                        padding: 0 5px;
+                    }
+                    .save_the_date{
+                        font-size: 18px;
+                        letter-spacing: 12px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    #footer{
+        .wave_box span{
+            font-size: 24px;
+        }
+        .contact-social a{
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+        }
+    }
+}
+
+@media (max-width: 280px){
+    .hero__content{
+        &__details{
+            .chat{
+                width: 250px;
+            }
+        }
+        .save_the_date{
+            letter-spacing: 8px !important;
+        }
+    }
+}

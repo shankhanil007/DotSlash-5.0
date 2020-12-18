@@ -25,36 +25,24 @@
   <title>DotSlash</title>
   <link rel="shortcut icon" type="image/png" href="/img/logo_only1.png" />
 
-  <!-- Google font -->
-  {{!--
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Poppins:400,700,900" as="style"
-    onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,700,900">
-  </noscript>
-  <link rel="preload"
-    href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:800i|Amaranth:700i|Kanit:700i|Lato:900i|Source+Sans+Pro:900i"
-    as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:800i|Amaranth:700i|Kanit:700i|Lato:900i|Source+Sans+Pro:900i">
-  </noscript> --}}
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700,900" rel="stylesheet">
   <link
-    href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:800i|Amaranth:700i|Kanit:700i|Lato:900i|Source+Sans+Pro:900i"
+    href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:800i|Amaranth:700i|Kanit:700i|Lato:900i|Lato|Source+Sans+Pro:900i"
     rel="stylesheet">
 
-  <!-- Bootstrap (required to load initially)-->
   <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
 
   <!-- Owl Carousel -->
   <link rel="stylesheet" href="css/owl.carousel.css">
   <link rel="stylesheet" href="css/owl.theme.default.css">
+
   <!-- Font Awesome Icon -->
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Custom stlylesheet  (required to load initially)-->
+
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="./css/herostyles.css">
+  <link rel="stylesheet" href="./css/background.css" />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
   <style>
@@ -79,94 +67,152 @@
 
 <body>
   <div style="overflow-x: hidden;">
-    <!-- Header -->
-    <header id="header" class="transparent-navbar">
-      <!-- container -->
-      <div class="container">
-        <!-- navbar header -->
-        <div class="navbar-header">
-          <!-- Logo -->
-          <div class="navbar-brand">
-            <a class="logo" href="/">
-              <img class="logo-img logofix" src="./img/image.png" alt="logo">
-              <img class="logo-alt-img" src="./img/image.png" alt="logo">
-            </a>
-          </div>
-          <!-- /Logo -->
 
-          <!-- Mobile toggle -->
-          <button class="navbar-toggle hamburger">
-            <i class="fa fa-bars"></i>
-          </button>
-          <!-- /Mobile toggle -->
-        </div>
-        <!-- /navbar header -->
-
-        <!-- Navigation -->
-        <nav id="nav">
-          <ul class="main-nav nav navbar-nav navbar-right">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            {{!-- <li><a href="#schedule">Schedule</a></li> --}}
-            <li><a href="#sponsors">Sponsors</a></li>
-            <li><a href="#faq">FAQs</a></li>
-            <li><a href="#prizes">Prizes</a></li>
-            <li><a href="/coc">Code of conduct</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-        <!-- /Navigation -->
+    <!-- Hero -->
+    <div class="hero" id="home">
+      <div class="hero__background">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
       </div>
-      <!-- /container -->
-    </header>
-    <!-- /Header -->
-
-    <!-- Home -->
-    <div id="home">
-
-      <!-- home wrapper -->
-      <div class="home-wrapper">
+      <!-- Header -->
+      <header id="header" class="transparent-navbar">
         <!-- container -->
-        <div class="container" style="">
-          <img src="img/main.svg" class="img-responsive" alt="" style="">
-          <img src="img/main-vector.png" class="img-responsive img-vector" alt="">
-          {{!-- <img src="img/illustration.png" class="img-bg" alt="" style="
-            
-        "> --}}
-          <!-- row -->
-          <div class="row">
-            <!-- home content -->
-            <div>
-              <div class="home-content" style="">
-                <h1 style="font-family: lato"><img src="img/logo_only1.png" alt="logo"
-                    class="animated rotateIn delay-1s" style="" width="20%">&nbsp;<span
-                    style="color: #bd0c0e">DOT</span><span style="color: black">SLASH</span><span
-                    style="color: black; margin-top: 1rem;"> 4.0</span></h1>
-                <h4 class="lead" style="font-size: 25px;color: black; text-shadow:0 0 5px white;">Root to Ideas</h4>
-                <button class="lead" id="devfolio-apply-now1" onclick="register()">Register </button>
-                <h3 class="lead" id="hackathon__dates">
-                  30-31st January, 2021</h3>
-                <h3 class="lead"><span style="font-size:20px">Powered by</span> <span
-                    style="font-weight: 600">ASHINE</span></h3>
-                {{!-- <button class="" id="devfolio-apply-now1"><svg class="logo" xmlns="http://www.w3.org/2000/svg"
-                    fill="#fff" viewBox="0 0 115.46 123.46" style="height:24px;width:24px;margin-right:8px">
-                    <path
-                      d="M115.46 68a55.43 55.43 0 0 1-50.85 55.11S28.12 124 16 123a12.6 12.6 0 0 1-10.09-7.5 15.85 15.85 0 0 0 5.36 1.5c4 .34 10.72.51 20.13.51 13.82 0 28.84-.38 29-.38h.26a60.14 60.14 0 0 0 54.72-52.47c.05 1.05.08 2.18.08 3.34z" />
-                    <path
-                      d="M110.93 55.87A55.43 55.43 0 0 1 60.08 111s-36.48.92-48.58-.12C5 110.29.15 104.22 0 97.52l.2-83.84C.38 7 5.26.94 11.76.41c12.11-1 48.59.12 48.59.12a55.41 55.41 0 0 1 50.58 55.34z" />
-                  </svg>Apply
-                </button> --}}
-              </div>
+        <div class="container">
+          <!-- navbar header -->
+          <div class="navbar-header">
+            <!-- Logo -->
+            <div class="navbar-brand">
+              <a class="logo" href="/">
+                <img class="logo-alt-img" src="./img/logo_only1.png" alt="logo" />
+                <img class="logo-img logofix" src="./img/logo_only1.png" alt="logo">
+              </a>
             </div>
-            <!-- /home content -->
+            <!-- /Logo -->
+
+            <!-- Mobile toggle -->
+            <button class="navbar-toggle">
+              <i class="fa fa-bars"></i>
+            </button>
+            <!-- /Mobile toggle -->
           </div>
-          <!-- /row -->
+          <!-- /navbar header -->
+
+          <!-- Navigation -->
+          <nav id="nav">
+            <ul class="main-nav nav navbar-nav navbar-right">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#prizes">Prizes</a></li>
+              <li><a href="#sponsors">Sponsors</a></li>
+              <li><a href="#faq">FAQs</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+          <!-- /Navigation -->
         </div>
         <!-- /container -->
+      </header>
+      <div class="hero__content">
+        <div class="row">
+          <div class="hero__content__details">
+            <div class="hackathon__details">
+              <h1 class="hackathon__details__title"><span>Dot</span><span>Slash</span><span> 4.0</span></h1>
+              <div class="hackathon__details__discription">
+                <div>Root to ideas</div>
+              </div>
+              <div class="chat">
+                <div class="header chat__header">
+                  <div class="header__title">Dotslash Server</div>
+                  <div class="header__members">
+                    <div class="header__member"></div>
+                    <div class="header__member header__member--server"></div>
+                  </div>
+                </div>
+                <div class="message message--browser">
+                  <div class="message__content">Hey Server</div>
+                </div>
+                <div class="message message--server">
+                  <div class="message__content">Hey Folk 👋</div>
+                </div>
+                <div class="message message--browser">
+                  <div class="message__content">What is the date of hackathon?</div>
+                </div>
+                <div class="message message--server">
+                  <div class="message__content">It's 30-31st Jan 2021</div>
+                </div>
+                <div class="message message--browser">
+                  <div class="message__content">OK</div>
+                </div>
+                <div class="message message--browser">
+                  <div class="message__content">What's the last date of registration?</div>
+                </div>
+                <div class="message message--server">
+                  <div class="message__content">6th Jan 2021</div>
+                </div>
+                <div class="message message--browser">
+                  <div class="message__content">What is the mode of conduct?</div>
+                </div>
+                <div class="message message--server">
+                  <div class="message__content">Online</div>
+                </div>
+                <div class="message message--server">
+                  <div class="message__content">Anything else??</div>
+                </div>
+                <div class="message message--server">
+                  <div class="message__content">You still there??</div>
+                </div>
+                <div class="message message--left">
+                  <div class="message__content">Server left the chat</div>
+                </div>
+                <div class="message message--typing message--browser">
+                  <div class="message__content">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="countdown__wrapper">
+              <p>
+                Hackathon starts in
+              </p>
+              <div id="timer" class="countdown"></div>
+            </div>
+            <div class="registration__details">
+              <button class="register" onclick="register()">Register</button>
+            </div>
+          </div>
+          <div class="hero__content__banner">
+            <img class="banner_img animated rotateIn delay-1s" src="./img/main_banner.png" alt="banner">
+            <div class="hero__content__banner_slogan">
+              <div class="animated delay-5s fadeOut">
+                <span class="fadeIn animated delay-1s">
+                  Register
+                </span>
+                <span class="fadeIn animated delay-2s">
+                  Compete
+                </span>
+                <span class="fadeIn animated delay-3s">
+                  Win
+                </span>
+                <span class="fadeIn animated delay-4s">
+                  Brag
+                </span>
+              </div>
+              <div class="save_the_date zoomIn animated delay-5s">
+                Save the Date
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
-      <!-- /home wrapper -->
     </div>
-    <!-- /Home -->
+    <!-- /Hero -->
+
+
     <!-- About -->
     <div id="about" class="section">
       <!-- container -->
@@ -204,42 +250,6 @@
                 target="_blank"><button id="slackBtn"><i class="fa fa-slack"></i> Slack Channel</button></a> --}}
             </div>
             <!-- /about content -->
-
-            <!-- Numbers -->
-            <div id="numbers">
-              <!-- row -->
-              <div class="row">
-                <!-- number -->
-                <div class="col-md-4 col-sm-4 col-xs-6">
-                  <div class="number">
-                    <h3><span class="counter" data-from="0" data-to="30" data-speed="1500">0</span></h3>
-                    <p>Hours</p>
-                  </div>
-                </div>
-                <!-- /number -->
-
-                <!-- number -->
-                <div class="col-md-4 col-sm-4 col-xs-6">
-                  <div class="number">
-                    <h3><span class="counter" data-from="0" data-to="900" data-speed="1500">0</span>+</h3>
-                    <p>Applications</p>
-                  </div>
-                </div>
-                <!-- /number -->
-
-                <!-- number -->
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                  <div class="number">
-                    <h3><span class="counter" data-from="0" data-to="150" data-speed="1500">0</span>+</h3>
-                    <p>Participants</p>
-                  </div>
-                </div>
-                <!-- /number -->
-
-              </div>
-              <!-- /row -->
-            </div>
-            <!-- /Numbers -->
           </div>
         </div>
         <!-- row -->
@@ -410,45 +420,58 @@
           <div class="row">
             <div class="row">
               <div class="section-title">
-                <h3 class="title"><span>Prizes worth more than Rs. 33 Lakhs!!</span></h3>
+                <h3 class="title"><span>Prizes worth more than Rs 33 Lakhs</span></h3>
               </div>
             </div>
 
-            <div class="col-md-4 col-sm-4 col-xs-12">
-              <div class="content text-center">
+            <div class="col-md-4 col-sm-4 col-xs-12 flip">
+              <div class="front content text-center"
+                style="background: linear-gradient(to top left, #3a6186, #89253e);">
                 <h2>First Prize</h2>
+                {{!-- <h1>&#x20B9; 10,000</h1> --}}
+                <p>
+                  To be announced...
+                <p>
               </div>
-              <a class="sponsor">
-                <img src="./img/cup.png" alt="">
-              </a>
+              <div class="back">
+                <h2 class="content text-center">Details</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel eum totam cumque corrupti obcaecati
+                  magni?
+                </p>
+              </div>
             </div>
-            <div class="col-md-4 col-sm-4 col-xs-12">
-              <div class="content text-center">
+            <div class="col-md-4 col-sm-4 col-xs-12 flip">
+              <div class="front content text-center"
+                style="background: linear-gradient(to top left, #ffa17f, #00223e);">
                 <h2>Second Prize</h2>
+                <p>
+                  To be announced...
+                <p>
               </div>
-              <a class="sponsor">
-                <img src="./img/cup.png" alt="">
-              </a>
+              <div class="back">
+                <h2 class="content text-center">Details</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel eum totam cumque corrupti obcaecati
+                  magni?
+                </p>
+              </div>
             </div>
-            <div class="col-md-4 col-sm-4 col-xs-12">
-              <div class="content text-center">
+            <div class="col-md-4 col-sm-4 col-xs-12 flip">
+              <div class="front content text-center" style="background: linear-gradient(to top left, #1CB5E0, #ffaf40)">
                 <h2>Third Prize</h2>
+                <p>
+                  To be announced...
+                <p>
               </div>
-              <a class="sponsor">
-                <img src="./img/cup.png" alt="">
-              </a>
-            </div>
-            <div>
-              <div class="content text-center">
-                <h3 style="color:#000 ;text-decoration: none; ">
-                  To be announced soon...
-                </h3>
+              <div class="back">
+                <h2 class="content text-center">Details</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel eum totam cumque corrupti obcaecati
+                  magni?
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- /PRIZES -->
 
       <!-- Current-Sponsors -->
       <div id="sponsors" class="section">
@@ -695,7 +718,7 @@
                   what can be done. We're open for all! We'll take care of the food and stay - virtually leaving
                   you no excuse to not build something that'll blow our minds.</p>
                 {{!-- <button class="" id="devfolio-apply-now2">Apply with Devfolio</button> --}}
-                <button class="" id="devfolio-apply-now1" onclick="register()">Register </button>
+                <button class="register" onclick="register()">Register</button>
 
               </div>
             </div>
@@ -755,48 +778,51 @@
 
       </div>
       <!-- /Contact -->
-
-      <!-- Footer -->
-      <footer id="footer">
-        <!-- container -->
-        <div class="container">
-          <!-- row -->
-          <div class="row">
-
-            <!-- footer logo -->
-            <div class="col-md-4">
-              <div class="footer-brand">
-                <a class="logo" href="/">
-                  <img class="logo-img" src="./img/image.png" alt="logo">
-                </a>
-              </div>
-            </div>
-            <!-- /footer logo -->
-
-            <!-- contact social -->
-            <div class="col-md-8">
-              <div class="contact-social">
-
-                <a href="https://www.facebook.com/hackatdotslash/" rel="noopener noreferrer" target="_blank"><i
-                    class="fa fa-facebook"></i></a>
-                <a href="https://twitter.com/hackatdotslash" rel="noopener noreferrer" target="_blank"><i
-                    class="fa fa-twitter"></i></a>
-                <a href="https://www.instagram.com/hackatdotslash/" target="_blank"><i class="fa fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/company/hackatdotslash/" rel="noopener noreferrer" target="_blank">
-                  <i class="fa fa-linkedin"></i>
-                </a>
-                <a href="mailto:hackatdotslash@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
-              </div>
-            </div>
-            <!-- /contact social -->
-
-          </div>
-          <!-- /row -->
-        </div>
-        <!-- /container -->
-      </footer>
-      <!-- /Footer -->
     </div>
+    <!-- Footer -->
+    <footer id="footer">
+      <!-- container -->
+      <div class="wave_box container">
+        <!-- row -->
+        <div class="row">
+          <!-- footer logo -->
+          <div class="col-md-4">
+            <div class="footer-brand">
+              <a class="logo" href="/">
+                <img class="logo-img" src="./img/logo_only1.png" alt="logo" />
+              </a>
+              <span>Dot</span><span>Slash</span><span> 4.0</span>
+            </div>
+          </div>
+          <!-- /footer logo -->
+
+          <!-- contact social -->
+          <div class="col-md-8">
+            <div class="contact-social">
+              <a href="https://www.facebook.com/hackatdotslash/" rel="noopener noreferrer" target="_blank"><i
+                  class="fa fa-facebook"></i></a>
+              <a href="https://twitter.com/hackatdotslash" rel="noopener noreferrer" target="_blank"><i
+                  class="fa fa-twitter"></i></a>
+              <a href="https://www.instagram.com/hackatdotslash/" target="_blank"><i class="fa fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/hackatdotslash/" rel="noopener noreferrer" target="_blank">
+                <i class="fa fa-linkedin"></i>
+              </a>
+              <a href="mailto:hackatdotslash@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
+            </div>
+          </div>
+          <!-- /contact social -->
+          <div class="coc">
+            <a href="/coc">Code of Conduct</a>
+          </div>
+          <div class="copyright">
+            ©2021 DOTSLASH
+          </div>
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /container -->
+    </footer>
+    <!-- /Footer -->
   </div>
   <!-- jQuery Plugins -->
   <script src="js/jquery.min.js"></script>
@@ -805,9 +831,11 @@
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/jquery.stellar.min.js"></script>
   <script src="js/jquery.countTo.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
+  <script src="./js/countdown.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+  <script src="./js/chatroom.js"></script>
   <script src="js/main.js"></script>
-  {{!--
-  <script src="js/devfolio.js"></script> --}}
   <script>
     for (let i = 0; i < 13; i++) {
       $('.arrow' + i).on("click", function (event) {
