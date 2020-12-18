@@ -197,12 +197,13 @@ button:not(:focus) {
 
 .section-bg {
   position: absolute;
-  background-image: 
-    linear-gradient(
-      rgba(255, 255, 255, 0.1),
-      rgba(255, 255, 255, 0.1)
-    ),
-    url(/img/main.jpg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.1));
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  // filter: blur(2px);
+  // -webkit-filter: blur(2px);
+  border-radius: 20px;
   left: 0;
   top: 0;
   right: 0;
@@ -447,7 +448,6 @@ button:not(:focus) {
 ===========================================================*/
 
 #home {
-  height: 100vh;
   position: relative;
   margin-bottom: 45px;
 }
@@ -1410,9 +1410,6 @@ div.home-content {
     padding: 10px;
     border-radius: 25px;
   }
-  div#about{
-    margin-top: 10rem;
-  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -1490,6 +1487,3 @@ div.home-content {
   }
 }
 
-
-@import 'custom-card';
-@import 'prizes';

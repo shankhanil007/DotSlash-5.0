@@ -696,7 +696,7 @@
       <!-- CTA -->
       <div id="cta" class="section">
         <!-- background image -->
-        <div class="section-bg" style="background-image:url(./img/background03.jpg)"
+        <div class="section-bg" style="background-image:url(./img/background004.jpg);"
           data-stellar-background-ratio="0.5">
         </div>
         <!-- /background image -->
@@ -851,7 +851,7 @@
   <script src="js/jquery.waypoints.min.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/jquery.countTo.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/stellar.js/0.6.1/jquery.stellar.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"></script>
   <script src="./js/countdown.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
@@ -863,21 +863,6 @@
         $('.arrow-img' + i).toggleClass('rotate');
       });
     }
-
-    jQuery(document).ready(function ($) {
-      let alterClass = function () {
-        let ww = document.body.clientWidth;
-        if (ww < 415) {
-          $('.logofix').addClass('logofixer');
-        } else if (ww >= 416) {
-          $('.logofix').removeClass('logofixer');
-        };
-      };
-      $(window).resize(function () {
-        alterClass();
-      });
-      alterClass();
-    });
   </script>
 
 </body>
