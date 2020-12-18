@@ -114,7 +114,7 @@ ol {
 .main-btn:hover,
 .main-btn:focus {
   color: #fff;
-  background: linear-gradient(to right, darken(#ff416c, 3),darken( #ff4b2b, 3));
+  background: linear-gradient(to right, darken(#ff416c, 3), darken(#ff4b2b, 3));
   transform: scale(1.01);
 }
 
@@ -150,7 +150,7 @@ textarea.input {
 .swal2-popup .swal2-styled:focus {
   box-shadow: none !important;
 }
-.swal2-popup{
+.swal2-popup {
   width: 55em !important;
 }
 h2.swal2-title h2 {
@@ -169,7 +169,6 @@ div#swal2-content ol li {
   margin-bottom: 0.5rem !important;
 }
 
-
 /* button:focus {
   background-color: #bd0c10 !important;
 }
@@ -181,7 +180,12 @@ button:not(:focus) {
   border-radius: 10px !important;
 }
 
-.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus {
   outline: 0 !important;
   color: #fff !important;
 }
@@ -197,7 +201,10 @@ button:not(:focus) {
 
 .section-bg {
   position: absolute;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.1));
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.1)
+  );
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -267,7 +274,6 @@ button:not(:focus) {
     max-height: 50px;
     width: auto;
   }
-
 }
 
 #header.transparent-navbar:not(.fixed-navbar) .navbar-brand .logo .logo-img {
@@ -301,7 +307,7 @@ button:not(:focus) {
   top: 0;
   background-color: transparent;
   backdrop-filter: blur(3px);
-  border-bottom: 1px solid #DADADA30;
+  border-bottom: 1px solid #dadada30;
 }
 
 #header.fixed-navbar {
@@ -494,15 +500,14 @@ button:not(:focus) {
   text-align: center;
 }
 
-#hackathon__dates{
+#hackathon__dates {
   box-shadow: 2px 2px #5d5d5d;
   font-size: 20px;
   color: #bd0c0e;
-  font-weight:600;
+  font-weight: 600;
   border: 0.5px solid #5d5d5d;
   border-radius: 7px;
   padding: 10px;
-
 }
 
 /*=========================================================
@@ -564,7 +569,6 @@ button:not(:focus) {
 
 /* #galery-owl.owl-theme .owl-item.active .galery-item img {
 } */
-
 
 #galery-owl.owl-theme .owl-nav [class*='owl-'] {
   position: absolute;
@@ -994,7 +998,6 @@ div.home-content {
 #devfolio-apply-now1:not([disabled]) {
   cursor: pointer;
   outline: none;
-
 }
 
 #devfolio-apply-now1:hover {
@@ -1080,18 +1083,20 @@ div.home-content {
 .tracks p {
   margin-top: 20px;
 }
-#become-sponsor{
+#become-sponsor {
   position: relative;
   background: #1d1d22;
   border-radius: 25px;
-  box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
-  .title, h4, a{
+  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+  .title,
+  h4,
+  a {
     color: #ddd;
   }
-  h4 a:hover{
+  h4 a:hover {
     color: #ff4b2b;
   }
-  .dotted-line{
+  .dotted-line {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -1107,28 +1112,28 @@ div.home-content {
     REGISTRATION FORM 
 \*----------------------------*/
 
-.reason-text{
+.reason-text {
   display: inline;
 }
 
-.select-wrapper+label{
+.select-wrapper + label {
   font-size: 1rem !important;
 }
 
-.input-field label{
+.input-field label {
   width: 100%;
   text-align: left;
 }
 
-.add-member{
+.add-member {
   margin: 20px;
 }
 
-.resume{
-  top: 0px !important
+.resume {
+  top: 0px !important;
 }
 
-.mode{
+.mode {
   position: relative !important;
 }
 
@@ -1209,7 +1214,8 @@ div.home-content {
   max-height: 50px;
 }
 
-.copyright, .coc{
+.copyright,
+.coc {
   text-align: center;
   margin-top: 10px;
 }
