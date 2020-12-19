@@ -4,7 +4,7 @@ $primary-text: #ddd;
 .hero__content{
     position: relative;
     padding: 0 100px;
-    padding-top: 100px;
+    padding-top: 50px;
     .row{
         display: flex;
         justify-content: space-between;
@@ -44,6 +44,7 @@ $primary-text: #ddd;
             margin-bottom: 30px;
         }
         .hackathon__details{
+            padding-top: 55px;
             width: fit-content;
             &__title{
                 font-family: lato;
