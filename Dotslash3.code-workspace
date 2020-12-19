@@ -12,5 +12,6 @@
                 "savePath": "/public/css",
             }
         ],
+        "liveSassCompile.settings.generateMap": false,
     }
 }

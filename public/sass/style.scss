@@ -247,6 +247,15 @@ button:not(:focus) {
   -ms-transform: translateY(0%);
   transform: translateY(0%);
 }
+.section-subtitle {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  .title{
+    text-decoration: none;
+  }
+
+}
 
 /*=========================================================
     LOGO
