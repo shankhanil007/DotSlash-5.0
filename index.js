@@ -38,14 +38,14 @@ app.get('/coc', (req, res) => {
   res.render('coc');
 });
 
-let matchString = (s1, s2, s3, s4, s5, s6) => {
-  let strSet = new Set();
-  let strArr = [s1, s2, s3, s4, s5, s6].filter((str) => {
-    return str !== 'none';
-  });
-  strArr.forEach((str) => {
-    strSet.add(str);
-  });
+// removes none entries from array
+let sanitize = (strArr) => {
+  return strArr.filter((str) => str !== 'none');
+};
+
+// checks for duplicate strings in array
+let containsDuplicateString = (strArr) => {
+  let strSet = new Set(strArr);
   if (strSet.size === strArr.length) return false;
   else return true;
 };
@@ -105,7 +105,9 @@ app.post('/api/users', async (req, res) => {
       let docEmail2 = doc.data().members[1].email2;
       let docEmail3 = doc.data().members[2].email3;
       if (
-        matchString(docEmail1, docEmail2, docEmail3, email1, email2, email3)
+        containsDuplicateString(
+          sanitize({ docEmail1, docEmail2, docEmail3, email1, email2, email3 })
+        )
       ) {
         found = true;
       }

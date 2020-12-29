@@ -1,4 +1,8 @@
+const options = {
+  yearRange: 50,
+};
+
 $(document).ready(function () {
-  $('.datepicker').datepicker();
+  $('.datepicker').datepicker(options);
   $('select').formSelect();
 });
