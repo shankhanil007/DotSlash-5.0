@@ -101,9 +101,13 @@ $primary-text: #ddd;
       .save_the_date {
         font-size: 28px;
         letter-spacing: 16px;
+        margin-bottom: 15px;
         font-weight: bold;
         text-transform: uppercase;
         text-align: center;
+      }
+      .last-date-info{
+        margin-bottom: 15px;
       }
     }
   }
