@@ -106,15 +106,17 @@ $primary-text: #ddd;
         text-transform: uppercase;
         text-align: center;
       }
-      .last-date-info{
+      .last-date-info {
         margin-bottom: 15px;
       }
     }
   }
 }
 
-.register {
+.register,
+.discord {
   color: $primary-text;
+  margin-right: 20px;
   background: #ff416c;
   background: -webkit-linear-gradient(to right, #ff416c, #ff4b2b);
   background: linear-gradient(to right, #ff416c, #ff4b2b);
@@ -128,11 +130,16 @@ $primary-text: #ddd;
     sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   box-shadow: 0 8px 6px -6px black;
   transition: all 0.3s ease-in-out;
+  a {
+    color: inherit;
+  }
 }
-.register:not([disabled]) {
+.register:not([disabled]),
+.discord:not([disabled]) {
   outline: none;
 }
-.register:hover {
+.register:hover,
+.discord:hover {
   background: linear-gradient(to right, darken(#ff416c, 3), darken(#ff4b2b, 3));
   transform: scale(1.05);
 }
