@@ -53,7 +53,12 @@
             padding: 0 10px;
             &__details{
                 min-width: 300px;
-                
+                .registration__details{
+                    flex-direction: column;
+                    .register{
+                        margin-bottom: 15px;
+                    }
+                }
                 .countdown__wrapper{
                     p{
                         letter-spacing: 4px;

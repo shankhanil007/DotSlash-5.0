@@ -41,6 +41,8 @@ $primary-text: #ddd;
     }
     .registration__details {
       margin-bottom: 30px;
+      display: flex;
+      align-items: center;
     }
     .hackathon__details {
       padding-top: 55px;
