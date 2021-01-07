@@ -174,8 +174,8 @@ app.post('/api/users', async (req, res) => {
   }
 });
 
-app.get('/registration', (req, res) => {
-  res.render('form');
-});
+// app.get('/registration', (req, res) => {
+//   res.render('form');
+// });
 
 app.listen(port);
