@@ -1,7 +1,7 @@
 function modalShow() {
   Swal({
     title: `<h3>Instructions!</h3>`,
-    html: `<h5>The Deadline for Registrations is 6th January 2021</h5>
+    html: `<h5>The Deadline for Registrations is 9th January 2021</h5>
     <ol>
     <li><b>1. </b>First Team member will be our point of contact.Further Details will be conveyed to him.</li>
     <li><b>2. </b>Enter the College name of first team member</li>
