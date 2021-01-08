@@ -86,7 +86,12 @@
     loop: true,
     margin: 0,
     center: true,
-    nav: false,
+    dots: false,
+    nav: true,
+    navText: [
+      '<i class="fa fa-angle-left"></i>',
+      '<i class="fa fa-angle-right"></i>',
+    ],
     autoplay: true,
     navSpeed: 500,
     responsive: {

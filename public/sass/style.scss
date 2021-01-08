@@ -817,10 +817,11 @@ button:not(:focus) {
 .profile {
   background-color: #1d1d22;
   min-height: 50vh;
+  height: 400px;
   // max-width: 80vw;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
   word-wrap: break-word;
@@ -828,7 +829,6 @@ button:not(:focus) {
     margin: 0;
     height: 100%;
     flex: 1 1 auto;
-    align-items: right;
   }
   .content {
     width: 60%;
@@ -877,28 +877,9 @@ button:not(:focus) {
 }
 
 #profile-owl.owl-theme .owl-nav [class*='owl-'] {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  background: transparent;
-  color: #bd0c0e;
-  width: 90px;
-  height: 90px;
-  line-height: 90px;
+  background-color: #333;
   font-size: 40px;
-  border-radius: 50%;
-  padding: 0;
-  margin: 0;
-}
-
-#profile-owl.owl-theme .owl-prev {
-  left: 6%;
-}
-
-#profile-owl.owl-theme .owl-next {
-  right: 6%;
+  width: 80px;
 }
 
 /*=========================================================
