@@ -826,7 +826,6 @@ button:not(:focus) {
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
-  word-wrap: break-word;
   .image-section {
     margin: 0;
     height: 100%;
@@ -839,7 +838,7 @@ button:not(:focus) {
     flex-direction: column;
     text-overflow: ellipsis;
     &-body {
-      color: #ddd;
+      color: #ddd !important;
     }
   }
   .title {

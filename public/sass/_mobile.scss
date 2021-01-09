@@ -110,7 +110,8 @@
   }
   .profile {
     flex-wrap: wrap !important;
-    overflow: visible;
+    // overflow: visible;
+    padding: 0;
     height: auto !important;
     .image-section {
       width: 100%;
@@ -118,6 +119,13 @@
     }
     &_image {
       height: 100%;
+    }
+    .content {
+      margin: 0;
+      width: 100%;
+      &-body {
+        font-size: 10px !important;
+      }
     }
   }
 }
