@@ -1,0 +1,30 @@
+.alumni-section {
+  .alumni-greet {
+    margin-top: 200px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+    text-transform: capitalize;
+    font-family: lato;
+    h1 {
+      color: #bc0d0e;
+    }
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .item {
+    height: 200px;
+    width: 200px;
+    margin: 30px;
+    .card-img img {
+      width: 100%;
+      border-radius: 5%;
+    }
+    .card-body {
+      h3 {
+        text-align: center;
+      }
+    }
+  }
+}
