@@ -8,7 +8,6 @@
     > .back {
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
       color: white;
-      text-align: left;
       background-size: cover;
       background-position: center;
       height: 700px;
@@ -26,6 +25,9 @@
       li {
         list-style-type: disc;
       }
+    }
+    .small {
+      height: 300px;
     }
     .front {
       display: flex;
