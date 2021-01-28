@@ -819,7 +819,6 @@ button:not(:focus) {
   background-color: #1d1d22;
   min-height: 50vh;
   height: 400px;
-  width: 100%;
   margin: 0;
   // max-width: 80vw;
   display: flex;
@@ -846,7 +845,6 @@ button:not(:focus) {
     color: #ddd;
   }
   &_image {
-    object-fit: cover;
     height: 100%;
     width: 100%;
   }
