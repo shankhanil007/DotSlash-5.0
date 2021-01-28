@@ -34,9 +34,9 @@ app.get('/final', (req, res) => {
   res.render('final1');
 });
 
-// app.get('/alumni', (req, res) => {
-//   res.render('alumni');
-// });
+app.get('/alumni', (req, res) => {
+  res.render('alumni');
+});
 
 app.get('/coc', (req, res) => {
   res.render('coc');
