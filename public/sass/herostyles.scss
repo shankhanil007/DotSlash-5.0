@@ -3,7 +3,7 @@ $primary-text: #ddd;
 .hero__content {
   position: relative;
   padding: 0 100px;
-  padding-top: 50px;
+  padding-top: 100px;
   .row {
     display: flex;
     justify-content: space-between;
@@ -84,7 +84,7 @@ $primary-text: #ddd;
     .banner_img {
       max-width: 40rem;
       height: auto;
-      margin-bottom: 20px;
+      // margin-bottom: 20px;
       opacity: 0.9;
     }
     &_slogan {
