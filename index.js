@@ -1,42 +1,46 @@
-const express = require('express');
-const hbs = require('hbs');
-const compression = require('compression');
+const express = require("express");
+const hbs = require("hbs");
+const compression = require("compression");
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 
 // compress all responses
 app.use(compression());
 
 // express middleware setup
-app.set('view engine', 'hbs');
-app.use(express.static(__dirname + '/public'));
+app.set("view engine", "hbs");
+app.use(express.static(__dirname + "/public"));
 app.use(express.json());
 
 // partial setup
-hbs.registerPartials(__dirname + '/views/partials');
+hbs.registerPartials(__dirname + "/views/partials");
 
 // App routes
-app.get('/', (req, res) => {
-  res.render('home');
+app.get("/2021", (req, res) => {
+  res.render("home_4");
 });
 
-app.get('/final', (req, res) => {
-  res.render('final1');
+app.get("/2022", (req, res) => {
+  res.render("home_5");
 });
 
-app.get('/alumni', (req, res) => {
-  res.render('alumni');
+app.get("/final", (req, res) => {
+  res.render("final1");
 });
 
-app.get('/coc', (req, res) => {
-  res.render('coc');
+app.get("/alumni", (req, res) => {
+  res.render("alumni");
 });
 
-app.get('/registration', (req, res) => {
-  res.render('form');
+app.get("/coc", (req, res) => {
+  res.render("coc");
 });
 
-app.use('/api', require('./routes/index.routes'));
+app.get("/registration", (req, res) => {
+  res.render("form");
+});
+
+app.use("/api", require("./routes/index.routes"));
 
 app.listen(port);
