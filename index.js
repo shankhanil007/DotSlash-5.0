@@ -18,11 +18,11 @@ hbs.registerPartials(__dirname + "/views/partials");
 
 // App routes
 app.get("/2021", (req, res) => {
-  res.render("home_4");
+  res.render("home_2022");
 });
 
 app.get("/2022", (req, res) => {
-  res.render("home_5");
+  res.render("home_2022");
 });
 
 app.get("/final", (req, res) => {
