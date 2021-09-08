@@ -52,6 +52,7 @@
       rel="stylesheet"
     />
 
+    <link rel="stylesheet" href="css/meteor.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="./css/herostyles.css" />
     <link rel="stylesheet" href="./css/background.css" />
@@ -64,9 +65,24 @@
       <!-- Hero -->
       <div class="hero" id="home">
         <div class="hero__background">
-          {{! <div id="stars"></div>
+          <div id="stars"></div>
           <div id="stars2"></div>
-          <div id="stars3"></div> }}
+          <div id="stars3"></div>
+          <div class="meteor-1"></div>
+          <div class="meteor-2"></div>
+          <div class="meteor-3"></div>
+          <div class="meteor-4"></div>
+          <div class="meteor-5"></div>
+          <div class="meteor-6"></div>
+          <div class="meteor-7"></div>
+          <div class="meteor-8"></div>
+          <div class="meteor-9"></div>
+          <div class="meteor-10"></div>
+          <div class="meteor-11"></div>
+          <div class="meteor-12"></div>
+          <div class="meteor-13"></div>
+          <div class="meteor-14"></div>
+          <div class="meteor-15"></div>
         </div>
         <!-- Header -->
         <header id="header" class="transparent-navbar">
@@ -82,7 +98,7 @@
                     src="./img/2022/navbar_logo.png"
                     alt="logo"
                   />
-                  <img class="logo-img" src="./img/logo_only1.png" alt="logo" />
+
                 </a>
               </div>
               <!-- /Logo -->
@@ -121,6 +137,7 @@
                 <div class="hackathon__details__discription">
                   <div>Root to ideas</div>
                 </div>
+
               </div>
               <div class="countdown__wrapper">
                 {{! <p>
@@ -190,6 +207,9 @@
                   developers around the world to use their innovative skills to
                   produce something new and useful for the society.
                 </p>
+                {{! <a
+                href="https://join.slack.com/t/dotslashhackathon/shared_invite/enQtODY3MjMwOTIxOTA5LTU1YjdhZWUyOTMwZjk3MTU3NDkyNTlkMWQ0MzNiZTE5ZjRiM2FiYWM3NjdhNzdmM2UzNGZjMWUzMDQ2M2YyN2I"
+                target="_blank"><button id="slackBtn"><i class="fa fa-slack"></i> Slack Channel</button></a> }}
               </div>
               <!-- /about content -->
             </div>
@@ -321,6 +341,15 @@
           </div>
         </div>
         <div class="row">
+          {{! <div class="col-xs-4">
+          <h3>Blockchain</h3>
+          <img src="img/blockchain.jpg" class="img-responsive" alt="">
+          <p>A blockchain is a time-stamped series of immutable records of data bound together by cryptographic rules
+            and managed by a cluster of computers not owned by any single entity.
+            <br>We invite you to brainstorm and create applications that uses this awesome new technology.
+            <br> <b style="color:  #bd0c0e;">The track will be open with no predefined problem statement</b>
+          </p>
+        </div> }}
           <div class="col-md-8 col-md-offset-2">
             <div class="row" style="text-align:center">
               <img
@@ -342,12 +371,412 @@
             <br />
             <br />
           </div>
-
+          {{! <div class="col-xs-6">
+          <h2 style="color: #bd0c0e">Hardware</h2>
+          <img src="img/hardware.png" class="img-responsive" alt="" style="margin: 0 auto; width: auto;">
+          <p style="margin-bottom:5px;">Want to develop your ideas to interact with the physical world? Under this track
+            you can use any microcontroller or microprocessor with any interfacing peripheral to achieve your goal.
+            <br>If you have some special hardware requirements, we request you to bring those alongwith.
+            <br><b style="color:  #bd0c0e;">The track will contain problem statements.</b>
+          </p>
+        </div> }}
           <br />
         </div>
 
-      </div>
+        <div
+          id="schedule"
+          class="section"
+          style="background-color: whitesmoke;"
+        >
+          <!-- container -->
+          <div class="container">
+            <!-- row -->
+            <div class="row">
+              <!-- section title -->
+              <div class="section-title">
+                <h3 class="title"><span
+                    style="color: #bd0c0e;"
+                  >Schedule</span></h3>
+              </div>
+              <!-- /section title -->
 
+              <div class="col-md-8 col-md-offset-2">
+
+                <div class="events-wrapper">
+                  <!-- event -->
+                  <div class="event">
+                    <div class="event-day">
+                      <div>
+                        <span class="day">30</span>
+                        <span class="year">Jan, 2021</span>
+                      </div>
+                    </div>
+                    <div class="event-content">
+                      <p class="event-time"><i class="fa fa-clock-o"></i>
+                        12 : 00 AM</p>
+                      <h3 class="event-title">Problem Statements Released</h3>
+                      <p>Participating Teams will have to select any one of the
+                        problem statements released and build their hack around
+                        it during the hackathon.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- /event -->
+
+                  <!-- event -->
+                  <div class="event">
+                    <div class="event-hour"></div>
+                    <div class="event-content">
+                      <p class="event-time"><i class="fa fa-clock-o"></i>
+                        8 : 30 AM</p>
+                      <h3 class="event-title">Virtual Onboarding</h3>
+                      <p>The teams will be checked in before the main event
+                        commences. Participants are requested to make sure that
+                        their team members are present and all the prerequisites
+                        for the event are fulfilled.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- /event -->
+
+                  <!-- event -->
+                  <div class="event">
+                    <div class="event-hour"></div>
+                    <div class="event-content">
+                      <p class="event-time"><i class="fa fa-clock-o"></i>
+                        9 : 00 AM</p>
+                      <h3 class="event-title">Opening Ceremony</h3>
+                      <p>Inauguration ceremony of DOTSLASH 4.0 will start!
+                        Participants will be briefed on rules and regulations,
+                        schedule and other information regarding hackathon.
+                        Problem Statements willl be thoroughly explained.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- /event -->
+
+                  <!-- event -->
+                  <div class="event">
+                    <div class="event-hour"></div>
+                    <div class="event-content">
+                      <p class="event-time"><i class="fa fa-clock-o"></i>
+                        10 : 00 AM</p>
+                      <h3 class="event-title">Hackathon Begins </h3>
+                      <p>Coding time starts! The participating teams can utilize
+                        their private team rooms on discord server to discuss
+                        and develop their hack based on their chosen problem
+                        statement</p>
+                    </div>
+                  </div>
+                  <!-- /event -->
+
+                  <div class="event">
+                    <div class="event-hour"></div>
+                    <div class="event-content">
+                      <p class="event-time"><i class="fa fa-clock-o"></i>
+                        12 : 00 PM</p>
+                      <h3 class="event-title">Final Problem Statement Selection</h3>
+                      <p>Teams will have to finalise the problem statements they
+                        wish to work upon, after which any changes thus
+                        requested will stand inadmissible.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- event -->
+                  <div class="event">
+                    <div class="event-hour"></div>
+                    <div class="event-content">
+                      <p class="event-time"><i class="fa fa-clock-o"></i>
+                        3: 00 PM</p>
+                      <h3 class="event-title">Mentoring Session</h3>
+                      <p>Mentors will visit each of the participating teams
+                        present. They will provide guidance and counsel to the
+                        teams on how they can improvise their idea or hack they
+                        are working on.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- /event -->
+
+                  <!-- event -->
+                  <div class="event">
+                    <div class="event-day">
+                      <div>
+                        <span class="day">31</span>
+                        <span class="year">Jan, 2021</span>
+                      </div>
+                    </div>
+                    <div class="event-content">
+                      <p class="event-time"><i class="fa fa-clock-o"></i>
+                        9 : 00 AM</p>
+                      <h3 class="event-title">Mentoring Session</h3>
+                      <p>Mentors will visit the teams again. They will help them
+                        come down to the best suited solution for their problem
+                        statements and refine their projects before the final
+                        submissions.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- /event -->
+
+                  <!-- event -->
+                  <div class="event">
+                    <div class="event-hour"></div>
+                    <div class="event-content">
+                      <p class="event-time"><i class="fa fa-clock-o"></i>
+                        2 : 00 PM</p>
+                      <h3 class="event-title">Judging Round </h3>
+                      <p>The judging panel will visit each team to evaluate
+                        their work. The participants will be expected to pitch
+                        their ideas as well as show a demo of their hack within
+                        a stipulated amount of time.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- /event -->
+
+                  <!-- event -->
+                  <div class="event">
+                    <div class="event-hour"></div>
+                    <div class="event-content">
+                      <p class="event-time"><i class="fa fa-clock-o"></i>
+                        4 : 00 PM</p>
+                      <h3 class="event-title">Final Submission - Coding Time
+                        Ends</h3>
+                      <p>The participants will have to submit their final work.
+                        After this point, No addition to the project will be
+                        allowed.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- /event -->
+
+                  <!-- event -->
+                  <div class="event">
+                    <div class="event-hour"></div>
+                    <div class="event-content">
+                      <p class="event-time"><i class="fa fa-clock-o"></i>
+                        4 : 30 PM</p>
+                      <h3 class="event-title">Presentation Round</h3>
+                      <p>Top 8 teams will have to present their ideas and
+                        projects in front of everyone. The Showdown Begins!</p>
+                    </div>
+                  </div>
+                  <!-- /event -->
+
+                  <div class="event">
+                    <div class="event-hour"></div>
+                    <div class="event-content">
+                      <p class="event-time"><i class="fa fa-clock-o"></i>
+                        7 : 30 PM</p>
+                      <h3 class="event-title">Result Declaration</h3>
+                      <p>The judges will declare the winners of DotSlash 4.0.
+                        Prizes for the winners will be revealed followed by the
+                        Closing Ceremony.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /row -->
+          </div>
+          <!-- /container -->
+        </div>
+        <!-- PRIZES -->
+        <div id="prizes" class="section">
+          <div class="container">
+            <div class="row">
+              <div class="row">
+                <div class="section-title">
+                  <h3 class="title">
+                    <span>
+                      Prizes
+                    </span>
+                  </h3>
+                  <h2 style="text-align: center;">
+                    Worth more than 37 Lakhs!!
+                  </h2>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-12 flip">
+                <div
+                  class="front content"
+                  style="background: linear-gradient(to top left, #dbd271, #c09540)"
+                >
+                  <a class="sponsor">
+                    <img src="./img/prize_1.png" alt="" />
+                  </a>
+                  <h3 style="color: white; text-decoration: none;">Worth 1.5
+                    Lakhs+</h3>
+                </div>
+                <div class="back">
+                  <h2 class="content text-center">Details</h2>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Vel eum totam cumque corrupti obcaecati magni?
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-12 flip">
+                <div
+                  class="front content"
+                  style="background: linear-gradient(to top left, #62eea1, #29945f);"
+                >
+                  <a class="sponsor">
+                    <img src="./img/prize_2.png" alt="" />
+                  </a>
+                  <h3 style="color: white; text-decoration: none;">Worth 1.25
+                    Lakhs+</h3>
+                </div>
+                <div class="back">
+                  <h2 class="content text-center">Details</h2>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Vel eum totam cumque corrupti obcaecati magni?
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-12 flip">
+                <div
+                  class="front content"
+                  style="background: linear-gradient(to top left, #dd778d, #9c192a)"
+                >
+                  <a class="sponsor">
+                    <img src="./img/prize_3.png" alt="" />
+                  </a>
+                  <h3 style="color: white; text-decoration: none;">Worth 1
+                    Lakhs+</h3>
+                </div>
+                <div class="back">
+                  <h2 class="content text-center">Details</h2>
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Vel eum totam cumque corrupti obcaecati magni?
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section" id="judges">
+        <div class="section-title">
+          <h3 class="title"><span style="color: #0b0f28"> Our &nbsp;</span><span
+              style="color: #bd0c0e;"
+            >
+              Judges</span>
+          </h3>
+        </div>
+        <div class="container">
+          <div id="profile-owl" class="owl-carousel owl-theme">
+            <div class="row">
+              <div
+                class="profile-item col-md-12 col-12 col-lg-12 col-sm-12 col-xl-12"
+              >
+                <div class="profile">
+                  <div class="content">
+                    <h1 class="title"> Ankit Rastogi</h1>
+                    <div class="content-body">
+                      <p>Senior Vice President of MakeMyTrip</p>
+                      <p>Gold Medalist, BE Computer Engg. SVNIT 2003</p>
+                    </div>
+                  </div>
+                  <div class="image-section">
+                    <img
+                      class="profile_image"
+                      src="img/judge_1.jfif"
+                      alt="profile-pic"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div
+                class="profile-item col-md-12 col-12 col-lg-12 col-sm-12 col-xl-12"
+              >
+                <div class="profile">
+                  <div class="content">
+                    <h1 class="title">Anand Chowdhary</h1>
+                    <div class="content-body">
+                      <p>Co founder and CTO of Koj</p>
+                      <p>Featured in Forbes 30 under 30 Asia 2018</p>
+                      <p>Co founder and former CEO of Oswald Labs</p>
+                    </div>
+                  </div>
+                  <div class="image-section">
+                    <img
+                      class="profile_image"
+                      src="img/judge_2.jpg"
+                      alt="profile-pic"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div
+                class="profile-item col-md-12 col-12 col-lg-12 col-sm-12 col-xl-12"
+              >
+                <div class="profile">
+                  <div class="content">
+                    <h1 class="title">Jyotsna Gupta</h1>
+                    <div class="content-body">
+                      <p>Senior Software Engineer at Gojek</p>
+                      <p>Founder at Women Who Go Bangalore</p>
+                      <p>Mozilla Tech Speaker</p>
+                    </div>
+                  </div>
+                  <div class="image-section">
+                    <img
+                      class="profile_image"
+                      src="img/judge_3.jfif"
+                      alt="profile-pic"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div
+                class="profile-item col-md-12 col-12 col-lg-12 col-sm-12 col-xl-12"
+              >
+                <div class="profile">
+                  <div class="content">
+                    <h1 class="title">Kuldeep Singh</h1>
+                    <div class="content-body">
+                      <p>Head of ARVR practice at ThoughtWorks, India</p>
+                      <p>Co-Lead of Product Design and development</p>
+                      <p>CoP at VRIAR Association</p>
+                    </div>
+                  </div>
+                  <div class="image-section">
+                    <img
+                      class="profile_image"
+                      src="img/judge_4.jpeg"
+                      alt="profile-pic"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            {{! <div class="row">
+            <div class="profile-item col-md-12 col-12 col-lg-12 col-sm-12 col-xl-12">
+              <div class="profile">
+                <div class="content">
+                  <h1 class="title" style="font-size: 3.5rem"> Judge Name </h1>
+                  <h5 class="content-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe consequatur veritatis est quo,
+                    voluptatum sit ex! Mollitia illo dolorem minus.
+                  </h5>
+                </div>
+                <div class="image-section">
+                  <img class="profile_image" src="https://picsum.photos/200" alt="profile-pic">
+                </div>
+              </div>
+            </div>
+          </div> }}
+          </div>
+        </div>
+      </div>
       <div class="tracks container section">
         <div class="modal" tabindex="-1" role="dialog">
           <div class="modal-dialog" role="document">
@@ -397,6 +826,494 @@
           <!-- /Sponsors -->
         </div>
 
+        <!-- platform Partner -->
+        <div id="platform-partner">
+          <!-- container -->
+          <div class="container">
+            <div class="section-subtitle">
+              <h3 class="title"><span style="color:#000;">Platform &nbsp;</span><span
+                  style="color: #bd0c0e;"
+                >Partner</span>
+              </h3>
+            </div>
+            <div
+              style="display: flex;
+																			flex-wrap: wrap;
+																			justify-content: center;
+																			align-items: center;"
+            >
+              <a
+                href="https://bit.ly/2VKyFW1"
+                target="_blank"
+                class="sponsor"
+                rel="noopener noreferrer"
+              >
+                <img src="img/airmeet_logo.svg" alt="" />
+              </a>
+            </div>
+            <!-- /row -->
+            <!-- /container -->
+          </div>
+          <!-- /platform partner  -->
+        </div>
+
+        {{! Our-sponsors }}
+        <div id="our-sponsors">
+          <!-- container -->
+          <div class="container">
+            <div class="row">
+              <div class="section-subtitle">
+                <h3 class="title"><span style="color:#000;">Our &nbsp;</span><span
+                    style="color: #bd0c0e;"
+                  >Sponsors</span>
+                </h3>
+              </div>
+              <div
+                style="display: flex;
+																				flex-wrap: wrap;
+																				justify-content: center;
+																				align-items: center;"
+              >
+                <a
+                  href="https://www.github.com/"
+                  target="_blank"
+                  class="sponsor"
+                  rel="noopener noreferrer"
+                >
+                  <img src="img/github-logo.jpg" alt="" />
+                </a>
+                <a
+                  href="https://www.digitalocean.com/"
+                  target="_blank"
+                  class="sponsor"
+                  rel="noopener noreferrer"
+                >
+                  <img src="img/digitalocean.png" alt="" />
+                </a>
+                <a
+                  href="https://www.wolfram.com/"
+                  target="_blank"
+                  class="sponsor"
+                  rel="noopener noreferrer"
+                >
+                  <img src="img/wolfram.jpg" alt="" />
+                </a>
+                <a
+                  href="https://www.sashido.io/en/"
+                  target="_blank"
+                  class="sponsor"
+                  rel="noopener noreferrer"
+                >
+                  <img src="img/sashido.png" alt="" />
+                </a>
+                <a
+                  href="https://www.echoar.xyz/"
+                  target="_blank"
+                  class="sponsor"
+                  rel="noopener noreferrer"
+                >
+                  <img src="img/echoAR.png" alt="" />
+                </a>
+                <a
+                  href="https://www.clerky.com/"
+                  target="_blank"
+                  class="sponsor"
+                  rel="noopener noreferrer"
+                >
+                  <img src="img/clerky-logo.svg" alt="" style="width: 15rem;" />
+                </a>
+                <a
+                  href="https://givemycertificate.com/"
+                  target="_blank"
+                  class="sponsor"
+                  rel="noopener noreferrer"
+                >
+                  <img src="img/give_me_certificate.jpeg" alt="" />
+                </a>
+                <a
+                  href="https://www.careernaksha.com/"
+                  target="_blank"
+                  class="sponsor"
+                  rel="noopener noreferrer"
+                >
+                  <img src="img/CareerNaksha.jpeg" alt="" />
+                </a>
+                <a
+                  href="https://www.axure.com/"
+                  target="_blank"
+                  class="sponsor"
+                  rel="noopener noreferrer"
+                >
+                  <img src="img/axure.png" alt="" />
+                </a>
+                <a
+                  href="https://jovian.ai/"
+                  target="_blank"
+                  class="sponsor"
+                  rel="noopener noreferrer"
+                >
+                  <img src="img/jovian.svg" alt="" />
+                </a>
+                <a
+                  href="https://interwebs.host/"
+                  target="_blank"
+                  class="sponsor"
+                  rel="noopener noreferrer"
+                >
+                  <img src="img/interwebshost.png" alt="" />
+                </a>
+                <a
+                  href="https://www.interviewcake.com/"
+                  target="_blank"
+                  class="sponsor"
+                  rel="noopener noreferrer"
+                >
+                  <img src="img/interview_cake_logo.png" alt="" />
+                </a>
+                <a
+                  href="https://www.framer.com/"
+                  target="_blank"
+                  class="sponsor"
+                  rel="noopener noreferrer"
+                >
+                  <img src="img/framer.svg" alt="" />
+                </a>
+                <a
+                  href="https://cipherschools.com/"
+                  target="_blank"
+                  class="sponsor"
+                  rel="noopener noreferrer"
+                >
+                  <img src="img/cipherschools.png" alt="" />
+                </a>
+                <a
+                  href="https://onli.in/"
+                  target="_blank"
+                  class="sponsor"
+                  rel="noopener noreferrer"
+                >
+                  <img src="img/onli_logo.jpeg" alt="" style="width: 15rem;" />
+                </a>
+                <a
+                  href="https://www.hackathonsinternational.com/"
+                  target="_blank"
+                  class="sponsor"
+                  rel="noopener noreferrer"
+                >
+                  <img src="img/Hackathons_International_Logo.png" alt="" />
+                </a>
+                <a
+                  href="https://www.elastic.co/"
+                  target="_blank"
+                  class="sponsor"
+                  rel="noopener noreferrer"
+                >
+                  <img src="img/elastic_logo.png" alt="" />
+                </a>
+                <a
+                  href="https://buythevalue.in/"
+                  target="_blank"
+                  class="sponsor"
+                  rel="noopener noreferrer"
+                >
+                  <img src="img/buy_the_value.jpeg" alt="" />
+                </a>
+                <a
+                  href="https://1password.com/"
+                  target="_blank"
+                  class="sponsor"
+                  rel="noopener noreferrer"
+                >
+                  <img src="img/1P.png" alt="" />
+                </a>
+                <a
+                  href="https://balsamiq.com/"
+                  target="_blank"
+                  class="sponsor"
+                  rel="noopener noreferrer"
+                >
+                  <img src="img/balsamiq.svg" alt="" />
+                </a>
+                <a
+                  href="https://codingblocks.com/"
+                  target="_blank"
+                  class="sponsor"
+                  rel="noopener noreferrer"
+                >
+                  <img src="img/coding-blocks-logo.png" alt="" />
+                </a>
+                <a
+                  href="https://www.voiceflow.com/"
+                  target="_blank"
+                  class="sponsor"
+                  rel="noopener noreferrer"
+                >
+                  <img src="img/voiceflow_logo.png" alt="" />
+                </a>
+                <a
+                  href="https://www.producthunt.com/"
+                  target="_blank"
+                  class="sponsor"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="img/profucthunt-logo.png"
+                    alt=""
+                    style="width: 15rem;"
+                  />
+                </a>
+                <a
+                  href="https://www.theatom.app/"
+                  target="_blank"
+                  class="sponsor"
+                  rel="noopener noreferrer"
+                >
+                  <img src="img/theatom_logo.jpeg" alt="" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/witech-india/?originalSubdomain=in"
+                  target="_blank"
+                  class="sponsor"
+                  rel="noopener noreferrer"
+                >
+                  <img src="img/wi-tech.jpeg" alt="" />
+                </a>
+                <a
+                  href="https://rosenfeldmedia.com/"
+                  target="_blank"
+                  class="sponsor"
+                  rel="noopener noreferrer"
+                >
+                  <img src="img/rosenfeld.jpg" alt="" />
+                </a>
+              </div>
+              <!-- /row -->
+            </div>
+            <!-- /container -->
+          </div>
+          <!-- /platform partner  -->
+        </div>
+
+        <!-- internship Partners -->
+        <div id="internship-partners">
+          <!-- container -->
+          <div class="container">
+            <div class="row">
+              <div class="section-subtitle">
+                <h3 class="title"><span
+                    style="color:#000;"
+                  >Internship&nbsp;</span><span
+                    style="color: #bd0c0e;"
+                  >Partner</span>
+                </h3>
+              </div>
+              <div
+                style="display: flex;
+																	flex-wrap: wrap;
+																	justify-content: center;
+																	align-items: center;"
+              >
+                <a
+                  href="https://www.mergeintern.com/"
+                  target="_blank"
+                  class="sponsor"
+                  rel="noopener noreferrer"
+                >
+                  <img src="img/merge.png" alt="" />
+                </a>
+              </div>
+              <!-- /row -->
+            </div>
+            <!-- /container -->
+          </div>
+        </div>
+        <!-- /internship partners  -->
+        <!-- media Partners -->
+        <div id="media-partners">
+          <!-- container -->
+          <div class="container">
+            <div class="row">
+              <div class="section-subtitle">
+                <h3 class="title"><span
+                    style="color:#000;"
+                  >Media&nbsp;</span><span
+                    style="color: #bd0c0e;"
+                  >Partner</span>
+                </h3>
+              </div>
+              <div
+                style="display: flex;
+														flex-wrap: wrap;
+														justify-content: center;
+														align-items: center;"
+              >
+                <a
+                  href="https://dubeat.com/"
+                  target="_blank"
+                  class="sponsor"
+                  rel="noopener noreferrer"
+                >
+                  <img src="img/du-beat.jpeg" alt="" />
+                </a>
+              </div>
+              <!-- /row -->
+            </div>
+            <!-- /container -->
+          </div>
+        </div>
+        <!-- /media partners  -->
+
+        <!-- Community Partners -->
+        <div id="community-partners">
+          <!-- container -->
+          <div class="container">
+            <div class="row">
+              <div class="section-subtitle">
+                <h3 class="title"><span
+                    style="color:#000;"
+                  >Community&nbsp;</span><span
+                    style="color: #bd0c0e;"
+                  >Partners</span>
+                </h3>
+              </div>
+              <div
+                style="display: flex;
+														flex-wrap: wrap;
+														justify-content: center;
+														align-items: center;"
+              >
+                <a
+                  href="http://nitsurat.acm.org/"
+                  target="_blank"
+                  class="sponsor"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="img/acm_logo.png"
+                    alt=""
+                    style="max-height: 100px; width: auto;"
+                  />
+                </a>
+                <a
+                  href="https://dsc-nitsurat.netlify.app/"
+                  target="_blank"
+                  class="sponsor"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="img/dscnitsurat.png"
+                    alt=""
+                    style="height: 100px;width: auto;"
+                  />
+                </a>
+                <a
+                  href="https://oppspot.in/"
+                  target="_blank"
+                  class="sponsor"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="img/oppspot_logo.jfif"
+                    alt=""
+                    style="height: 100px;width: auto;"
+                  />
+                </a>
+                <a
+                  href="https://gdg.community.dev/gdg-surat/"
+                  target="_blank"
+                  class="sponsor"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="img/gdg_surat.jpeg"
+                    alt=""
+                    style="height: 170px;width: auto;"
+                  />
+                </a>
+              </div>
+              <!-- /row -->
+            </div>
+            <!-- /container -->
+          </div>
+        </div>
+        <!-- /community partners  -->
+
+        <!-- ecosystem Partners -->
+        <div id="ecosystem-partner" style="padding-bottom: 30px;">
+          <!-- container -->
+          <div class="container">
+            <div class="row">
+              <div class="section-subtitle">
+                <h3 class="title"><span
+                    style="color:#000;"
+                  >Ecosystem&nbsp;</span><span
+                    style="color: #bd0c0e;"
+                  >Partner</span>
+                </h3>
+              </div>
+              <div
+                style="display: flex;
+														flex-wrap: wrap;
+														justify-content: center;
+														align-items: center;"
+              >
+                <a
+                  href="http://ihubgujarat.in/"
+                  target="_blank"
+                  class="sponsor"
+                  rel="noopener noreferrer"
+                >
+                  <img src="img/ihub.jpg" alt="" />
+                </a>
+              </div>
+              <!-- /row -->
+            </div>
+            <!-- /container -->
+          </div>
+        </div>
+        <!-- /ecosystem partners  -->
+
+        <!-- SponsorChallenges -->
+        <div id="sponsorChallenges" class="section">
+          <div class="section-title">
+            <h3 class="title"><span style="color: #0b0f28">Sponsor &nbsp;</span><span
+                style="color: #bd0c0e;"
+              >
+                Challenges</span>
+            </h3>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-12 flip">
+                <div
+                  class="front content text-center"
+                  style="background: linear-gradient(to top left, #F7736F, #F5372A);"
+                >
+                  <h2>SASHIDO challenge</h2>
+                  <p>
+                    Register for a 45-day SashiDo free trial, create a ML
+                    project with SashiDo & Teachable Machine by Google and get a
+                    chance to win amazing prizes and Internship Opportunities
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-12 flip">
+                <div
+                  class="front content text-center"
+                  style="background: linear-gradient(to top left, #434343, #000000);"
+                >
+                  <h2>EchoAR Challenge</h2>
+                  <p>
+                    Only for participants who have used EchoAR in their project.
+                    Win $50 amazon gift card, 1 month free Business Tier access
+                    and a Feature in our newsletter(sent to investors and AR/VR
+                    ecosystem)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- become-sponsor -->
         <div id="become-sponsor" class="section">
           <img
@@ -627,6 +1544,37 @@
           </div>
         </div>
         <!-- /FAQS -->
+
+        <!-- CTA -->
+        {{! <div id="cta" class="section">
+        <!-- background image -->
+        <div class="section-bg" style="background-image:url(./img/background004.jpg);"
+          data-stellar-background-ratio="0.5">
+        </div>
+        <!-- /background image -->
+
+        <!-- container -->
+        <div class="container">
+          <!-- container -->
+          <div class="row">
+            <!-- cta content -->
+            <div class="col-md-8 col-md-offset-2">
+              <div class="cta-content text-center">
+                <h2>Registrations started</h2>
+                <p class="lead">Our focus is on letting your imagination flow free and enable you to push the
+                  boundaries of what can be done. We're open for all! We'll take care of the food and stay - virtually
+                  leaving
+                  you no excuse to not build something that'll blow our minds.</p>
+
+              </div>
+            </div>
+            <!-- /cta content -->
+          </div>
+          <!-- /row -->
+        </div>
+        <!-- /container -->
+      </div> }}
+        <!-- /CTA -->
 
         <!-- Contact -->
         <div id="contact" class="section">

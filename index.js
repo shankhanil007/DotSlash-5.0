@@ -18,7 +18,7 @@ hbs.registerPartials(__dirname + "/views/partials");
 
 // App routes
 app.get("/2021", (req, res) => {
-  res.render("home_2022");
+  res.render("home_2021");
 });
 
 app.get("/2022", (req, res) => {
