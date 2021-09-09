@@ -3,7 +3,8 @@ body {
   -webkit-font-smoothing: antialiased;
   font-display: fallback !important;
   font-size: 16px;
-  color: #444;
+  background: radial-gradient(ellipse at bottom, #030119 0%, #00172c 100%);
+  color: white;
 }
 h1,
 h2,
@@ -12,7 +13,7 @@ h4,
 h5,
 h6 {
   margin: 0px 0px 15px;
-  color: #0b0f28;
+  color: white;
   font-weight: 700;
 }
 hr {
@@ -34,7 +35,7 @@ h4 {
   font-size: 20px;
 }
 a {
-  color: #0b0f28;
+  color: white;
   transition: 0.3s color;
 }
 a:hover,
@@ -236,7 +237,7 @@ div#swal2-content ol li {
 .main-nav li a {
   position: relative;
   padding: 30px 15px;
-  color: #0b0f28;
+  color: white;
   letter-spacing: 1.4px;
   font-weight: 500;
   text-transform: uppercase;
@@ -249,7 +250,7 @@ div#swal2-content ol li {
   color: #fff;
 }
 #header.fixed-navbar .main-nav li a {
-  color: #0b0f28;
+  color: white;
 }
 .main-nav li.active a:after {
   content: "";
@@ -280,13 +281,13 @@ div#swal2-content ol li {
   margin: 15px;
   padding: 0;
   font-size: 32px;
-  color: #0b0f28;
+  color: white;
 }
 #header.transparent-navbar .navbar-toggle {
   color: #fff;
 }
 #header.fixed-navbar .navbar-toggle {
-  color: #0b0f28 !important;
+  color: white !important;
 }
 @media only screen and (max-width: 991px) {
   .main-nav {
@@ -303,7 +304,7 @@ div#swal2-content ol li {
     display: none;
   }
   #header.transparent-navbar .main-nav li a {
-    color: #0b0f28;
+    color: white;
   }
   .main-nav li a:hover,
   .main-nav li a:focus,
@@ -378,7 +379,7 @@ div#swal2-content ol li {
 }
 .number p {
   text-transform: uppercase;
-  color: #0b0f28;
+  color: white;
 }
 .atlastmoment {
   font-size: 25px;
@@ -875,7 +876,7 @@ div.home-content {
 }
 #become-sponsor {
   position: relative;
-  background: #1d1d22;
+  background: #211b5c;
   border-radius: 25px;
   box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
 }
@@ -1030,7 +1031,7 @@ div.home-content {
 }
 .blog .blog-meta .blog-tags li:first-child {
   font-weight: 700;
-  color: #0b0f28;
+  color: white;
 }
 .blog .blog-content .read-more {
   display: inline-block;
@@ -1057,7 +1058,7 @@ div.home-content {
 .blog .blog-share li:first-child {
   line-height: 30px;
   font-weight: 700;
-  color: #0b0f28;
+  color: white;
 }
 .blog .blog-share li a {
   display: inline-block;
