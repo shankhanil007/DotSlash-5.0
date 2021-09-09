@@ -1,0 +1,119 @@
+video {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.hackathon__details__title {
+  position: absolute;
+  top: 55%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.hackathon__details__discription {
+  position: absolute;
+  top: 65%;
+  left: 30%;
+  opacity: 0;
+  -webkit-animation: animate 1s linear forwards;
+  animation: animate 1s linear forwards;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-animation-delay: 3.4s;
+  animation-delay: 3.4;
+}
+
+h1 span {
+  display: inline-block;
+  -webkit-animation: animate 1s linear forwards;
+  animation: animate 1s linear forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+  }
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+  }
+}
+
+h1 span:nth-child(1) {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+h1 span:nth-child(2) {
+  -webkit-animation-delay: 1.3s;
+  animation-delay: 1.3s;
+}
+
+h1 span:nth-child(3) {
+  -webkit-animation-delay: 1.6s;
+  animation-delay: 1.6s;
+}
+
+h1 span:nth-child(4) {
+  -webkit-animation-delay: 1.9s;
+  animation-delay: 1.9s;
+}
+
+h1 span:nth-child(5) {
+  -webkit-animation-delay: 2.2s;
+  animation-delay: 2.2s;
+}
+
+h1 span:nth-child(6) {
+  -webkit-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+}
+
+h1 span:nth-child(7) {
+  -webkit-animation-delay: 2.8s;
+  animation-delay: 2.8s;
+}
+
+h1 span:nth-child(8) {
+  -webkit-animation-delay: 3.1s;
+  animation-delay: 3.1s;
+}
+
+h1 span:nth-child(9) {
+  -webkit-animation-delay: 3.4s;
+  animation-delay: 3.4s;
+}
+
+h1 span:nth-child(10) {
+  -webkit-animation-delay: 3.7s;
+  animation-delay: 3.7s;
+}
+
+h1 span:nth-child(11) {
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+}
