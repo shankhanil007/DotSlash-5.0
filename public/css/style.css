@@ -294,7 +294,7 @@ div#swal2-content ol li {
     margin: 0px -15px;
     max-height: 0;
     overflow-y: scroll;
-    background-color: #fff;
+    background-color: red;
     transition: 0.3s all;
   }
   .main-nav.open {
@@ -305,6 +305,7 @@ div#swal2-content ol li {
   }
   #header.transparent-navbar .main-nav li a {
     color: white;
+    background-color: black;
   }
   .main-nav li a:hover,
   .main-nav li a:focus,
