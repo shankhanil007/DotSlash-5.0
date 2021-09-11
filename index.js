@@ -16,31 +16,12 @@ app.use(express.json());
 // partial setup
 hbs.registerPartials(__dirname + "/views/partials");
 
-// App routes
-app.get("/2021", (req, res) => {
-  res.render("home_2021");
-});
-
-app.get("/2022", (req, res) => {
-  res.render("home_2022");
-});
-
-app.get("/final", (req, res) => {
-  res.render("final1");
-});
-
-app.get("/alumni", (req, res) => {
-  res.render("alumni");
+app.get("/", (req, res) => {
+  res.render("home");
 });
 
 app.get("/coc", (req, res) => {
   res.render("coc");
 });
-
-app.get("/registration", (req, res) => {
-  res.render("form");
-});
-
-app.use("/api", require("./routes/index.routes"));
 
 app.listen(port);
