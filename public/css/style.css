@@ -192,7 +192,7 @@ div#swal2-content ol li {
   display: none;
 }
 #header.fixed-navbar .navbar-brand .logo .logo-alt-img {
-  display: block;
+  display: none;
 }
 #header:not(.transparent-navbar) .navbar-brand .logo .logo-alt-img {
   display: none;

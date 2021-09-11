@@ -18,12 +18,10 @@
     var $win = $(window);
     var winH = $win.height();
     var winW = $win.width();
-    console.log(winH + " " + wScroll);
     if (winW < 1024) {
       winH = 1200;
     }
     if (wScroll > winH) {
-      console.log("asfasdf");
       $("#header").addClass("fixed-navbar");
     } else {
       $("#header").removeClass("fixed-navbar");
