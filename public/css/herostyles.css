@@ -139,22 +139,24 @@
   transform: scale(1.05);
 }
 .hero__content .chat {
-  backdrop-filter: blur(4px);
+  /* backdrop-filter: blur(4px); */
   font-family: lato, sans-serif;
   border-radius: 15px;
   color: black;
-  background: transparent;
-  border-bottom: 1px solid #ff416c;
-  box-shadow: 0 3px 3px -2px #ff416c;
+  background: #00172C;
+  border-bottom: 1px solid #c1002c;
+  box-shadow: 0 5px 3px -2px #c1002c;
   width: 400px;
   height: 250px;
-  display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: 0 15px;
   overflow: hidden;
   position: relative;
-  margin-bottom: 30px;
+  z-index: 100;
+  margin-top: 50px;
+  display: flex;
+  /* display: none; */
 }
 .hero__content .chat__header {
   position: absolute;
