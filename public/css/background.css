@@ -563,6 +563,24 @@
     transform: translateY(-2000px);
   }
 }
+.bottom-center{
+  transform: scale(0.6);
+  position: absolute;
+  bottom: -50vh;
+  left: 10vw;
+}
+.bottom-right{
+  transform: scale(0.6);
+  position: absolute;
+  bottom: -55vh;
+  right: -10vw;
+}
+.top-right{
+  transform: scale(0.6);
+  position: absolute;
+  top: -8vh;
+  right: -10vw;
+}
 @media (max-width: 1024px) {
   .hero {
     background-size: 1500px;
