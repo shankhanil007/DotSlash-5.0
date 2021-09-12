@@ -38,9 +38,24 @@
   margin-left: 0;
 }
 .hero__content__details .registration__details {
-  margin-bottom: 30px;
   display: flex;
   align-items: center;
+}
+.registration__details>*{
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+.registration__details input[type="email"]{
+  color: rgb(31, 31, 31);
+  width: 250px;
+  margin-right: 10px;
+}
+.registration__details input[type="submit"]{
+  cursor: pointer !important;
+  width: 120px;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
 }
 .hero__content__details .hackathon__details {
   padding-top: 55px;
@@ -84,7 +99,8 @@
   opacity: 0.9;
 }
 .hero__content__banner_slogan {
-  margin-top: 40px;
+  margin-top: 50px;
+  margin-left: -35px;
   font-family: lato;
   color: #ddd;
   font-size: 18px;
@@ -98,8 +114,10 @@
   padding: 0 15px;
 }
 .hero__content__banner_slogan .save_the_date {
-  font-size: 28px;
-  letter-spacing: 16px;
+  margin-top: -22px;
+  margin-left: 20px;
+  font-size: 23px;
+  letter-spacing: 12px;
   margin-bottom: 15px;
   font-weight: bold;
   text-transform: uppercase;
@@ -378,9 +396,10 @@
 }
 @media (min-width: 1440px) {
   .hero__content__details {
+    margin-left: 30px;
     transform: scale(1.2);
-    margin-left: 35px;
   }
+  
   .chat {
     transform: scale(1.3);
     position: relative;
@@ -391,7 +410,7 @@
 @media (max-width: 1440px) and (min-width: 1024px) {
   .chat {
     position: relative;
-    top: 7vh !important;
+    top: 0vh !important;
     right: -5vw !important;
   }
 }
