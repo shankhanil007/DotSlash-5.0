@@ -379,6 +379,7 @@
 @media (min-width: 1440px) {
   .hero__content__details {
     transform: scale(1.2);
+    margin-left: 35px;
   }
   .chat {
     transform: scale(1.3);
