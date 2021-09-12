@@ -243,6 +243,7 @@
 #footer {
   position: relative;
   background-image: url("../img/wave.svg");
+  background-repeat: round;
   height: 350px;
 }
 #footer .wave_box {
