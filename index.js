@@ -16,8 +16,12 @@ app.use(express.json());
 // partial setup
 hbs.registerPartials(__dirname + "/views/partials");
 
-app.get("/", (req, res) => {
+app.get("/1", (req, res) => {
   res.render("home");
+});
+
+app.get("/2", (req, res) => {
+  res.render("home_copy");
 });
 
 app.get("/coc", (req, res) => {
