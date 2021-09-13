@@ -407,24 +407,7 @@
     top: 7vh !important;
     right: -5vw !important;
   }
-  .bottom-center{
-    transform: scale(0.8) !important;
-    position: absolute;
-    bottom: -50vh;
-    left: 20vw !important;
-  }
-  .bottom-right{
-    transform: scale(0.8) !important;
-    position: absolute;
-    bottom: -60vh !important;
-    right: -10vw !important;
-  }
-  .top-right{
-    transform: scale(0.8) !important;
-    position: absolute;
-    top: 0vh !important;
-    right: -10vw;
-  }
+  
 }
 @media(max-width: 1440px) and (min-width: 1300px){
   .chat{
@@ -433,24 +416,10 @@
     top: 5vh !important;
     right: -5vw !important;
   }
-  .bottom-center{
-    transform: scale(0.7) !important;
-    position: absolute;
-    bottom: -40vh !important;
-    left: 14vw !important;
+  .hero__content__banner_slogan{
+    margin-top: -30px !important;
   }
-  .bottom-right{
-    transform: scale(0.7) !important;
-    position: absolute;
-    bottom: -50vh !important;
-    right: -13vw !important;
-  }
-  .top-right{
-    transform: scale(0.7) !important;
-    position: absolute;
-    top: -5vh !important;
-    right: -10vw;
-  }
+  
 }
 @media(max-width: 1300px) and (min-width: 1024px){
   .chat{
@@ -458,23 +427,8 @@
     top: 5vh !important;
     right: -5vw !important;
   }
-}
-
-@media(max-width:850px) and (min-height: 950px){
-  .bottom-center{
-    transform: scale(0.6);
-    position: absolute;
-    top: 60vh !important;
-    left: -55vw !important;
-  }
-  .bottom-right{
-    transform: scale(0.6);
-    position: absolute;
-    top: 59vh !important;
-    left: 5vw !important;
-  }
-  .top-right{
-    display: none !important;
+  .hero__content__banner_slogan{
+    margin-top: -15px !important;
   }
 }
 
@@ -485,16 +439,12 @@
   .hero__content__details {
     transform: scale(1.3);
   }
-  .bottom-right {
-    position: absolute;
-    bottom: 0;
-    left: -40vw;
-  }
-  .top-right {
-    right: -20vw !important;
-  }
   .hero__content__banner_slogan{
+    margin-top: -5vh !important;
     margin-left: 0 !important;
+  }
+  .chat{
+    margin-top: 20vh !important;
   }
 }
 @media (max-width: 850px) and (min-width: 600px) {
@@ -504,19 +454,12 @@
   .hero__content__details {
     transform: scale(1.3);
   }
-  .top-right {
-    right: 50vw !important;
-    top: 110vh !important;
-  }
-  .bottom-right {
-    bottom: -80vh !important;
-    right: 0 !important;
-  }
-  .bottom-center {
-    bottom: -65vh !important;
-  }
   .hero__content__banner_slogan{
+    margin-top: -5vh !important;
     margin-left: 0 !important;
+  }
+  .chat{
+    margin-top: 25vh !important;
   }
 }
 @media (max-width: 600px) and (min-width: 425px) {
@@ -525,17 +468,6 @@
   }
   .hero__content__details {
     transform: scale(1);
-  }
-  .top-right {
-    right: 20vw !important;
-    top: 90vh !important;
-  }
-  .bottom-right {
-    bottom: -80vh !important;
-    right: -43vw !important;
-  }
-  .bottom-center {
-    bottom: -65vh !important;
   }
   .registration__details>*{
     margin-top: 15px;
@@ -555,17 +487,6 @@
   .chat {
     width: 320px !important;
     height: 225px !important;
-  }
-  .top-right {
-    right: 5vw !important;
-    top: 70vh !important;
-  }
-  .bottom-right{
-    bottom: -60vh !important;
-    right: -60vw !important;
-  }
-  .bottom-center{
-    bottom: -15vh !important;
   }
   .registration__details>*{
     margin-top: 15px;
