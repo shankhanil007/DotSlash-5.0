@@ -1,4 +1,4 @@
-# Dotslash 5.0
+# Dotslash 4.0
 
 The official repository for the website of Dotslash Hackathon conducted by NIT Surat
 
