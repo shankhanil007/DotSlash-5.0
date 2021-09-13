@@ -23,6 +23,7 @@ app.use(compression());
 // express middleware setup
 app.set("view engine", "hbs");
 app.use(express.static(__dirname + "/public"));
+app.use(express.urlencoded({extended:true}))
 app.use(express.json());
 
 // partial setup
@@ -38,7 +39,7 @@ app.get("/coc", (req, res) => {
 
 app.post("/api/email", async (req, res) => {
 	const emailExsist = await Email.findOne({email : req.body.email});
-	if(emailExsist) return res.status(400).json({error : "Email already exsists"})
+	if(emailExsist) return res.redirect("/");
 
 	const newEmail = new Email({
 		email : req.body.email
@@ -46,11 +47,10 @@ app.post("/api/email", async (req, res) => {
 
 	try{
 		const savedEmail = await newEmail.save();
-		return res.json({email : "New email added"});
+		res.redirect("/");
 	}catch(err){
-		return res.status(400).send(err);
+		return res.redirect("/");
 	}
-
 })
 
 app.listen(port, () => {
