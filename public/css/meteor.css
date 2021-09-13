@@ -85,7 +85,7 @@
   left: 15%;
   width: 300px;
   height: 1px;
-  transform: rotate(-32deg);
+  transform: rotate(-45deg);
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
   animation: meteor 4.7s linear infinite;
 }
@@ -105,7 +105,7 @@
   left: 30%;
   width: 300px;
   height: 1px;
-  transform: rotate(-32deg);
+  transform: rotate(-45deg);
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
   animation: meteor 6.3s linear infinite;
 }
@@ -125,7 +125,7 @@
   left: 91%;
   width: 300px;
   height: 1px;
-  transform: rotate(-32deg);
+  transform: rotate(-45deg);
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
   animation: meteor 7.5s linear infinite;
 }
@@ -145,7 +145,7 @@
   left: 74%;
   width: 300px;
   height: 1px;
-  transform: rotate(-32deg);
+  transform: rotate(-45deg);
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
   animation: meteor 8.6s linear infinite;
 }
@@ -165,7 +165,7 @@
   left: 99%;
   width: 300px;
   height: 1px;
-  transform: rotate(-32deg);
+  transform: rotate(-45deg);
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
   animation: meteor 5.3s linear infinite;
 }
@@ -185,7 +185,7 @@
   left: 34%;
   width: 300px;
   height: 1px;
-  transform: rotate(-32deg);
+  transform: rotate(-45deg);
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
   animation: meteor 6.1s linear infinite;
 }
@@ -205,7 +205,7 @@
   left: 45%;
   width: 300px;
   height: 1px;
-  transform: rotate(-32deg);
+  transform: rotate(-45deg);
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
   animation: meteor 9.1s linear infinite;
 }
@@ -225,7 +225,7 @@
   left: 68%;
   width: 300px;
   height: 1px;
-  transform: rotate(-32deg);
+  transform: rotate(-45deg);
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
   animation: meteor 9.2s linear infinite;
 }
@@ -245,7 +245,7 @@
   left: 72%;
   width: 300px;
   height: 1px;
-  transform: rotate(-32deg);
+  transform: rotate(-45deg);
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
   animation: meteor 3.7s linear infinite;
 }
@@ -265,7 +265,7 @@
   left: 73%;
   width: 300px;
   height: 1px;
-  transform: rotate(-32deg);
+  transform: rotate(-45deg);
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
   animation: meteor 4.4s linear infinite;
 }
@@ -285,7 +285,7 @@
   left: 66%;
   width: 300px;
   height: 1px;
-  transform: rotate(-32deg);
+  transform: rotate(-45deg);
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
   animation: meteor 9.4s linear infinite;
 }
@@ -305,7 +305,7 @@
   left: 64%;
   width: 300px;
   height: 1px;
-  transform: rotate(-32deg);
+  transform: rotate(-45deg);
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
   animation: meteor 8s linear infinite;
 }
@@ -325,7 +325,7 @@
   left: 71%;
   width: 300px;
   height: 1px;
-  transform: rotate(-32deg);
+  transform: rotate(-45deg);
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
   animation: meteor 4.4s linear infinite;
 }
@@ -345,7 +345,7 @@
   left: 74%;
   width: 300px;
   height: 1px;
-  transform: rotate(-32deg);
+  transform: rotate(-45deg);
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
   animation: meteor 8.7s linear infinite;
 }
@@ -365,7 +365,7 @@
   left: 83%;
   width: 300px;
   height: 1px;
-  transform: rotate(-32deg);
+  transform: rotate(-45deg);
   background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
   animation: meteor 3.2s linear infinite;
 }
