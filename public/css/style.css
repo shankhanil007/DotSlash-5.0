@@ -1208,3 +1208,21 @@ div.home-content {
     text-align: center;
   }
 }
+
+
+/* #motion-demo {
+  offset-path: path('M1958.5 2C1711.67 17.5 1151.4 123.9 885 425.5C730.5 600.414 490.2 924.1 -39 844.5');
+  animation: move 6000ms infinite;
+  width: 40px;
+  height: 40px;
+  background: cyan;
+}
+
+@keyframes move {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+} */
