@@ -964,6 +964,12 @@ div.home-content {
   color: #bd0c0e;
   cursor: pointer;
 }
+.material-icons{
+  transition: transform 100ms ease;
+}
+.material-icons.active{
+  transform: rotate(90deg);
+}
 #footer {
   padding: 60px 0px;
 }
