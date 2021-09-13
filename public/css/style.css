@@ -385,6 +385,12 @@ div#swal2-content ol li {
 .atlastmoment {
   font-size: 25px;
 }
+.college img:first-child{
+  transform: scale(0.95);
+}
+.college img{
+  margin: 0px 20px;
+}
 #galery-owl .owl-item .galery-item {
   opacity: 0.5;
   transform: scale(0.9);
