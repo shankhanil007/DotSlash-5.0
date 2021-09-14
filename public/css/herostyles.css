@@ -123,6 +123,7 @@
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
+  animation-delay: 5.5s !important;
 }
 .hero__content__banner_slogan .last-date-info {
   margin-bottom: 15px;
