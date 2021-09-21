@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/8e09481a-d841-4da0-9d41-2f838c74f2e6/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/hackdotslash",
+    "appService.deploySubpath": "."
+}
