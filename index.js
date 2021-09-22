@@ -33,6 +33,11 @@ app.get("/", (req, res) => {
   res.render("home");
 });
 
+app.get("/2", (req, res) => {
+	res.render("with_ssip");
+  });
+
+
 app.get("/test", (req, res) => {
 	res.render("test");
   });
