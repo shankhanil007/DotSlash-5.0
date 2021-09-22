@@ -375,9 +375,12 @@
   background-size: cover;
   background-position: center;
   height: auto;
-  padding: 3em;
+  padding: 2em;
   background: #313131;
   border-radius: 25px;
+  border: 3px solid #407bff;
+  box-shadow: 0 0 40px -15px var(--accent),0 0 16px -8px rgba(0,0,0,.3),0 0 16px -6px rgba(0,0,0,.03);
+  transition: all .2s ease-in;
 }
 #sponsorChallenges .flip > .front h2,
 #sponsorChallenges .flip > .front h1,
