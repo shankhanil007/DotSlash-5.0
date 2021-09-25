@@ -379,8 +379,14 @@
   background: #313131;
   border-radius: 25px;
   border: 3px solid #407bff;
-  box-shadow: 0 0 40px -15px var(--accent),0 0 16px -8px rgba(0,0,0,.3),0 0 16px -6px rgba(0,0,0,.03);
+  box-shadow: 0 0 35px -15px #407bff,0 0 16px -8px rgba(0,0,0,.3),0 0 16px -6px rgba(0,0,0,.03);
   transition: all .2s ease-in;
+  margin-bottom: 20px;
+}
+
+#sponsorChallenges .flip > .front:hover,
+#sponsorChallenges .flip > .back:hover  {
+  transform: scale(1.05)
 }
 #sponsorChallenges .flip > .front h2,
 #sponsorChallenges .flip > .front h1,
