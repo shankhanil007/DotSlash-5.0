@@ -246,4 +246,13 @@
     .timeline .timeline-row:nth-child(even) .timeline-content:after {
       display: none;
     }
+    .timeline .timeline-row .timeline-content h4{
+      text-align: left !important;
+      overflow: auto !important;
+      white-space: normal !important;
+      text-overflow: clip !important;
+    }
+    .timeline .timeline-row .timeline-content p{
+      text-align: left !important;
+    }
   }
