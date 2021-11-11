@@ -230,7 +230,7 @@
     }
     .timeline .timeline-row:nth-child(even) .timeline-time {
       position: relative;
-      top: 0;
+      top: -5px;
       left: 0;
       margin: 0 0 10px 30px;
       text-align: left;
@@ -246,41 +246,4 @@
     .timeline .timeline-row:nth-child(even) .timeline-content:after {
       display: none;
     }
-  }
-  @media (max-width: 430px) {
-    .timeline{
-        position: relative !important;
-        left: 50%;
-        transform: translateX(-50%) !important;
-        min-width: none;
-        padding-right: 20px;
-    }
-    .timeline-row{
-        margin-right: 20px;
-        min-width: none;
-        height: auto !important;
-    }
-    .timeline-row::before{
-        /* display: none; */
-        left: 50%;
-    }
-    .timeline-row::after{
-        /* display: none; */
-        left: 50%;
-        z-index: -1
-
-    }
-    .timeline-row .timeline-time{
-        position: absolute;
-        right: 0;
-        top: -5px !important;
-        left: 100% !important;
-        transform: translateX(-57%);
-    }
-    .timeline-row .timeline-content:before{
-        left: 45% !important;
-        transform: translateX(-50%);
-    }
-    
-    
   }
