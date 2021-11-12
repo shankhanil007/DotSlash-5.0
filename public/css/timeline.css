@@ -246,6 +246,11 @@
     .timeline .timeline-row:nth-child(even) .timeline-content:after {
       display: none;
     }
+    .timeline .timeline-row .timeline-content{
+      display: flex !important;
+      flex-direction: column!important;
+      align-items: flex-start !important;
+    }
     .timeline .timeline-row .timeline-content h4{
       text-align: left !important;
       overflow: auto !important;
