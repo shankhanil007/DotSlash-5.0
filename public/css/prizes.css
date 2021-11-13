@@ -94,14 +94,6 @@
   .card-front img {
     height: 100%;
   }
-  .tracks img {
-    max-height: 200px !important;
-    border-radius: 5px !important;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20rem !important;
-    height: auto;
-  }
   
   .card-back {
     background: #bcd0f7;
@@ -123,6 +115,46 @@
 
 .show-grid{
     display: grid !important;
+}
+
+@media(max-width: 992px){
+  .swags-for-all{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 789px){
+  .prizes-navbar{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .overall-prizes{
+    flex-direction: column;
+  }
+  .gold{
+    order: 1;
+  }
+  .silver{
+    margin-top: 30px;
+    order: 2;
+  }
+  .silver img{
+    transform: scale(1.2);
+  }
+  .bronze{
+    order: 3;
+  }
+  .swags-for-all{
+    display: grid;
+    max-width: 350px;
+    grid-template-columns: 1fr;
+  }
+}
+@media(max-width: 450px){
+  .prizes-container{
+    width: 100%;
+  }
 }
   
   
