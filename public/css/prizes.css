@@ -94,6 +94,14 @@
   .card-front img {
     height: 100%;
   }
+  .tracks img {
+    max-height: 200px !important;
+    border-radius: 5px !important;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20rem !important;
+    height: auto;
+  }
   
   .card-back {
     background: #bcd0f7;
