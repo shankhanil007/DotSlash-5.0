@@ -8,7 +8,4 @@ The official repository for the website of Dotslash Hackathon conducted by NIT S
 - Handlebars
 - SCSS
 
-## Authors
 
-- Rohit Bakoliya - [@rohitbakoliya](https://github.com/rohitbakoliya)
-- Hardik Upadhyay - [@Simply-divine](https://github.com/Simply-divine)
