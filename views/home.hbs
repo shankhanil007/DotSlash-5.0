@@ -100,11 +100,12 @@
                     src="./img/2022/navbar_logo.png"
                     alt="logo"
                   />
-                  <img
+                   <img
                     class="logo-img"
                     src="./img/2022/navbar_logo.png"
                     alt="logo"
                   />
+
                 </a>
               </div>
               <!-- /Logo -->
@@ -123,7 +124,7 @@
               <ul class="main-nav nav navbar-nav navbar-right">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#schedule">Schedule</a></li>
+                {{!-- <li><a href="#schedule">Schedule</a></li> --}}
                 <li><a href="#sponsors">Sponsors</a></li>
                 <li><a href="#faq">FAQs</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -157,12 +158,24 @@
                   <h2 ><span>7-9</span>January 2022</h2>
                 </div>
               </div>
-            <form class="notify-me" action="/api/email" method="POST">
+
+              
+                
+
+            {{!-- <form class="notify-me" action="/api/email" method="POST"> --}}
               <div class="registration__details" style="margin-top: 30px;">
-                <input type="email" name="email" id="user-email" placeholder="Enter your email" >
-                <input type="submit" id="notify-btn" value="Notify Me">
+                <div 
+                class="apply-button" 
+                data-hackathon-slug="inout2020" 
+                data-button-theme="light"
+                style="height: 44px; width: 312px;"
+              >
               </div>
-            </form>
+              <button class="blue-button" style="margin-left: 10px;">
+                <a target="_blank" rel="noopener noreferrer" href="https://discord.com/invite/WvPdAbv5tP"><img src="img/2022/discord.png" style="height: 30px;"></a>
+              </button>
+              </div>
+            {{!-- </form> --}}
             </div>
             <div class="hero__content__banner">
               <div class="chat">
@@ -470,7 +483,7 @@
       <!-- /Galery -->
 
 
-      <div id="schedule" class="section" style="margin-top: 80px; color:#a5b3cf;">
+      {{!-- <div id="schedule" class="section" style="margin-top: 80px; color:#a5b3cf;">
         <!-- container -->
         <div class="container">
           <!-- row -->
@@ -557,7 +570,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> --}}
       
       <div class="tracks container section">
         <div class="modal" tabindex="-1" role="dialog">
@@ -604,6 +617,38 @@
                 <p><a href="https://acm-svnit.github.io/DotSlash4.0/">Check out
                     our last year sponsor's here!</a></p>
               </div>
+              <div style="display: flex;
+																				flex-wrap: wrap;
+																				justify-content: center;
+																				align-items: center;">
+              <a href="https://www.github.com/" target="_blank" class="sponsor" rel="noopener noreferrer">
+                <img src="img/sponsors/github.PNG" alt="">
+              </a>
+              <a href="https://www.github.com/" target="_blank" class="sponsor" rel="noopener noreferrer">
+                <img src="img/sponsors/devfolio.png" alt="">
+              </a>
+              <a href="https://www.github.com/" target="_blank" class="sponsor" rel="noopener noreferrer">
+                <img src="img/sponsors/polygon.png" alt="">
+              </a>
+              <a href="https://www.github.com/" target="_blank" class="sponsor" rel="noopener noreferrer">
+                <img src="img/sponsors/tezos.png" alt="">
+              </a>
+              <a href="https://www.github.com/" target="_blank" class="sponsor" rel="noopener noreferrer">
+                <img src="img/sponsors/celo.png" alt="">
+              </a>
+              <a href="https://www.github.com/" target="_blank" class="sponsor" rel="noopener noreferrer">
+                <img src="img/sponsors/filecoin.png" alt="">
+              </a>
+              <a href="https://www.github.com/" target="_blank" class="sponsor" rel="noopener noreferrer">
+                <img src="img/sponsors/replit.png" alt="">
+              </a>
+              <a href="https://www.github.com/" target="_blank" class="sponsor" rel="noopener noreferrer">
+                <img src="img/sponsors/rosenfeld.png" alt="">
+              </a>
+              <a href="https://www.github.com/" target="_blank" class="sponsor" rel="noopener noreferrer">
+                <img src="img/sponsors/balsamiq.png" alt="">
+              </a>
+            </div>
               <!-- /row -->
             </div>
             <!-- /container -->
@@ -611,8 +656,11 @@
           <!-- /Sponsors -->
         </div>
 
+
+       
+
         <!-- become-sponsor -->
-        <div id="become-sponsor" class="section">
+        <div id="become-sponsor" class="section" style="margin-top: 100px;">
           <svg class="dotted-line" width="1920" height="859" viewBox="0 0 1920 859" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <style type="text/css">
@@ -875,34 +923,6 @@
         </div>
         <!-- /FAQS -->
 
-        <!-- CTA -->
-        {{! <div id="cta" class="section">
-        <!-- background image -->
-        <div class="section-bg" style="background-image:url(./img/background004.jpg);"
-          data-stellar-background-ratio="0.5">
-        </div>
-        <!-- /background image -->
-        <!-- container -->
-        <div class="container">
-          <!-- container -->
-          <div class="row">
-            <!-- cta content -->
-            <div class="col-md-8 col-md-offset-2">
-              <div class="cta-content text-center">
-                <h2>Registrations started</h2>
-                <p class="lead">Our focus is on letting your imagination flow free and enable you to push the
-                  boundaries of what can be done. We're open for all! We'll take care of the food and stay - virtually
-                  leaving
-                  you no excuse to not build something that'll blow our minds.</p>
-              </div>
-            </div>
-            <!-- /cta content -->
-          </div>
-          <!-- /row -->
-        </div>
-        <!-- /container -->
-      </div> }}
-        <!-- /CTA -->
 
         <!-- Contact -->
         <div id="contact" class="section">
@@ -970,8 +990,9 @@
                 <a class="logo" href="#home">
                   <img
                     class="logo-img"
-                    src="./img/2022/navbar_logo.png"
+                    src="./img/2022/footer_logo.png"
                     alt="logo"
+                    style="max-height: 75px;"
                   /> 
                 <span>Dot</span><span>Slash</span><span> 5.0</span>
                 </a>
@@ -1042,6 +1063,6 @@
       for (let i = 0; i < 13; i++) { $('.arrow' + i).on("click", function
       (event) { $('.arrow-img' + i).toggleClass('rotate'); }); }
     </script>
-
+    <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
   </body>
 </html>
