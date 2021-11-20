@@ -6,6 +6,8 @@ const app = express();
 const port = process.env.PORT || 3000;
 const dotenv = require("dotenv")
 const Email = require("./models/emailModel");
+const cors = require("cors");
+app.use(cors());
 
 dotenv.config();
 async function mongoConnect(){
@@ -25,6 +27,7 @@ app.set("view engine", "hbs");
 app.use(express.static(__dirname + "/public"));
 app.use(express.urlencoded({extended:true}))
 app.use(express.json());
+
 
 // partial setup
 hbs.registerPartials(__dirname + "/views/partials");
