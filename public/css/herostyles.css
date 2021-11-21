@@ -178,6 +178,11 @@
   background: radial-gradient(ellipse at bottom, #030119 0%, #00172c 100%);
   /* display: none; */
 }
+.blue-button-mobile{
+  margin-left: 0 !important;
+  width: 312px;
+  display: none;
+}
 .hero__content .chat__header {
   position: absolute;
   top: 0;
@@ -595,6 +600,12 @@
     font-size: 18px;
     letter-spacing: 12px;
     text-align: center;
+  }
+  .blue-button{
+    display: none;
+  }
+  .blue-button-mobile{
+    display: block;
   }
   #footer .wave_box span {
     font-size: 24px;
