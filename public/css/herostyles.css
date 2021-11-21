@@ -632,6 +632,43 @@
   .profile .content-body {
     font-size: 10px !important;
   }
+  .blue-button{
+    width: 314px;
+    margin-right: 10px;
+  }
+}
+@media (max-width: 475px){
+  .hero__content__details{
+    margin: 10vh 0 !important;
+  }
+  .hackathon__details{
+    margin: 0 !important;
+    margin-left: 10vw !important;
+    text-align: left !important;
+  }
+  .hero__content__banner_slogan, .hero__content__banner_slogan h2{
+    margin: 0 !important;
+    margin-top: -20px !important;
+    text-align: left !important;
+    transform: scale(0.9);
+  }
+  .hackathon__details__discription{
+    justify-content: flex-start !important;
+    align-items: flex-start;
+  }
+  #devfolio_block{
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    margin-left: 10vw !important;
+  }
+  .devfolio-button-iframe{
+    width: 275px !important;
+  }
+  .blue-button{
+    width: 275px !important;
+    margin-left: 0 !important;
+  }
 }
 @media (max-width: 280px) {
   .hero__content__details .chat {
