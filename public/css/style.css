@@ -890,9 +890,12 @@ div.home-content {
 #become-sponsor a {
   color: #ddd;
 }
-#become-sponsor h4 a:hover {
+#become-sponsor h4 a, #become-sponsor p a{
+  color: #ddd;
+  }
+  #become-sponsor h4 a:hover, #become-sponsor p a:hover{
   color: #ff4b2b;
-}
+  }
 #become-sponsor .dotted-line {
   position: absolute;
   top: 50%;
