@@ -58,7 +58,7 @@
     <link rel="stylesheet" href="./css/herostyles.css" />
     <link rel="stylesheet" href="./css/background.css" />
     <link rel="stylesheet" href="./css/timeline.css" />
-
+    <link rel="stylesheet" href="./css/prizes.css" />
     <link rel="stylesheet" href="./css/animated.min.css" />
   </head>
 
@@ -127,6 +127,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 {{!-- <li><a href="#schedule">Schedule</a></li> --}}
+                <li><a href="/prizes">Prizes</a></li>
                 <li><a href="#sponsors">Sponsors</a></li>
                 <li><a href="#faq">FAQs</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -246,7 +247,7 @@
       <!-- /Hero -->
 
 
-      <div id="about" class="container tracks section">
+      <div class="container tracks section">
         <br /><br />
         <div class="row">
           <div class="col-xs-12">
@@ -259,7 +260,7 @@
         </div>
         <div class="row">
 
-          <div class="col-md-8 col-md-offset-2">
+          <div id="about" class="col-md-8 col-md-offset-2">
             <div class="row" style="text-align:center">
               <img
                 src="img/soft.svg"
@@ -300,7 +301,7 @@
 
       
       <!-- Supported By -->
-      <div class="section">
+      <div id="about" class="section">
         <!-- container -->
         <div class="container">
           <!-- row -->
@@ -585,6 +586,115 @@
           </div>
         </div>
       </div> --}}
+       {{!-- <div id="prizes" class="section" style="margin-top: 50px;">
+        <div class="section-title">
+          <h3 class="title"><span style="color: white">Prizes and Swags</span></h3>
+        </div>
+        <div class="prizes-container">
+          <div class="prizes-navbar">
+            <h4 class="overall active">Overall</h4>
+            <h4 class="tracks">Track Prizes</h4>
+            <h4 class="swags">Swags for all</h4>
+          </div>
+          <div class="overall-prizes show-flexbox">
+            <div class="prize-info silver">
+              <img src="./img/silver-medal.png" alt="" />
+              <div class="details">
+                <h2>2nd Prize</h2>
+                <h3>Rs. 15,000 /-</h3>
+              </div>
+            </div>
+            <div class="prize-info gold">
+              <img src="./img/gold-medal.png" alt="" />
+              <div class="details">
+                <h2>1st Prize</h2>
+                <h3>Rs. 20,000 /-</h3>
+              </div>
+            </div>
+            <div class="prize-info bronze">
+              <img src="./img/bronze-medal.png" alt="" />
+              <div class="details">
+                <h2>3rd Prize</h2>
+                <h3>Rs. 10,000 /-</h3>
+              </div>
+            </div>
+          </div>
+          <div class="swags-for-all">
+            <div class="flip-card-container">
+              <div class="flip-card">
+                <div class="card-front"> 
+                  <img src="./img/stickers-swags.png" alt="">
+                </div>
+
+                <div class="card-back">
+                  <h4>Cool GitHub Laptop Stickers</h4>
+                </div>
+
+              </div>
+            </div>
+            <div class="flip-card-container">
+              <div class="flip-card">
+                <div class="card-front"> 
+                  <img src="./img/stickers-swags.png" alt="">
+                </div>
+
+                <div class="card-back">
+                  <h4>Cool GitHub Laptop Stickers</h4>
+                </div>
+
+              </div>
+            </div>
+            <div class="flip-card-container">
+              <div class="flip-card">
+                <div class="card-front"> 
+                  <img src="./img/stickers-swags.png" alt="">
+                </div>
+
+                <div class="card-back">
+                  <h4>Cool GitHub Laptop Stickers</h4>
+                </div>
+
+              </div>
+            </div>
+            <div class="flip-card-container">
+              <div class="flip-card">
+                <div class="card-front"> 
+                  <img src="./img/stickers-swags.png" alt="">
+                </div>
+
+                <div class="card-back">
+                  <h4>Cool GitHub Laptop Stickers</h4>
+                </div>
+
+              </div>
+            </div>
+            <div class="flip-card-container">
+              <div class="flip-card">
+                <div class="card-front"> 
+                  <img src="./img/stickers-swags.png" alt="">
+                </div>
+
+                <div class="card-back">
+                  <h4>Cool GitHub Laptop Stickers</h4>
+                </div>
+
+              </div>
+            </div>
+            <div class="flip-card-container">
+              <div class="flip-card">
+                <div class="card-front"> 
+                  <img src="./img/stickers-swags.png" alt="">
+                </div>
+
+                <div class="card-back">
+                  <h4>Cool GitHub Laptop Stickers</h4>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> --}}
       
       <div class="tracks container section">
         <div class="modal" tabindex="-1" role="dialog">
@@ -616,15 +726,48 @@
           </div>
         </div>
 
+        <div id="prizes-home" style="margin-top: 40px; margin-bottom: 100px;">
+          <div class="section-title">
+              <h3 class="title"><span style="color: white;">Prizes</span></h3>
+          </div>
+          <div class="overall-prizes show-flexbox" style="margin-top: -35px;">
+            <div class="prize-info silver">
+              <img src="./img/prizes/first.svg" alt="" />
+              <div class="details">
+                <h2>1st Prize</h2>
+                <h3 style="text-decoration: none; color: white; opacity: 0.75;">Coming soon!</h3>
+              </div>
+            </div>
+            <div class="prize-info gold">
+              <img src="./img/prizes/second.svg" alt="" />
+              <div class="details">
+                <h2>2nd Prize</h2>
+                <h3 style="text-decoration: none; color: white; opacity: 0.75;">Coming soon!</h3>
+              </div>
+            </div>
+            <div class="prize-info bronze">
+              <img src="./img/prizes/third.svg" alt="" />
+              <div class="details">
+                <h2>3rd Prize</h2>
+                <h3 style="text-decoration: none; color: white; opacity: 0.75;">Coming soon!</h3>
+              </div>
+            </div>
+          </div>
+          <div class="view-prizes" style="margin-top: 50px;">
+            <a href="/prizes" style="font-weight: 400; font-size: 20px">View All Prizes</a>
+          </div>
+
+        </div>
+
         <!-- Current-Sponsors -->
         <div id="sponsors" class="section">
           <!-- container -->
           <div class="container">
             <div class="row">
               <div class="section-title">
-                <h3 class="title"><span style="color: white">Sponsors /&nbsp;</span><span
+                <h3 class="title"><span style="color: white">Sponsors &nbsp;</span><span
                     style="color: #bd0c0e;"
-                  > Partners</span>
+                  >/ Partners</span>
                 </h3>
               </div>
 
@@ -633,17 +776,14 @@
 																				justify-content: center;
 																				align-items: center;">
 
-              <a href="https://www.tatvic.com/about-us/what-we-do/" target="_blank" class="sponsor" rel="noopener noreferrer">
-                <img src="img/sponsors/tatvic.PNG" alt="">
+              <a href="https://www.github.com/" target="_blank" class="sponsor" rel="noopener noreferrer">
+                <img src="img/sponsors/github_logo.png" alt="">
               </a>
               <a href="https://devfolio.co" target="_blank" class="sponsor" rel="noopener noreferrer">
                 <img src="img/sponsors/devfolio.png" alt="">
               </a>
               <a href="https://polygon.technology/" target="_blank" class="sponsor" rel="noopener noreferrer">
                 <img src="img/sponsors/polygon.png" alt="">
-              </a>
-              <a href="https://www.github.com/" target="_blank" class="sponsor" rel="noopener noreferrer">
-                <img src="img/sponsors/github_logo.png" alt="">
               </a>
               <a href="https://tezos.com" target="_blank" class="sponsor" rel="noopener noreferrer">
                 <img src="img/sponsors/tezos.png" alt="">
@@ -653,18 +793,6 @@
               </a>
               <a href="https://filecoin.io" target="_blank" class="sponsor" rel="noopener noreferrer">
                 <img src="img/sponsors/filecoin.png" alt="">
-              </a>
-              <a href="https://symbl.ai/" target="_blank" class="sponsor" rel="noopener noreferrer">
-                <img src="img/sponsors/symblAI.png" alt="">
-              </a>
-              <a href="https://onec.in/" target="_blank" class="sponsor" rel="noopener noreferrer">
-                <img src="img/sponsors/onecdot.png" alt="">
-              </a>
-              <a href="https://www.leadlearners.ca/" target="_blank" class="sponsor" rel="noopener noreferrer" style="padding: 0px !important;">
-                <img src="img/sponsors/leading_learners.png" alt="" style="width: 140px; margin-left: 35px; margin-right: 35px">
-              </a>
-              <a href="https://www.geeksforgeeks.org/" target="_blank" class="sponsor" rel="noopener noreferrer">
-                <img src="img/sponsors/gfg.png" alt="">
               </a>
               <a href="https://replit.com/" target="_blank" class="sponsor" rel="noopener noreferrer">
                 <img src="img/sponsors/replit.png" alt="">
@@ -678,7 +806,6 @@
               <a href="https://www.sketch.com/" target="_blank" class="sponsor" rel="noopener noreferrer">
                 <img src="img/sponsors/sketch.png" alt="">
               </a>
-              
             </div>
               <!-- /row -->
             </div>
@@ -691,7 +818,7 @@
        
 
         <!-- become-sponsor -->
-        <div id="become-sponsor" class="section" style="margin-top: 100px;">
+        <div id="become-sponsor" class="section" style="margin-top: 50px;">
           <svg class="dotted-line" width="1920" height="859" viewBox="0 0 1920 859" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <style type="text/css">
@@ -736,7 +863,7 @@
                 <div class="section-title">
                   <h3 class="title"><span>Want to become a sponsor?</span></h3>        
                   <p>
-                    <a href="https://acm-svnit.github.io/DotSlash4.0/">Click here to see our last year sponsors  <i class="fa fa-external-link" aria-hidden="true" style="margin-left: 5px;"></i></a>
+                    <a href="https://acm-svnit.github.io/DotSlash4.0/">Click here to see our last year sponsor's  <i class="fa fa-external-link" aria-hidden="true" style="margin-left: 5px;"></i></a>
                   </p>          
                 </div>
               </div>
@@ -849,7 +976,9 @@
                         >play_arrow</i></span>Can we apply as a team?
 
                     </h3>
-                    <p class="collapse box1" id="num4">Yes! You can have a
+                    <p class="collapse box1" id="num4">Yes! This hackathon is a
+                      team competition. Most teams aim to have a mix of people
+                      with both design and developer skills. You can have a
                       maximum of 3 members per team. If you don't have a team,
                       you can participate individually. We'll have team
                       formation at the time of hackathon.</p>
@@ -872,7 +1001,7 @@
                       you will gain an unparalleled learning experience and
                       memories for a lifetime! You will also get a cool geeky
                       T-Shirt, Certificate of Participation and a bag full of
-                      swags.
+                      schwags.
                     </p>
                     <br />
                     <h3
@@ -888,7 +1017,8 @@
                       DotSlash?
                     </h3>
                     <p class="collapse box1" id="num9">Not to worry, you will be
-                      provided with variety of theme options on the day of hackathon.</p>
+                      provided with variety of theme options, once you get
+                      selected.</p>
                     <br />
                   </div>
                   <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -902,10 +1032,13 @@
                     >
                       <span style="vertical-align: sub"><i
                           class="material-icons prefix arrow-img9"
-                        >play_arrow</i></span>What is the registration procedure?
+                        >play_arrow</i></span>What is the registration
+                      procedure?
+
                     </h3>
-                    <p class="collapse box1" id="num10"> Simply click on "Apply with Devfolio" button on our website and fill out the form. RSVP and other details will be shared closer to the hackathon.
-                    </p>
+                    <p class="collapse box1" id="num10">You have to apply
+                      online. Once you are selected we will inform you about the
+                      remaining procedure.</p>
                     <br />
                     <h3
                       data-parent="#accordion"
@@ -939,7 +1072,7 @@
                       of hackathon?
                     </h3>
                     <p class="collapse box1" id="num13">Due to the current
-                      pandemic situation, mode of conduct will be ONLINE this
+                      pandemic situation, mode of conduct will be online this
                       year.</p>
                     <br />
 
@@ -954,7 +1087,7 @@
                           class="material-icons prefix arrow-img12"
                         >play_arrow</i></span>Where can I find updates?
                     </h3>
-                    <p class="collapse box1" id="num14">Join us on <a href="https://discord.gg/WvPdAbv5tP"> Discord <i class="fa fa-external-link" aria-hidden="true" style="margin-left: 2px;"></i></a> and follow us on 
+                    <p class="collapse box1" id="num14">Follow us on 
                       <a href="https://www.instagram.com/hackatdotslash/"> Instagram <i class="fa fa-external-link" aria-hidden="true" style="margin-left: 2px;"></i></a> for all the updates. Also we will be reaching out to you via mail. To receive the updates through mail, kindly register for the hackathon.
                     </p>
                     <br />
@@ -1093,6 +1226,7 @@
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/prizes.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery.countdown/2.2.0/jquery.countdown.min.js"
     ></script>
