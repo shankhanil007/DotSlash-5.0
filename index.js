@@ -32,9 +32,7 @@ app.use(express.json());
 // partial setup
 hbs.registerPartials(__dirname + "/views/partials");
 
-app.get("/", (req, res) => {
-  res.render("home");
-});
+
 
 app.get("/prizes", (req, res) => {
 	res.render("prizes");
@@ -43,6 +41,14 @@ app.get("/prizes", (req, res) => {
 app.get("/coc", (req, res) => {
   res.render("coc");
 });
+
+app.get("/", (req, res) => {
+	res.render("home");
+  });
+
+app.get("/test", (req, res) => {
+	res.render("test");
+  });
 
 app.post("/api/email", async (req, res) => {
 	const emailExsist = await Email.findOne({email : req.body.email});
