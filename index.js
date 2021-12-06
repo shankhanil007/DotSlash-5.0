@@ -33,9 +33,7 @@ app.use(express.json());
 hbs.registerPartials(__dirname + "/views/partials");
 
 app.get("/", (req, res) => {
-	console.log("This is test message")
 	res.render("home");
-	
   });
 
 app.get("/prizes", (req, res) => {
