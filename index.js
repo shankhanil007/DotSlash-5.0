@@ -10,14 +10,14 @@ const cors = require("cors");
 app.use(cors());
 
 dotenv.config();
-async function mongoConnect(){
-	await mongoose.connect(process.env.MONGOURI)
-		.then(() => {
-			console.log("Connected to database");
-		})
-}
+// async function mongoConnect(){
+// 	await mongoose.connect(process.env.MONGOURI)
+// 		.then(() => {
+// 			console.log("Connected to database");
+// 		})
+// }
 
-mongoConnect();
+// mongoConnect();
 
 // compress all responses
 app.use(compression());
@@ -39,6 +39,10 @@ app.get("/", (req, res) => {
 app.get("/prizes", (req, res) => {
 	res.render("prizes");
   });
+
+app.get("/alumni", (req, res) => {
+	res.render("alumni");
+})
 
 app.get("/coc", (req, res) => {
   res.render("coc");

@@ -138,7 +138,7 @@ el.forEach((element) => {
 // To change faq prefix icons on click
 let faqIcons = document.querySelectorAll('.material-icons');
 let faqQues = document.querySelectorAll('.questions');
-console.log(faqQues[0]);
+// console.log(faqQues[0]);
 
 faqQues.forEach(function(question, index){
   question.addEventListener("click", ()=>{
