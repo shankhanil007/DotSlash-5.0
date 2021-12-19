@@ -1,6 +1,6 @@
 #workshop-speakers{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 60px;
     margin: 30px 60px;
 }
@@ -13,7 +13,7 @@
 }
 .speaker-card img{
     border-radius: 50%;
-    width: 100%;
+    width: 80%;
     border: 6px solid #407bff;
 }
 .speaker-card h1{
