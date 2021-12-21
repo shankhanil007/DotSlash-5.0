@@ -1,0 +1,58 @@
+#workshop-speakers{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 60px;
+    margin: 30px 60px;
+}
+.speaker-card{
+    /* background: teal; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.speaker-card img{
+    border-radius: 50%;
+    width: 80%;
+    border: 6px solid #407bff;
+}
+.speaker-card h1{
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 2.25rem;
+    text-align: center;
+}
+.speaker-card h3{
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+@media (max-width: 1200px){
+    #workshop-speakers{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 900px){
+    #workshop-speakers{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media(max-width: 700px){
+    #workshop-speakers{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 500px){
+    #workshop-speakers{
+        grid-template-columns: 1fr;
+    }
+    .speaker-card img{
+        width: 80%;
+    }
+
+}
