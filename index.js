@@ -10,14 +10,14 @@ const cors = require("cors");
 app.use(cors());
 
 dotenv.config();
-// async function mongoConnect(){
-// 	await mongoose.connect(process.env.MONGOURI)
-// 		.then(() => {
-// 			console.log("Connected to database");
-// 		})
-// }
+async function mongoConnect(){
+	await mongoose.connect(process.env.MONGOURI)
+		.then(() => {
+			console.log("Connected to database");
+		})
+}
 
-// mongoConnect();
+mongoConnect();
 
 // compress all responses
 app.use(compression());
