@@ -17,4 +17,6 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           port: 22
-          script: deploy
+          script: |
+            pwd
+            deploy
