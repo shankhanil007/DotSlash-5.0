@@ -8,13 +8,15 @@
     /* background: teal; */
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     flex-direction: column;
 }
 .speaker-card img{
     border-radius: 50%;
     width: 80%;
     border: 6px solid #407bff;
+    width: 180px;
+    height: 180px;
 }
 .speaker-card h1{
     margin: 0;
@@ -51,8 +53,6 @@
     #workshop-speakers{
         grid-template-columns: 1fr;
     }
-    .speaker-card img{
-        width: 80%;
-    }
+   
 
 }
