@@ -96,10 +96,9 @@
 .overall-prizes{
     margin-top: 30px;
     display: none !important;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content:space-evenly;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 4vw;
 }
 .prize-info, .details{
     display: flex;
@@ -112,6 +111,7 @@
 }
 .details h2{
     font-size: 3.5rem;
+    white-space: nowrap;
 }
 .details h3{
   font-size: 1.5rem;
@@ -264,18 +264,17 @@
 }
 
 
-@media(max-width: 1190px){
+@media(max-width: 1080px){
   .prizes-navbar{
     flex-direction: column;
     align-items: flex-start;
   }
   .overall-prizes{
-    flex-direction: column;
-    align-content: stretch;
+    grid-template-columns: 1fr 1fr;
   }
   .overall-prizes>*{
     width: 95%;
-    margin: 20px 0px;
+    /* margin: 20px 0px; */
   }
   .overall-title, .sponsored-title, .swags-title{
     margin-left: 0px;
@@ -284,9 +283,6 @@
     top: 100%;
     left: 0;
     width: 75vw;
-  }
-  .silver{
-    margin-top: 30px;
   }
   .sponsered-tracks, .swags-kit{
     display: grid;
@@ -300,6 +296,9 @@
 @media(max-width: 700px){
   .sponsered-tracks, .swags-kit{
     width: 80vw;
+    grid-template-columns: 1fr;
+  }
+  .overall-prizes{
     grid-template-columns: 1fr;
   }
   .for-all{
