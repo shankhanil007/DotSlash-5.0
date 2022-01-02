@@ -192,6 +192,78 @@
     transform: rotate(45deg);
   }
 
+  .schedule-navbar{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /* background: #1a233a; */
+    padding: 1rem 1.5rem;
+    font-size: 2rem;
+    margin: 2rem;
+    border-radius: 10px;
+  }
+  .schedule-navbar>*{
+    background: #272e48 ;
+    margin: 0px 10px;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+  }
+  .schedule-navbar>*.active{
+    background: white;
+    color: #1a233a;
+    font-weight: bold;
+  }
+  .hack-schedule{
+    width: 85%;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1rem 2rem;
+    display: none;
+    /* background: red; */
+  }
+  .hack-schedule.active{
+    display: flex;
+  }
+  .schedule-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .schedule-time{
+    width: 25%;
+    background: #202741;
+    text-align: right;
+    padding: 1.5rem 2rem;
+    border-radius: 5px;
+    margin-right: 20px;
+  }
+  .schedule-time h1{
+    font-size: 2.75rem;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  .schedule-time h3{
+    font-weight: 500;
+    font-size: 2rem;
+    margin: 0;
+  }
+  .schedule-event{
+    width: 95%;
+    padding: 10px 0px;
+    padding-left: 20px;
+    border-left: 3px solid #0047b1;
+  }
+  .schedule-event h2{
+    font-size: 2.75rem;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
   @media (max-width: 992px) {
     .timeline {
       padding: 15px;
@@ -260,7 +332,39 @@
     .timeline .timeline-row .timeline-content p{
       text-align: left !important;
     }
+    .hack-schedule{
+      width: 98%;
+    }
   }
+  @media (max-width: 825px){
+    .schedule-time{
+      width: 35%;
+    }
+  }
+  @media(max-width: 650px){
+    .schedule-time{
+      width: 45%;
+    }
+    .schedule-time h1{
+      font-size: 2.5rem;
+      white-space: nowrap;
+    }
+    .schedule-event p{
+      display: none;
+    }
+  }
+  @media(max-width: 550px){
+    .hack-schedule{
+      margin-left: 5px;
+    }
+    .schedule-time{
+      width: 50%;
+      margin-left: 0;
+    }
+    .schedule-event h2{
+      font-size: 2.25rem;
+    }
+  } 
 
 
   
