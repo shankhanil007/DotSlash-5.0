@@ -543,12 +543,19 @@
         <!-- container -->
         <div class="container">
           <!-- row -->
-          <div class="row">
+          {{!-- <div class="row"> --}}
             <!-- section title -->
             <div class="section-title">
               <h3 class="title"><span style="color: white">Schedule</span></h3>
             </div>
-            <div class="timeline">
+            
+            <div class="schedule-navbar">
+              <button class="toggle-buttons" onclick="day1()">7th Jan</button>
+              <button class="toggle-buttons" onclick="day2()">8th Jan</button>
+              <button class="toggle-buttons" onclick="day3()">9th Jan</button>
+            </div>
+            
+            <div class="timeline" id="7th" style="display: block;">
               <div class="timeline-row">
                 <div class="timeline-time">23rd Nov 6:00 pm</div>
                 <div class="timeline-content">
@@ -578,69 +585,42 @@
                   </p>
                 </div>
               </div>
-
-              <div class="timeline-row">
-                <div class="timeline-time">26th Dec - 4th Jan 11:59 pm </div>
-                <div class="timeline-content">
-                  <h4>Idea Submission </h4>
-                  <p>
-                    Registered teams will receive a form link after the release of problem statements. They need to select any one of the problem statements and submit an idea on how they are planning to go about their hack. Once an idea is submitted, they will receive the RSVP for the hackathon.
-                  </p>
-                </div>
-              </div>
-
-              <div class="timeline-row">
-                <div class="timeline-time">4th Jan 11:59 pm</div>
-                <div class="timeline-content">
-                  <h4>Registration Ends</h4>
-                  <p>
-                    This is the end of the registration phase. Teams should ensure all their members have registered on Devfolio before this date. 
-                  </p>
-                </div>
-              </div>
-
-              <div class="timeline-row">
-                <div class="timeline-time">7th Jan 7:00 pm</div>
-                <div class="timeline-content">
-                  <h4>Opening Ceremony</h4>
-                  <p>
-                    The inauguration ceremony of DotSlash 5.0 will start. Participants will be briefed on rules and regulations, schedules, and other information regarding the hackathon.
-                  </p>
-                </div>
-              </div>
-
-              <div class="timeline-row">
-                <div class="timeline-time">7th Jan 9:00 pm</div>
-                <div class="timeline-content">
-                  <h4>Virtual Onboarding</h4>
-                  <p>
-                    Teams will be checked in before the main event commences. Participants are requested to make sure that their team members are present and all the prerequisites for the event are fulfilled.
-                  </p>
-                </div>
-              </div>
-
-              <div class="timeline-row">
-                <div class="timeline-time">7th Jan 10:00 pm </div>
-                <div class="timeline-content">
-                  <h4>Hacking Starts</h4>
-                  <p>
-                    Coding time starts! The participating teams can utilize their private team rooms on the discord server to discuss and develop their hack based on their chosen problem statement.
-                  </p>
-                </div>
-              </div>
-
-              <div class="timeline-row">
-                <div class="timeline-time">9th Jan 10:00 am </div>
-                <div class="timeline-content">
-                  <h4>Final Submission - Coding Time Ends</h4>
-                  <p>
-                    This is the end of the 36 hour coding period. Teams will have to submit their final work. After this point, no addition to the project will be allowed.
-                  </p>
-                </div>
-              </div>
-
             </div>
-          </div>
+
+            <div class="timeline" id="8th" style="display: none;">
+              <div class="timeline-row">
+                <div class="timeline-time">24th Dec - 5th Jan</div>
+                <div class="timeline-content">
+                  <h4>Workshop Series</h4>
+                  <p >
+                    In the evening informative speaker sessions will be conducted by industry experts. The platform and link for the session will be shared on our website and Discord server before the event date. 
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-row">
+                <div class="timeline-time">26th Dec 6:00 pm</div>
+                <div class="timeline-content">
+                  <h4>Release of Problem Statements </h4>
+                  <p>
+                    Problem statements focussing on the recent and trending topics in the field of research and development will be released.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline" id="9th" style="display: none;">
+              <div class="timeline-row">
+                <div class="timeline-time">26th Dec 6:00 pm</div>
+                <div class="timeline-content">
+                  <h4>Release of Problem Statements </h4>
+                  <p>
+                    Problem statements focussing on the recent and trending topics in the field of research and development will be released.
+                  </p>
+                </div>
+              </div>
+            </div>
+          {{!-- </div> --}}
         </div>
       </div>
 
@@ -1656,6 +1636,30 @@
     <script>
       for (let i = 0; i < 13; i++) { $('.arrow' + i).on("click", function
       (event) { $('.arrow-img' + i).toggleClass('rotate'); }); }
+
+      function day1(){
+        console.log("Hello")
+        document.getElementById("7th").style.display = "block";
+        document.getElementById("8th").style.display = "none";
+        document.getElementById("9th").style.display = "none";
+      }
+
+      function day2(){
+        document.getElementById("7th").style.display = "none";
+        document.getElementById("8th").style.display = "block";
+        document.getElementById("9th").style.display = "none";
+      }
+
+      function day3(){
+        document.getElementById("7th").style.display = "none";
+        document.getElementById("8th").style.display = "none";
+        document.getElementById("9th").style.display = "block";
+      }
+      
+
+
+
+
     </script>
     <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
   </body>

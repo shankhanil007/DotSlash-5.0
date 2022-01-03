@@ -263,4 +263,18 @@
   }
 
 
-  
+.schedule-navbar{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 10px;
+}
+
+.toggle-buttons{
+  margin: 0px 10px;
+  padding: 1rem 1.5rem;
+  border: 0px;
+  border-radius: 10px;
+  background: rgb(39, 46, 72);
+  font-size: 20px;
+}
