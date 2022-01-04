@@ -550,9 +550,9 @@
             </div>
             
             <div class="schedule-navbar">
-              <button class="toggle-buttons" onclick="day1()">7th Jan</button>
-              <button class="toggle-buttons" onclick="day2()">8th Jan</button>
-              <button class="toggle-buttons" onclick="day3()">9th Jan</button>
+              <button class="toggle-buttons active" id="7th-button" onclick="day1()">7th Jan</button>
+              <button class="toggle-buttons" id="8th-button" onclick="day2()">8th Jan</button>
+              <button class="toggle-buttons" id="9th-button" onclick="day3()">9th Jan</button>
             </div>
             
             <div class="timeline" id="7th" style="display: block;">
@@ -1638,19 +1638,27 @@
       (event) { $('.arrow-img' + i).toggleClass('rotate'); }); }
 
       function day1(){
-        console.log("Hello")
+        document.getElementById("8th-button").classList.remove('active');
+        document.getElementById("9th-button").classList.remove('active');
+        document.getElementById("7th-button").classList.add('active');
         document.getElementById("7th").style.display = "block";
         document.getElementById("8th").style.display = "none";
         document.getElementById("9th").style.display = "none";
       }
 
       function day2(){
+        document.getElementById("7th-button").classList.remove('active');
+        document.getElementById("9th-button").classList.remove('active');
+        document.getElementById("8th-button").classList.add('active');
         document.getElementById("7th").style.display = "none";
         document.getElementById("8th").style.display = "block";
         document.getElementById("9th").style.display = "none";
       }
 
       function day3(){
+        document.getElementById("7th-button").classList.remove('active');
+        document.getElementById("8th-button").classList.remove('active');
+        document.getElementById("9th-button").classList.add('active');
         document.getElementById("7th").style.display = "none";
         document.getElementById("8th").style.display = "none";
         document.getElementById("9th").style.display = "block";

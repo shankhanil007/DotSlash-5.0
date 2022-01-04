@@ -267,7 +267,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin: 0px 10px;
+  margin-bottom: 30px;
 }
 
 .toggle-buttons{
@@ -277,4 +277,10 @@
   border-radius: 10px;
   background: rgb(39, 46, 72);
   font-size: 20px;
+}
+
+.schedule-navbar>*.active {
+    background: white;
+    color: #1a233a;
+    font-weight: bold;
 }
