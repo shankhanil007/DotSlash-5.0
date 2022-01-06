@@ -545,104 +545,144 @@
         <!-- container -->
         <div class="container">
           <!-- row -->
-          <div class="row">
+          {{!-- <div class="row"> --}}
             <!-- section title -->
             <div class="section-title">
               <h3 class="title"><span style="color: white">Schedule</span></h3>
             </div>
-            <div class="timeline">
+            
+            <div class="schedule-navbar">
+              <button class="toggle-buttons active" id="7th-button" onclick="day1()">7th Jan</button>
+              <button class="toggle-buttons" id="8th-button" onclick="day2()">8th Jan</button>
+              <button class="toggle-buttons" id="9th-button" onclick="day3()">9th Jan</button>
+            </div>
+            
+            <div class="timeline" id="7th" style="display: block;">
               <div class="timeline-row">
-                <div class="timeline-time">23rd Nov 6:00 pm</div>
-                <div class="timeline-content">
-                  <h4>Registration Starts</h4>
-                  <p >
-                    Registration for the fifth edition of DotSlash hackathon begins! Click on the "Apply with Devfolio" button on our website and fill out your details. You can always register individually and form a team later. RSVP will be done closer to the hackathon.
-                  </p>
-                </div>
-              </div>
-
-              <div class="timeline-row">
-                <div class="timeline-time">24th Dec - 5th Jan</div>
-                <div class="timeline-content">
-                  <h4>Workshop Series</h4>
-                  <p >
-                    In the evening informative speaker sessions will be conducted by industry experts. The platform and link for the session will be shared on our website and Discord server before the event date. 
-                  </p>
-                </div>
-              </div>
-
-              <div class="timeline-row">
-                <div class="timeline-time">26th Dec 6:00 pm</div>
-                <div class="timeline-content">
-                  <h4>Release of Problem Statements </h4>
-                  <p>
-                    Problem statements focussing on the recent and trending topics in the field of research and development will be released.
-                  </p>
-                </div>
-              </div>
-
-              <div class="timeline-row">
-                <div class="timeline-time">26th Dec - 7th Jan 3:00 pm </div>
-                <div class="timeline-content">
-                  <h4>Idea Submission </h4>
-                  <p>
-                    Registered teams will receive a form link after the release of problem statements. They need to select any one of the problem statements and submit an idea on how they are planning to go about their hack. Once an idea is submitted, they will receive the RSVP for the hackathon.
-                  </p>
-                </div>
-              </div>
-
-              <div class="timeline-row">
-                <div class="timeline-time">7th Jan 3:00 pm</div>
+                <div class="timeline-time">3:00 pm</div>
                 <div class="timeline-content">
                   <h4>Registration Ends</h4>
-                  <p>
-                    This is the end of the registration phase. Teams should ensure all their members have registered on Devfolio before this date. 
+                  <p >
+                    Teams should ensure that they have submitted an idea based on the chosen problem statement and all their members have registered on Devfolio before 3 pm.
                   </p>
                 </div>
               </div>
 
               <div class="timeline-row">
-                <div class="timeline-time">7th Jan 7:00 pm</div>
+                <div class="timeline-time">7:00 pm</div>
                 <div class="timeline-content">
                   <h4>Opening Ceremony</h4>
-                  <p>
-                    The inauguration ceremony of DotSlash 5.0 will start. Participants will be briefed on rules and regulations, schedules, and other information regarding the hackathon.
+                  <p >
+                    Inauguration ceremony of DotSlash5.0 will start! Participants will be briefed on rules and regulations, schedule and other information regarding the hackathon.
                   </p>
                 </div>
               </div>
 
               <div class="timeline-row">
-                <div class="timeline-time">7th Jan 9:00 pm</div>
+                <div class="timeline-time">9:00 pm</div>
                 <div class="timeline-content">
                   <h4>Virtual Onboarding</h4>
                   <p>
-                    Teams will be checked in before the main event commences. Participants are requested to make sure that their team members are present and all the prerequisites for the event are fulfilled.
+                    The teams will be checked in before the main event commences. Participants are requested to make sure that all their team members are present and complete the check-in process.
                   </p>
                 </div>
               </div>
 
               <div class="timeline-row">
-                <div class="timeline-time">7th Jan 10:00 pm </div>
+                <div class="timeline-time">10:00 pm</div>
                 <div class="timeline-content">
                   <h4>Hacking Starts</h4>
                   <p>
-                    Coding time starts! The participating teams can utilize their private team rooms on the discord server to discuss and develop their hack based on their chosen problem statement.
+                    Coding time starts! The participating teams can utilize the 36 hours to discuss and develop their hack based on their chosen problem statement.
                   </p>
                 </div>
               </div>
 
               <div class="timeline-row">
-                <div class="timeline-time">9th Jan 10:00 am </div>
+                <div class="timeline-time">11:00 pm</div>
                 <div class="timeline-content">
-                  <h4>Final Submission - Coding Time Ends</h4>
+                  <h4>Onecdot API Demo</h4>
                   <p>
-                    This is the end of the 36 hour coding period. Teams will have to submit their final work. After this point, no addition to the project will be allowed.
+                    Team Onecdot will give walkthrough on how to use it's API. Participants can also get their queries resolved regarding Onecdot's sponsored track prize.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline" id="8th" style="display: none;">
+              <div class="timeline-row">
+                <div class="timeline-time">10:00 am</div>
+                <div class="timeline-content">
+                  <h4>Mentoring Session - I</h4>
+                  <p >
+                    Mentors will visit each of the participating teams. They will provide guidance and counsel to the teams on how they can improvise their idea or the hack they are working on.
                   </p>
                 </div>
               </div>
 
+              <div class="timeline-row">
+                <div class="timeline-time">6:00 pm</div>
+                <div class="timeline-content">
+                  <h4>Fun Activities</h4>
+                  <p>
+                    There will be some fun games and exciting giveaways. Hackers can participate in these activities whenever they feel the need to take a break! The details for the same will be available on our discord server.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-row">
+                <div class="timeline-time">10:00 pm</div>
+                <div class="timeline-content">
+                  <h4>Q&A with Organisers</h4>
+                  <p>
+                    Participants can connect with the hackathon organisers and get their queries resolved. Moreover a session on Devfolio submission requirements will be conducted.
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
+
+            <div class="timeline" id="9th" style="display: none;">
+              <div class="timeline-row">
+                <div class="timeline-time">10:00 am</div>
+                <div class="timeline-content">
+                  <h4>Final Submission - Coding Time Ends</h4>
+                  <p>
+                    The participants will have to submit their final work on Devfolio. After this point, no addition to the project will be allowed.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-row">
+                <div class="timeline-time">10:00 am</div>
+                <div class="timeline-content">
+                  <h4>Mentoring Session - II</h4>
+                  <p>
+                    Mentors will visit the teams again to evaluate their work. The participants are expected to pitch their ideas as well as show a demo of their hack within a stipulated amount of time.
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-row">
+                <div class="timeline-time">4:00 pm</div>
+                <div class="timeline-content">
+                  <h4>Presentation Round </h4>
+                  <p>
+                    The top 10 teams will have to present their ideas and projects in front of judges. The Showdown Begins!
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-row">
+                <div class="timeline-time">7:00 pm</div>
+                <div class="timeline-content">
+                  <h4>Closing Ceremony</h4>
+                  <p>
+                    The winners of DotSlash 5.0 will be announced. Prizes for the winners will be revealed followed by the Vote of thanks.
+                  </p>
+                </div>
+              </div>
+            </div>
+          {{!-- </div> --}}
         </div>
       </div>
 
@@ -953,7 +993,7 @@
                     </div>
                   </div>
                 </a>
-                <button class="session-link">
+                <button class="session-link" onClick="javascript:window.open('https://youtu.be/BsdUEhbfl2I', '_blank');">
                   <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#ffffff"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M10 16.5l6-4.5-6-4.5zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
                   Session Link
                 </button>
@@ -1021,6 +1061,30 @@
                   <img src="img/mentors/jai.PNG" alt="">
                   <h1 class="speaker-title">Jai Kumar Dewani</h1>
                   <h3 class="speaker-designation">Software Engineer<br>Zeiss</h3>
+                </div>
+              </a>
+
+              <a href="https://www.linkedin.com/in/littlestar642">
+                <div class="speaker-card">
+                  <img src="img/mentors/avinash.PNG" alt="">
+                  <h1 class="speaker-title">Avinash Jaiswal</h1>
+                  <h3 class="speaker-designation">SDE 2<br>Gojek</h3>
+                </div>
+              </a>
+
+              <a href="https://www.linkedin.com/in/hrishabh-sharma-122338163/">
+                <div class="speaker-card">
+                  <img src="img/mentors/hrishabh.PNG" alt="">
+                  <h1 class="speaker-title">Hrishabh Sharma</h1>
+                  <h3 class="speaker-designation">Software Engineer<br>HSBC</h3>
+                </div>
+              </a>
+
+              <a href="https://www.linkedin.com/in/devrajat/">
+                <div class="speaker-card">
+                  <img src="img/mentors/rajat.PNG" alt="">
+                  <h1 class="speaker-title">Rajat Sharma</h1>
+                  <h3 class="speaker-designation">Software Engineer<br>JP Morgan Chase & Co.</h3>
                 </div>
               </a>
 
@@ -1658,6 +1722,38 @@
     <script>
       for (let i = 0; i < 13; i++) { $('.arrow' + i).on("click", function
       (event) { $('.arrow-img' + i).toggleClass('rotate'); }); }
+
+      function day1(){
+        document.getElementById("8th-button").classList.remove('active');
+        document.getElementById("9th-button").classList.remove('active');
+        document.getElementById("7th-button").classList.add('active');
+        document.getElementById("7th").style.display = "block";
+        document.getElementById("8th").style.display = "none";
+        document.getElementById("9th").style.display = "none";
+      }
+
+      function day2(){
+        document.getElementById("7th-button").classList.remove('active');
+        document.getElementById("9th-button").classList.remove('active');
+        document.getElementById("8th-button").classList.add('active');
+        document.getElementById("7th").style.display = "none";
+        document.getElementById("8th").style.display = "block";
+        document.getElementById("9th").style.display = "none";
+      }
+
+      function day3(){
+        document.getElementById("7th-button").classList.remove('active');
+        document.getElementById("8th-button").classList.remove('active');
+        document.getElementById("9th-button").classList.add('active');
+        document.getElementById("7th").style.display = "none";
+        document.getElementById("8th").style.display = "none";
+        document.getElementById("9th").style.display = "block";
+      }
+      
+
+
+
+
     </script>
     <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
   </body>
