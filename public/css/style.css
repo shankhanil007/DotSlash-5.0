@@ -608,6 +608,12 @@ div#swal2-content ol li {
 .profile .content-body {
   color: #ddd !important;
 }
+.title-judges {
+  color: #bd0c0e !important;
+}
+.content-body-designation{
+  font-weight: normal !important;
+}
 .profile .title {
   color: #ddd;
 }
